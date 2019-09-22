@@ -1,11 +1,23 @@
 #
-# hbase.py
+# transform.py
 #
 
 
 import os
 import json
 
+
+'''
+
+Somehting.
+
+'''
+
+def readTableLine(table_name, row_pk):
+
+    index = ssb_date_tbl_kmap[int(row_pk)] if table_name == 'date' else (int(row_pk)-1)
+
+    return ssb_tables[table_name][index]
 
 '''
 
@@ -43,7 +55,7 @@ def determineRowKey(table, data):
 
         else:
 
-            table_rk +='NOT_IMPLEMENTED'
+            table_rk += 'NOT_IMPLEMENTED'
 
     return table_rk[:-1]
 
@@ -54,7 +66,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('hbase.json', 'r')
+tf_file = open('./models/T1.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -66,18 +78,29 @@ All tables, except the date table, use an integer as primary key
 and this number matches the line in which the record sits, thus,
 we can use this information to retrieve rows referenced by a PK.
 
-Since the primary keys of the date table are differnte, we create
-a key-value map to translate PK into line indexes.
+Since the primary keys of the date table are different, we create
+a key-value map to translate primary keys into line indexes.
 
 '''
 
 ssb_date_tbl_kmap = {}
 ssb_tables = {}
-ssb_tables_name = ['lineorder', 'date', 'customer', 'supplier', 'part']
+ssb_tables_name = [
+    'lineorder',
+    'date',
+    'customer',
+    'supplier',
+    'part',
+    'city',
+    'nation',
+    'region',
+    'customer_addr',
+    'supplier_addr'
+    ]
 
 for name in ssb_tables_name:
 
-    ssb_filename = ('./data_ssb/' + name + '.tbl')
+    ssb_filename = ('./data_ssb_geo/' + name + '.tbl')
     ssb_file = open(ssb_filename, 'r')
 
     ssb_tables[name] = ssb_file.readlines()
@@ -157,21 +180,21 @@ for transform in tf_data:
 
                     else:
 
-                        c_fk_table = ssb_tables[c_ssb_table_name]
-                        c_fk_index = c["column_fk_index"]
-                        c_fk_value = data[c_fk_index]
-                        c_fk_line_index = int(c_fk_value)
+                        c_join_tables = c["join_tables"][::-1]
+                        c_index = c_join_tables[0]['c_index']
+                        c_join_pk = data[c_index]
 
-                        if c_ssb_table_name == 'date':
+                        for join in c_join_tables[1:]:
 
-                            c_fk_line_index = ssb_date_tbl_kmap[c_fk_line_index]
-                            c_fk_line_index = int(c_fk_line_index)
+                            iter_c_table = join['c_table']
+                            iter_c_index = join['c_index']
 
-                        else:
+                            iter_line = readTableLine(iter_c_table, c_join_pk)
+                            iter_attrs = iter_line.split('|')
 
-                            c_fk_line_index -= 1
+                            c_join_pk = iter_attrs[iter_c_index]
 
-                        c_fk_row = c_fk_table[c_fk_line_index]
+                        c_fk_row = readTableLine(c_ssb_table_name, c_join_pk)
                         c_fk_data = c_fk_row.split('|')
                         c_data = c_fk_data[c_ssb_column_index]
 

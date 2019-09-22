@@ -1,0 +1,16 @@
+if !list.include?("people") 
+  create 'people', 'd' 
+end 
+
+put 'people', 'jmhsieh', 'd:hair', 'black'
+put 'people', 'enis', 'd:hair', 'brown'
+put 'people', 'stack', 'd:hair', 'none'
+put 'people', 'busbey', 'd:beard', 'scruffy'
+put 'people', 'apurtell', 'd:beard', 'grey'
+
+put 'people', 'jmhsieh', 'd:role-hbase', 'pmc'
+put 'people', 'stack', 'd:role-hbase', 'pmc'
+put 'people', 'stack', 'd:role-phoenix', 'mentor'
+put 'people', 'purtell', 'd:role-hbase', 'chair'
+
+exit

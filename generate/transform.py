@@ -4,6 +4,7 @@
 
 
 import os
+import sys
 import json
 
 
@@ -62,11 +63,23 @@ def determineRowKey(table, data):
 
 '''
 
+Somehting.
+
+'''
+
+window_rows, window_columns = os.popen('stty size', 'r').read().split()
+
+sys.stdout.write('\n' * 6)
+sys.stdout.write('\033[F' * 5)
+
+
+'''
+
 Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/T1.json', 'r')
+tf_file = open('./models/T4.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -121,7 +134,7 @@ setup the database tables and code to populate them.
 
 '''
 
-for transform in tf_data:
+for transform_i, transform in enumerate(tf_data):
 
     transform_id = transform['transform_id']
     transform_path = ('./data_hbase/' + transform_id + '/')
@@ -139,7 +152,7 @@ for transform in tf_data:
     Generate code to create the tables and populate them.
     '''
 
-    for table in transform_tables:
+    for table_i, table in enumerate(transform_tables):
 
         table_name = table['table_name']
         table_name_ssb = table['table_name_ssb']
@@ -163,12 +176,12 @@ for transform in tf_data:
             rowkey = str(i) if table_rk_surrogate == True else determineRowKey(table, data)
             cmdprefix = 'put \'' + table_name + '\', \'' + rowkey + '\', '
 
-            for cf in table_column_families_data:
+            for cf_i, cf in enumerate(table_column_families_data):
 
                 cf_name = cf['column_f_name']
                 cf_columns = cf['column_f_columns']
 
-                for c in cf_columns:
+                for c_i, c in enumerate(cf_columns):
 
                     c_name = c['column_name']
                     c_ssb_table_name = c['ssb_table_name']
@@ -203,6 +216,10 @@ for transform in tf_data:
                         c_value_prefix = c["column_value_prefix"]
                         c_data = (c_value_prefix + "+" + c_data)
 
+                    '''
+                    Write the HBase command to the file.
+                    '''
+
                     c_cmd = cmdprefix
                     c_cmd += '\'' + (cf_name + ':' + c_name) + '\', '
                     c_cmd += '\'' + c_data + '\''
@@ -210,9 +227,24 @@ for transform in tf_data:
 
                     hb_file.write(c_cmd)
 
+                    '''
+                    Log progress status.
+                    '''
+
+                    c_log = 'Transform: ' + str(transform_i+1) + '/' + str(len(tf_data)) + '.' + (10 * ' ') + '\n'
+                    c_log += 'Table: ' + str(table_i+1) + '/' + str(len(transform_tables)) + '.' + (10 * ' ') + '\n'
+                    c_log += 'Line: ' + str(i+1) + '/' + str(len(ssb_tables[table_name_ssb])) + '.' + (10 * ' ') + '\n'
+                    c_log += 'Family: ' + str(cf_i+1) + '/' + str(len(table_column_families_data)) + '.' + (10 * ' ') + '\n'
+                    c_log += 'Column: ' + str(c_i+1) + '/' + str(len(cf_columns)) + '.' + (10 * ' ') + '\n'
+
+                    sys.stdout.write(c_log)
+                    sys.stdout.write('\033[F' * 5)
+
+                hb_file.write('\n')
+
             hb_file.write('\n')
 
-            #if i == 0: break
+            #if i == 1000: break
 
         hb_file.close()
 
@@ -221,3 +253,5 @@ for transform in tf_data:
     tf_file.close()
 
     #break
+
+    sys.stdout.write('\n' * 6)

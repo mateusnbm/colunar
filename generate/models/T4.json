@@ -1,7 +1,7 @@
 [
     {
         "transform_id": "T4",
-        "transform_comments": "Normalized, one facts table and a table for each dimension (SF=1).",
+        "transform_comments": "Normalized, one facts table and a table for each dimension.",
         "transform_tables": [
             {
                 "table_name": "customer_address",
@@ -598,7 +598,7 @@
                         "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
-                                "column_name": "order_pk",
+                                "column_name": "order_number_pk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "orderkey"

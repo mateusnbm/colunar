@@ -1,7 +1,7 @@
 [
     {
         "transform_id": "T1-2",
-        "transform_comments": "Denormalized, sharing the same table with different column families (SF=1).",
+        "transform_comments": "Denormalized, sharing the same table with different column families (except geospatial).",
         "transform_tables": [
             {
                 "table_name": "generic_table",

@@ -79,7 +79,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/T6.json', 'r')
+tf_file = open('./models/T7.json', 'r')
 tf_data = json.load(tf_file)
 
 

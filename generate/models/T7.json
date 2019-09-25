@@ -1,7 +1,7 @@
 [
     {
-        "transform_id": "T1",
-        "transform_comments": "Denormalized, sharing the same table with different column families.",
+        "transform_id": "T7",
+        "transform_comments": "Denormalized, sharing the same table and column family.",
         "transform_tables": [
             {
                 "table_name": "generic_table",
@@ -11,144 +11,126 @@
                     "prefix": null,
                     "components": [
                         {
-                            "cf_name": "line_order_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         },
                         {
-                            "cf_name": "line_order_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 1
                         }
                     ]
                 },
                 "table_column_families": [
-                    "line_order_cf",
-                    "order_date_cf",
-                    "commit_date_cf",
-                    "customer_cf",
-                    "customer_city_cf",
-                    "customer_nation_cf",
-                    "customer_region_cf",
-                    "customer_addr_cf",
-                    "supplier_cf",
-                    "supplier_city_cf",
-                    "supplier_nation_cf",
-                    "supplier_region_cf",
-                    "supplier_addr_cf",
-                    "part_cf"
+                    "generic_cf"
                 ],
                 "table_column_families_data": [
                     {
-                        "column_f_name": "line_order_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
-                                "column_name": "order_number_pk",
+                                "column_name": "line_order_order_number_pk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "orderkey"
                             },
                             {
-                                "column_name": "line_number_pk",
+                                "column_name": "line_order_line_number_pk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "linenumber"
                             },
                             {
-                                "column_name": "customer_fk",
+                                "column_name": "line_order_customer_fk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "custkey"
                             },
                             {
-                                "column_name": "part_fk",
+                                "column_name": "line_order_part_fk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
                             },
                             {
-                                "column_name": "supplier_fk",
+                                "column_name": "line_order_supplier_fk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "suppkey"
                             },
                             {
-                                "column_name": "order_date_fk",
+                                "column_name": "line_order_order_date_fk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "orderdate"
                             },
                             {
-                                "column_name": "order_priority",
+                                "column_name": "line_order_order_priority",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "ordpriority"
                             },
                             {
-                                "column_name": "shipping_priority",
+                                "column_name": "line_order_shipping_priority",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "shippriority"
                             },
                             {
-                                "column_name": "quantity",
+                                "column_name": "line_order_quantity",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "quantity"
                             },
                             {
-                                "column_name": "extended_price",
+                                "column_name": "line_order_extended_price",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "extendedprice"
                             },
                             {
-                                "column_name": "order_total_price",
+                                "column_name": "line_order_order_total_price",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "ordtotalprice"
                             },
                             {
-                                "column_name": "discount",
+                                "column_name": "line_order_discount",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 11,
                                 "ssb_column_name": "discount"
                             },
                             {
-                                "column_name": "revenue",
+                                "column_name": "line_order_revenue",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 12,
                                 "ssb_column_name": "revenue"
                             },
                             {
-                                "column_name": "supply_cost",
+                                "column_name": "line_order_supply_cost",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 13,
                                 "ssb_column_name": "supplycost"
                             },
                             {
-                                "column_name": "tax",
+                                "column_name": "line_order_tax",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 14,
                                 "ssb_column_name": "tax"
                             },
                             {
-                                "column_name": "commit_date_fk",
+                                "column_name": "line_order_commit_date_fk",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"
                             },
                             {
-                                "column_name": "shipping_mode",
+                                "column_name": "line_order_shipping_mode",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 16,
                                 "ssb_column_name": "shipmode"
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "order_date_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "date_pk",
+                                "column_name": "order_date_date_pk",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -160,7 +142,7 @@
                                 ]
                             },
                             {
-                                "column_name": "date",
+                                "column_name": "order_date_date",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "date",
@@ -172,7 +154,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_of_week",
+                                "column_name": "order_date_day_of_week",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "dayofweek",
@@ -184,7 +166,7 @@
                                 ]
                             },
                             {
-                                "column_name": "month",
+                                "column_name": "order_date_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "month",
@@ -196,7 +178,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year",
+                                "column_name": "order_date_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "year",
@@ -208,7 +190,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year_month_num",
+                                "column_name": "order_date_year_month_num",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "yearmonthnum",
@@ -220,7 +202,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year_month",
+                                "column_name": "order_date_year_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "yearmonth",
@@ -232,7 +214,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_week",
+                                "column_name": "order_date_day_num_in_week",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "daynuminweek",
@@ -244,7 +226,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_month",
+                                "column_name": "order_date_day_num_in_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "daynuminmonth",
@@ -256,7 +238,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_year",
+                                "column_name": "order_date_day_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "daynuminyear",
@@ -268,7 +250,7 @@
                                 ]
                             },
                             {
-                                "column_name": "month_num_in_year",
+                                "column_name": "order_date_month_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "monthnuminyear",
@@ -280,7 +262,7 @@
                                 ]
                             },
                             {
-                                "column_name": "week_num_in_year",
+                                "column_name": "order_date_week_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 11,
                                 "ssb_column_name": "weeknuminyear",
@@ -292,7 +274,7 @@
                                 ]
                             },
                             {
-                                "column_name": "selling_season",
+                                "column_name": "order_date_selling_season",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 12,
                                 "ssb_column_name": "sellingseason",
@@ -304,7 +286,7 @@
                                 ]
                             },
                             {
-                                "column_name": "last_day_in_week_fl",
+                                "column_name": "order_date_last_day_in_week_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 13,
                                 "ssb_column_name": "lastdayinweekfl",
@@ -316,7 +298,7 @@
                                 ]
                             },
                             {
-                                "column_name": "last_day_in_month_fl",
+                                "column_name": "order_date_last_day_in_month_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 14,
                                 "ssb_column_name": "lastdayinmonthfl",
@@ -328,7 +310,7 @@
                                 ]
                             },
                             {
-                                "column_name": "holiday_fl",
+                                "column_name": "order_date_holiday_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "holidayfl",
@@ -340,7 +322,7 @@
                                 ]
                             },
                             {
-                                "column_name": "weekday_fl",
+                                "column_name": "order_date_weekday_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 16,
                                 "ssb_column_name": "weekday_fl",
@@ -350,14 +332,9 @@
                                         "c_index": 5
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "commit_date_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "date_pk",
+                                "column_name": "commit_date_date_pk",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -369,7 +346,7 @@
                                 ]
                             },
                             {
-                                "column_name": "date",
+                                "column_name": "commit_date_date",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "date",
@@ -381,7 +358,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_of_week",
+                                "column_name": "commit_date_day_of_week",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "dayofweek",
@@ -393,7 +370,7 @@
                                 ]
                             },
                             {
-                                "column_name": "month",
+                                "column_name": "commit_date_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "month",
@@ -405,7 +382,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year",
+                                "column_name": "commit_date_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "year",
@@ -417,7 +394,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year_month_num",
+                                "column_name": "commit_date_year_month_num",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "yearmonthnum",
@@ -429,7 +406,7 @@
                                 ]
                             },
                             {
-                                "column_name": "year_month",
+                                "column_name": "commit_date_year_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "yearmonth",
@@ -441,7 +418,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_week",
+                                "column_name": "commit_date_day_num_in_week",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "daynuminweek",
@@ -453,7 +430,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_month",
+                                "column_name": "commit_date_day_num_in_month",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "daynuminmonth",
@@ -465,7 +442,7 @@
                                 ]
                             },
                             {
-                                "column_name": "day_num_in_year",
+                                "column_name": "commit_date_day_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "daynuminyear",
@@ -477,7 +454,7 @@
                                 ]
                             },
                             {
-                                "column_name": "month_num_in_year",
+                                "column_name": "commit_date_month_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "monthnuminyear",
@@ -489,7 +466,7 @@
                                 ]
                             },
                             {
-                                "column_name": "week_num_in_year",
+                                "column_name": "commit_date_week_num_in_year",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 11,
                                 "ssb_column_name": "weeknuminyear",
@@ -501,7 +478,7 @@
                                 ]
                             },
                             {
-                                "column_name": "selling_season",
+                                "column_name": "commit_date_selling_season",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 12,
                                 "ssb_column_name": "sellingseason",
@@ -513,7 +490,7 @@
                                 ]
                             },
                             {
-                                "column_name": "last_day_in_week_fl",
+                                "column_name": "commit_date_last_day_in_week_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 13,
                                 "ssb_column_name": "lastdayinweekfl",
@@ -525,7 +502,7 @@
                                 ]
                             },
                             {
-                                "column_name": "last_day_in_month_fl",
+                                "column_name": "commit_date_last_day_in_month_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 14,
                                 "ssb_column_name": "lastdayinmonthfl",
@@ -537,7 +514,7 @@
                                 ]
                             },
                             {
-                                "column_name": "holiday_fl",
+                                "column_name": "commit_date_holiday_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "holidayfl",
@@ -549,7 +526,7 @@
                                 ]
                             },
                             {
-                                "column_name": "weekday_fl",
+                                "column_name": "commit_date_weekday_fl",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 16,
                                 "ssb_column_name": "weekday_fl",
@@ -559,14 +536,9 @@
                                         "c_index": 15
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "customer_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "customer_pk",
+                                "column_name": "customer_customer_pk",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "custkey",
@@ -578,7 +550,7 @@
                                 ]
                             },
                             {
-                                "column_name": "name",
+                                "column_name": "customer_name",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "name",
@@ -590,7 +562,7 @@
                                 ]
                             },
                             {
-                                "column_name": "address",
+                                "column_name": "customer_ddress",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "address",
@@ -602,7 +574,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city",
+                                "column_name": "customer_city",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "city",
@@ -614,7 +586,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation",
+                                "column_name": "customer_nation",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "nation",
@@ -626,7 +598,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region",
+                                "column_name": "customer_region",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "region",
@@ -638,7 +610,7 @@
                                 ]
                             },
                             {
-                                "column_name": "phone",
+                                "column_name": "customer_phone",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "phone",
@@ -650,7 +622,7 @@
                                 ]
                             },
                             {
-                                "column_name": "marketing_segment",
+                                "column_name": "customer_marketing_segment",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "mkt_segment",
@@ -662,7 +634,7 @@
                                 ]
                             },
                             {
-                                "column_name": "address_fk",
+                                "column_name": "customer_address_fk",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "address_fk",
@@ -674,7 +646,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city_fk",
+                                "column_name": "customer_city_fk",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "city_fk",
@@ -686,7 +658,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation_fk",
+                                "column_name": "customer_nation_fk",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "nation_fk",
@@ -698,7 +670,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region_fk",
+                                "column_name": "customer_region_fk",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 11,
                                 "ssb_column_name": "region_fk",
@@ -708,14 +680,9 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "customer_city_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "city_pk",
+                                "column_name": "customer_city_city_pk",
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_pk",
@@ -731,7 +698,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city_geometry",
+                                "column_name": "customer_city_city_geometry",
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_geometry",
@@ -745,14 +712,9 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "customer_nation_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "nation_pk",
+                                "column_name": "customer_nation_nation_pk",
                                 "ssb_table_name": "nation",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "nation_pk",
@@ -768,7 +730,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation_geometry",
+                                "column_name": "customer_nation_nation_geometry",
                                 "ssb_table_name": "nation",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "nation_geometry",
@@ -782,14 +744,9 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "customer_region_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "region_pk",
+                                "column_name": "customer_region_region_pk",
                                 "ssb_table_name": "region",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "region_pk",
@@ -805,7 +762,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region_geometry",
+                                "column_name": "customer_region_region_geometry",
                                 "ssb_table_name": "region",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "region_geometry",
@@ -819,14 +776,9 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "customer_addr_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "addr_pk",
+                                "column_name": "customer_addr_addr_pk",
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
@@ -842,7 +794,7 @@
                                 ]
                             },
                             {
-                                "column_name": "addr_geometry",
+                                "column_name": "customer_addr_addr_geometry",
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "addr_geometry",
@@ -856,14 +808,9 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "supplier_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "supplier_pk",
+                                "column_name": "supplier_supplier_pk",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "suppkey",
@@ -875,7 +822,7 @@
                                 ]
                             },
                             {
-                                "column_name": "name",
+                                "column_name": "supplier_name",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "name",
@@ -887,7 +834,7 @@
                                 ]
                             },
                             {
-                                "column_name": "address",
+                                "column_name": "supplier_address",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "address",
@@ -899,7 +846,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city",
+                                "column_name": "supplier_city",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "city",
@@ -911,7 +858,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation",
+                                "column_name": "supplier_nation",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "nation",
@@ -923,7 +870,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region",
+                                "column_name": "supplier_region",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "region",
@@ -935,7 +882,7 @@
                                 ]
                             },
                             {
-                                "column_name": "phone",
+                                "column_name": "supplier_phone",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "phone",
@@ -947,7 +894,7 @@
                                 ]
                             },
                             {
-                                "column_name": "address_fk",
+                                "column_name": "supplier_address_fk",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "address_fk",
@@ -959,7 +906,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city_fk",
+                                "column_name": "supplier_city_fk",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "city_fk",
@@ -971,7 +918,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation_fk",
+                                "column_name": "supplier_nation_fk",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "nation_fk",
@@ -983,7 +930,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region_fk",
+                                "column_name": "supplier_region_fk",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "region_fk",
@@ -993,14 +940,15 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "supplier_city_cf",
-                        "column_f_columns": [
+                            },
+
+
+
+
+
                             {
-                                "column_name": "city_pk",
+
+                                "column_name": "supplier_city_city_pk",
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_pk",
@@ -1016,7 +964,7 @@
                                 ]
                             },
                             {
-                                "column_name": "city_geometry",
+                                "column_name": "supplier_city_city_geometry",
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_geometry",
@@ -1030,14 +978,9 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "supplier_nation_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "nation_pk",
+                                "column_name": "supplier_nation_nation_pk",
                                 "ssb_table_name": "nation",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "nation_pk",
@@ -1053,7 +996,7 @@
                                 ]
                             },
                             {
-                                "column_name": "nation_geometry",
+                                "column_name": "supplier_nation_nation_geometry",
                                 "ssb_table_name": "nation",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "nation_geometry",
@@ -1067,14 +1010,9 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "supplier_region_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "region_pk",
+                                "column_name": "supplier_region_region_pk",
                                 "ssb_table_name": "region",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "region_pk",
@@ -1090,7 +1028,7 @@
                                 ]
                             },
                             {
-                                "column_name": "region_geometry",
+                                "column_name": "supplier_region_region_geometry",
                                 "ssb_table_name": "region",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "region_geometry",
@@ -1104,14 +1042,9 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "supplier_addr_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "addr_pk",
+                                "column_name": "supplier_addr_addr_pk",
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
@@ -1127,7 +1060,7 @@
                                 ]
                             },
                             {
-                                "column_name": "addr_geometry",
+                                "column_name": "supplier_addr_addr_geometry",
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "addr_geometry",
@@ -1141,14 +1074,9 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "part_cf",
-                        "column_f_columns": [
+                            },
                             {
-                                "column_name": "part_pk",
+                                "column_name": "part_part_pk",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "partkey",
@@ -1160,7 +1088,7 @@
                                 ]
                             },
                             {
-                                "column_name": "name",
+                                "column_name": "part_name",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 1,
                                 "ssb_column_name": "name",
@@ -1172,7 +1100,7 @@
                                 ]
                             },
                             {
-                                "column_name": "mfgr",
+                                "column_name": "part_mfgr",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "mfgr",
@@ -1184,7 +1112,7 @@
                                 ]
                             },
                             {
-                                "column_name": "category",
+                                "column_name": "part_category",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "category",
@@ -1196,7 +1124,7 @@
                                 ]
                             },
                             {
-                                "column_name": "brand",
+                                "column_name": "part_brand",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "brand1",
@@ -1208,7 +1136,7 @@
                                 ]
                             },
                             {
-                                "column_name": "color",
+                                "column_name": "part_color",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "color",
@@ -1220,7 +1148,7 @@
                                 ]
                             },
                             {
-                                "column_name": "type",
+                                "column_name": "part_type",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 6,
                                 "ssb_column_name": "type",
@@ -1232,7 +1160,7 @@
                                 ]
                             },
                             {
-                                "column_name": "size",
+                                "column_name": "part_size",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "size",
@@ -1244,7 +1172,7 @@
                                 ]
                             },
                             {
-                                "column_name": "container",
+                                "column_name": "part_container",
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "container",

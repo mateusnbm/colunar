@@ -1064,7 +1064,7 @@
                 ]
             },
             {
-                "table_name": "customer_address",
+                "table_name": "customer_addr",
                 "table_name_ssb": "customer_addr",
                 "table_row_key": {
                     "surrogate": false,
@@ -1100,7 +1100,7 @@
                 ]
             },
             {
-                "table_name": "supplier_address",
+                "table_name": "supplier_addr",
                 "table_name_ssb": "supplier_addr",
                 "table_row_key": {
                     "surrogate": false,

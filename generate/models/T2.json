@@ -132,6 +132,7 @@
                             },
                             {
                                 "column_name": "commit_date_fk",
+                                "column_value_prefix": "date",
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"

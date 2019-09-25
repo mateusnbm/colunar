@@ -4,8 +4,8 @@
         "transform_comments": "Normalized, one facts table and a table for each dimension.",
         "transform_tables": [
             {
-                "table_name": "customer_address",
-                "table_name_ssb": "customer_addr",
+                "table_name": "line_order",
+                "table_name_ssb": "lineorder",
                 "table_row_key": {
                     "surrogate": false,
                     "prefix": null,
@@ -13,6 +13,10 @@
                         {
                             "cf_name": "generic_cf",
                             "column_index": 0
+                        },
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 1
                         }
                     ]
                 },
@@ -24,160 +28,106 @@
                         "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
-                                "column_name": "ca_pk",
-                                "ssb_table_name": "customer_addr",
+                                "column_name": "order_number_pk",
+                                "ssb_table_name": "lineorder",
                                 "ssb_column_index": 0,
-                                "ssb_column_name": "ca_pk"
+                                "ssb_column_name": "orderkey"
                             },
                             {
-                                "column_name": "ca_geometry",
-                                "ssb_table_name": "customer_addr",
+                                "column_name": "line_number_pk",
+                                "ssb_table_name": "lineorder",
                                 "ssb_column_index": 1,
-                                "ssb_column_name": "ca_geometry"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "table_name": "supplier_address",
-                "table_name_ssb": "supplier_addr",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "sa_pk",
-                                "ssb_table_name": "supplier_addr",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "sa_pk"
+                                "ssb_column_name": "linenumber"
                             },
                             {
-                                "column_name": "sa_geometry",
-                                "ssb_table_name": "supplier_addr",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "sa_geometry"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "table_name": "city",
-                "table_name_ssb": "city",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "city_pk",
-                                "ssb_table_name": "city",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "city_pk"
+                                "column_name": "customer_fk",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "custkey"
                             },
                             {
-                                "column_name": "city_geometry",
-                                "ssb_table_name": "city",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "city_geometry"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "table_name": "nation",
-                "table_name_ssb": "nation",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "nation_pk",
-                                "ssb_table_name": "nation",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "nation_pk"
+                                "column_name": "part_fk",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "partkey"
                             },
                             {
-                                "column_name": "nation_geometry",
-                                "ssb_table_name": "nation",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "nation_geometry"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "table_name": "region",
-                "table_name_ssb": "region",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "region_pk",
-                                "ssb_table_name": "region",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "region_pk"
+                                "column_name": "supplier_fk",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "suppkey"
                             },
                             {
-                                "column_name": "region_geometry",
-                                "ssb_table_name": "region",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "region_geometry"
+                                "column_name": "order_date_fk",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "orderdate"
+                            },
+                            {
+                                "column_name": "order_priority",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "ordpriority"
+                            },
+                            {
+                                "column_name": "shipping_priority",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "shippriority"
+                            },
+                            {
+                                "column_name": "quantity",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "quantity"
+                            },
+                            {
+                                "column_name": "extended_price",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "extendedprice"
+                            },
+                            {
+                                "column_name": "order_total_price",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "ordtotalprice"
+                            },
+                            {
+                                "column_name": "discount",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 11,
+                                "ssb_column_name": "discount"
+                            },
+                            {
+                                "column_name": "revenue",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 12,
+                                "ssb_column_name": "revenue"
+                            },
+                            {
+                                "column_name": "supply_cost",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 13,
+                                "ssb_column_name": "supplycost"
+                            },
+                            {
+                                "column_name": "tax",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 14,
+                                "ssb_column_name": "tax"
+                            },
+                            {
+                                "column_name": "commit_date_fk",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 15,
+                                "ssb_column_name": "commitdate"
+                            },
+                            {
+                                "column_name": "shipping_mode",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 16,
+                                "ssb_column_name": "shipmode"
                             }
                         ]
                     }
@@ -310,174 +260,6 @@
                 ]
             },
             {
-                "table_name": "part",
-                "table_name_ssb": "part",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "part_pk",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "partkey"
-                            },
-                            {
-                                "column_name": "name",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "name"
-                            },
-                            {
-                                "column_name": "mfgr",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 2,
-                                "ssb_column_name": "mfgr"
-                            },
-                            {
-                                "column_name": "category",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 3,
-                                "ssb_column_name": "category"
-                            },
-                            {
-                                "column_name": "brand",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 4,
-                                "ssb_column_name": "brand1"
-                            },
-                            {
-                                "column_name": "color",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 5,
-                                "ssb_column_name": "color"
-                            },
-                            {
-                                "column_name": "type",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 6,
-                                "ssb_column_name": "type"
-                            },
-                            {
-                                "column_name": "size",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 7,
-                                "ssb_column_name": "size"
-                            },
-                            {
-                                "column_name": "container",
-                                "ssb_table_name": "part",
-                                "ssb_column_index": 8,
-                                "ssb_column_name": "container"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "table_name": "supplier",
-                "table_name_ssb": "supplier",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": null,
-                    "components": [
-                        {
-                            "cf_name": "generic_cf",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families" : [
-                    "generic_cf"
-                ],
-                "table_column_families_data": [
-                    {
-                        "column_f_name": "generic_cf",
-                        "column_f_columns": [
-                            {
-                                "column_name": "supplier_pk",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "suppkey"
-                            },
-                            {
-                                "column_name": "name",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "name"
-                            },
-                            {
-                                "column_name": "address",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 2,
-                                "ssb_column_name": "address"
-                            },
-                            {
-                                "column_name": "city",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 3,
-                                "ssb_column_name": "city"
-                            },
-                            {
-                                "column_name": "nation",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 4,
-                                "ssb_column_name": "nation"
-                            },
-                            {
-                                "column_name": "region",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 5,
-                                "ssb_column_name": ""
-                            },
-                            {
-                                "column_name": "phone",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 6,
-                                "ssb_column_name": ""
-                            },
-                            {
-                                "column_name": "address_fk",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 7,
-                                "ssb_column_name": "address_key"
-                            },
-                            {
-                                "column_name": "city_fk",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 8,
-                                "ssb_column_name": "city_key"
-                            },
-                            {
-                                "column_name": "nation_fk",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 9,
-                                "ssb_column_name": "nation_key"
-                            },
-                            {
-                                "column_name": "region_fk",
-                                "ssb_table_name": "supplier",
-                                "ssb_column_index": 10,
-                                "ssb_column_name": "region_key"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
                 "table_name": "customer",
                 "table_name_ssb": "customer",
                 "table_row_key": {
@@ -574,8 +356,8 @@
                 ]
             },
             {
-                "table_name": "line_order",
-                "table_name_ssb": "lineorder",
+                "table_name": "supplier",
+                "table_name_ssb": "supplier",
                 "table_row_key": {
                     "surrogate": false,
                     "prefix": null,
@@ -583,10 +365,96 @@
                         {
                             "cf_name": "generic_cf",
                             "column_index": 0
-                        },
+                        }
+                    ]
+                },
+                "table_column_families" : [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "supplier_pk",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "suppkey"
+                            },
+                            {
+                                "column_name": "name",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "name"
+                            },
+                            {
+                                "column_name": "address",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "address"
+                            },
+                            {
+                                "column_name": "city",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "city"
+                            },
+                            {
+                                "column_name": "nation",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "nation"
+                            },
+                            {
+                                "column_name": "region",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": ""
+                            },
+                            {
+                                "column_name": "phone",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": ""
+                            },
+                            {
+                                "column_name": "address_fk",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "address_key"
+                            },
+                            {
+                                "column_name": "city_fk",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "city_key"
+                            },
+                            {
+                                "column_name": "nation_fk",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "nation_key"
+                            },
+                            {
+                                "column_name": "region_fk",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "region_key"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "part",
+                "table_name_ssb": "part",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
                         {
                             "cf_name": "generic_cf",
-                            "column_index": 1
+                            "column_index": 0
                         }
                     ]
                 },
@@ -598,106 +466,238 @@
                         "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
-                                "column_name": "order_number_pk",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "part_pk",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 0,
-                                "ssb_column_name": "orderkey"
-                            },
-                            {
-                                "column_name": "line_number_pk",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 1,
-                                "ssb_column_name": "linenumber"
-                            },
-                            {
-                                "column_name": "customer_fk",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 2,
-                                "ssb_column_name": "custkey"
-                            },
-                            {
-                                "column_name": "part_fk",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
                             },
                             {
-                                "column_name": "supplier_fk",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "name",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "name"
+                            },
+                            {
+                                "column_name": "mfgr",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "mfgr"
+                            },
+                            {
+                                "column_name": "category",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "category"
+                            },
+                            {
+                                "column_name": "brand",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 4,
-                                "ssb_column_name": "suppkey"
+                                "ssb_column_name": "brand1"
                             },
                             {
-                                "column_name": "order_date_fk",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "color",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 5,
-                                "ssb_column_name": "orderdate"
+                                "ssb_column_name": "color"
                             },
                             {
-                                "column_name": "order_priority",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "type",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 6,
-                                "ssb_column_name": "ordpriority"
+                                "ssb_column_name": "type"
                             },
                             {
-                                "column_name": "shipping_priority",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "size",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 7,
-                                "ssb_column_name": "shippriority"
+                                "ssb_column_name": "size"
                             },
                             {
-                                "column_name": "quantity",
-                                "ssb_table_name": "lineorder",
+                                "column_name": "container",
+                                "ssb_table_name": "part",
                                 "ssb_column_index": 8,
-                                "ssb_column_name": "quantity"
+                                "ssb_column_name": "container"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "city",
+                "table_name_ssb": "city",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "city_pk",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "city_pk"
                             },
                             {
-                                "column_name": "extended_price",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 9,
-                                "ssb_column_name": "extendedprice"
+                                "column_name": "city_geometry",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "city_geometry"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "nation",
+                "table_name_ssb": "nation",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "nation_pk",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "nation_pk"
                             },
                             {
-                                "column_name": "order_total_price",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 10,
-                                "ssb_column_name": "ordtotalprice"
+                                "column_name": "nation_geometry",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "nation_geometry"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "region",
+                "table_name_ssb": "region",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "region_pk",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "region_pk"
                             },
                             {
-                                "column_name": "discount",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 11,
-                                "ssb_column_name": "discount"
+                                "column_name": "region_geometry",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "region_geometry"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "customer_addr",
+                "table_name_ssb": "customer_addr",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ca_pk",
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "ca_pk"
                             },
                             {
-                                "column_name": "revenue",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 12,
-                                "ssb_column_name": "revenue"
+                                "column_name": "ca_geometry",
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "ca_geometry"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "table_name": "supplier_addr",
+                "table_name_ssb": "supplier_addr",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "generic_cf",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "generic_cf"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "generic_cf",
+                        "column_f_columns": [
+                            {
+                                "column_name": "sa_pk",
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "sa_pk"
                             },
                             {
-                                "column_name": "supply_cost",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 13,
-                                "ssb_column_name": "supplycost"
-                            },
-                            {
-                                "column_name": "tax",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 14,
-                                "ssb_column_name": "tax"
-                            },
-                            {
-                                "column_name": "commit_date_fk",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 15,
-                                "ssb_column_name": "commitdate"
-                            },
-                            {
-                                "column_name": "shipping_mode",
-                                "ssb_table_name": "lineorder",
-                                "ssb_column_index": 16,
-                                "ssb_column_name": "shipmode"
+                                "column_name": "sa_geometry",
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "sa_geometry"
                             }
                         ]
                     }

@@ -1,14 +1,14 @@
 [
     {
-        "transform_id": "T3",
-        "transform_comments": "Normalized, two tables, one for facts and another for the remainder.",
+        "transform_id": "T6",
+        "transform_comments": "Normalized, sharing the same table and column family.",
         "transform_tables": [
             {
-                "table_name": "line_order",
+                "table_name": "generic_table",
                 "table_name_ssb": "lineorder",
                 "table_row_key": {
                     "surrogate": false,
-                    "prefix": null,
+                    "prefix": "line_order",
                     "components": [
                         {
                             "cf_name": "generic_cf",
@@ -146,25 +146,14 @@
                     "prefix": "date",
                     "components": [
                         {
-                            "cf_name": "date_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
-                "table_column_families": [
-                    "date_cf",
-                    "customer_cf",
-                    "supplier_cf",
-                    "part_cf",
-                    "city_cf",
-                    "nation_cf",
-                    "region_cf",
-                    "customer_addr_cf",
-                    "supplier_addr_cf"
-                ],
                 "table_column_families_data": [
                     {
-                        "column_f_name": "date_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "date_pk",
@@ -280,14 +269,14 @@
                     "prefix": "customer",
                     "components": [
                         {
-                            "cf_name": "customer_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "customer_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "customer_pk",
@@ -377,14 +366,14 @@
                     "prefix": "supplier",
                     "components": [
                         {
-                            "cf_name": "supplier_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "supplier_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "supplier_pk",
@@ -468,14 +457,14 @@
                     "prefix": "part",
                     "components": [
                         {
-                            "cf_name": "part_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "part_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "part_pk",
@@ -543,14 +532,14 @@
                     "prefix": "city",
                     "components": [
                         {
-                            "cf_name": "city_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "city_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "city_pk",
@@ -576,14 +565,14 @@
                     "prefix": "nation",
                     "components": [
                         {
-                            "cf_name": "nation_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "nation_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "nation_pk",
@@ -609,14 +598,14 @@
                     "prefix": "region",
                     "components": [
                         {
-                            "cf_name": "region_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "region_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "region_pk",
@@ -642,14 +631,14 @@
                     "prefix": "customer_addr",
                     "components": [
                         {
-                            "cf_name": "customer_addr_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "customer_addr_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "ca_pk",
@@ -675,14 +664,14 @@
                     "prefix": "supplier_addr",
                     "components": [
                         {
-                            "cf_name": "supplier_addr_cf",
+                            "cf_name": "generic_cf",
                             "column_index": 0
                         }
                     ]
                 },
                 "table_column_families_data": [
                     {
-                        "column_f_name": "supplier_addr_cf",
+                        "column_f_name": "generic_cf",
                         "column_f_columns": [
                             {
                                 "column_name": "sa_pk",

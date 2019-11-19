@@ -79,7 +79,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/T7.json', 'r')
+tf_file = open('./models/T4.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -244,7 +244,7 @@ for transform_i, transform in enumerate(tf_data):
 
             hb_file.write('\n')
 
-            if i == 0: break
+            #if i == 0: break
 
         hb_file.close()
 

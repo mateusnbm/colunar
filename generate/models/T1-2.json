@@ -1,7 +1,7 @@
 [
     {
         "transform_id": "T1-2",
-        "transform_comments": "Denormalized, sharing the same table with different column families. Geospatial data remainds normalized.",
+        "transform_comments": "Denormalized, sharing the same table with different column families. Geospatial data remains normalized.",
         "transform_tables": [
             {
                 "table_name": "generic_table",

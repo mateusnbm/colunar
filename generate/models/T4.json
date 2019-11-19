@@ -552,7 +552,7 @@
                             {
                                 "column_name": "city_geometry",
                                 "ssb_table_name": "city",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 0,
                                 "ssb_column_name": "city_geometry"
                             }
                         ]
@@ -588,7 +588,7 @@
                             {
                                 "column_name": "nation_geometry",
                                 "ssb_table_name": "nation",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 0,
                                 "ssb_column_name": "nation_geometry"
                             }
                         ]
@@ -624,7 +624,7 @@
                             {
                                 "column_name": "region_geometry",
                                 "ssb_table_name": "region",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 0,
                                 "ssb_column_name": "region_geometry"
                             }
                         ]

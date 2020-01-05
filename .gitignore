@@ -1,8 +1,11 @@
 # Exclude large files
-/generate/data_geo/*
-/generate/data_hbase/*
-/generate/data_ssb/*
-/generate/data_ssb_geo/*
+/apps/generate/data_geo/*
+/apps/generate/data_hbase/*
+/apps/generate/data_ssb/*
+/apps/generate/data_ssb_geo/*
+/apps/generate-geoms/
+/apps/generate-geoms/csvs/*
+/apps/generate-geoms/finals/*
 
 # macOS
 .DS_Store

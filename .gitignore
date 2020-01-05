@@ -3,7 +3,6 @@
 /apps/generate/data_hbase/*
 /apps/generate/data_ssb/*
 /apps/generate/data_ssb_geo/*
-/apps/generate-geoms/
 /apps/generate-geoms/csvs/*
 /apps/generate-geoms/finals/*
 

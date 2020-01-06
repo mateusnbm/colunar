@@ -13,21 +13,21 @@ input_file_path = input_path + 'brazil.shp'
 output_file_path = output_path + 'brazil.csv'
 attributes_raw = ['ISO', 'NAME_ISO']
 attributes_alias = ['ISO', 'NAME', 'GEOM']
-'''
+#'''
 
 '''
 input_file_path = input_path + 'brazil-states.shp'
 output_file_path = output_path + 'brazil-states.csv'
 attributes_raw = ['NAME_1', 'ISO', 'NAME_0']
 attributes_alias = ['NAME', 'COUNTRY_ISO', 'COUNTRY_NAME', 'GEOM']
-'''
+#'''
 
 '''
 input_file_path = input_path + 'usa.shp'
 output_file_path = output_path + 'usa.csv'
 attributes_raw = ['ISO', 'NAME_ISO']
 attributes_alias = ['ISO', 'NAME', 'GEOM']
-'''
+#'''
 
 #'''
 input_file_path = input_path + 'usa-states.shp'
@@ -46,22 +46,33 @@ field_names = [field[0] for field in fields]
 
 for sr in input_file.shapeRecords():
 
+    polygons = []
+
     attributes = dict(zip(field_names, sr.record))
     attributes = [unidecode.unidecode(attributes[name].upper()) for name in attributes_raw]
 
-    wkt_geom = []
     geometry = sr.shape.__geo_interface__
     type = geometry['type']
-    polygons = geometry['coordinates']
-    polygons = polygons if type == 'MultiPolygon' else [polygons]
+    coordinates = geometry['coordinates']
 
-    for polygon in polygons:
+    if type == 'Polygon':
 
-        coordinates = [(str(lat) + ' ' + str(lon)) for lat, lon in polygon[0]]
-        wkt_polygon = '(' + ', '.join(coordinates) + ')'
-        wkt_geom.append(wkt_polygon)
+        coordinates = [coordinates]
+
+    for polygon in coordinates:
+
+        regions = []
+
+        for region in polygon:
+
+            region_points = [(str(lat) + ' ' + str(lon)) for lat, lon in region]
+            region_wkt = '(' + ','.join(region_points) + ')'
+
+            regions.append(region_wkt)
+
+        polygons.append('(' + ', '.join(regions) + ')')
 
     output_file.write(','.join(attributes))
-    output_file.write(',polygon(' + ', '.join(wkt_geom) + ')\n')
+    output_file.write(',\"MULTIPOLYGON(' + ', '.join(polygons) + ')\"\n')
 
 output_file.close()

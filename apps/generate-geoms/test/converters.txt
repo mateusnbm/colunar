@@ -1,0 +1,89 @@
+geomesa = {
+  sfts = {
+    "custom-countries" = {
+      attributes = [
+        { name = "ISO",   type = "String",        index = false                              }
+        { name = "NAME",  type = "String",        index = false                              }
+        { name = "GEOM",  type = "MultiPolygon",  index = false, srid = 4326, default = true }
+      ]
+    }
+    "custom-states" = {
+      attributes = [
+        { name = "NAME",          type = "String",        index = false                              }
+        { name = "COUNTRY_ISO",   type = "String",        index = false                              }
+        { name = "COUNTRY_NAME",  type = "String",        index = false                              }
+        { name = "GEOM",          type = "MultiPolygon",  index = false, srid = 4326, default = true }
+      ]
+    }
+    "custom-people" = {
+      attributes = [
+        { name = "pid",         type = "Integer",      index = false                              }
+        { name = "name",        type = "String",       index = false                              }
+        { name = "surname",     type = "String",       index = false                              }
+        { name = "birthday",    type = "Date",         index = false                              }
+        { name = "birth_geom",  type = "Point",        index = false, srid = 4326, default = true }
+      ]
+    }
+  }
+  converters = {
+    "custom-countries-csv" = {
+      type = "delimited-text",
+      format = "CSV",
+      id-field = "$name",
+      fields = [
+        { name = "iso",   transform = "$1::string"        }
+        { name = "name",  transform = "$2::string"        }
+        { name = "geom",  transform = "multipolygon($3)"  }
+      ]
+    }
+    "custom-states-csv" = {
+      type = "delimited-text",
+      format = "CSV",
+      id-field = "$name",
+      fields = [
+        { name = "name",          transform = "$1::string"        }
+        { name = "country_iso",   transform = "$2::string"        }
+        { name = "country_name",  transform = "$3::string"        }
+        { name = "geom",          transform = "multipolygon($4)"  }
+      ]
+    }
+    "custom-people-csv" = {
+      type = "delimited-text",
+      format = "CSV",
+      options {
+        skip-lines = 1
+      },
+      id-field = "toString($pid)",
+      fields = [
+        { name = "pid",         transform = "$1::int"                       }
+        { name = "name",        transform = "$2::string"                    }
+        { name = "surname",     transform = "$3::string"                    }
+        { name = "birthday",    transform = "date('yyyy-MM-dd', $4)"        }
+        { name = "birth_lat",   transform = "$5::double"                    }
+        { name = "birth_lon",   transform = "$6::double"                    }
+        { name = "birth_geom",  transform = "point($birth_lon, $birth_lat)" }
+      ]
+    }
+  }
+}
+
+bin/geomesa-hbase ingest -c countries -s custom-countries -C custom-countries-csv "/Users/mateusnbm/Desktop/workspace/colunar/apps/generate-geoms/finals/countries.csv"
+bin/geomesa-hbase ingest -c states -s custom-states -C custom-states-csv "/Users/mateusnbm/Desktop/workspace/colunar/apps/generate-geoms/finals/states.csv"
+bin/geomesa-hbase ingest -c people -s custom-people -C custom-people-csv "/Users/mateusnbm/Desktop/workspace/colunar/apps/generate-geoms/test/people.csv"
+
+disable 'people'
+drop 'people'
+disable 'people_custom_2dpeople_id_v4'
+drop 'people_custom_2dpeople_id_v4'
+disable 'people_custom_2dpeople_z2_birth_5fgeom_v5'
+drop 'people_custom_2dpeople_z2_birth_5fgeom_v5'
+disable 'people_custom_2dpeople_z3_birth_5fgeom_birthday_v6'
+drop 'people_custom_2dpeople_z3_birth_5fgeom_birthday_v6'
+
+disable 'countries'
+drop 'countries'
+disable 'countries_custom_2dcountries_id_v4'
+drop 'countries_custom_2dcountries_id_v4'
+disable 'countries_custom_2dcountries_xz2_GEOM_v2'
+drop 'countries_custom_2dcountries_xz2_GEOM_v2'
+

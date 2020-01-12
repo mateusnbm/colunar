@@ -5,6 +5,7 @@
 /apps/generate/data_ssb_geo/*
 /apps/generate-geoms/csvs/*
 /apps/generate-geoms/finals/*
+/apps/generate-geoms/hbase/*
 
 # macOS
 .DS_Store

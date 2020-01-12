@@ -1,0 +1,46 @@
+
+create 'people', 'cf'
+
+put 'people', '1', 'cf:PID', '1'
+put 'people', '1', 'cf:NAME', 'MATEUS'
+put 'people', '1', 'cf:SURNAME', 'NUNES DE BARROS MAGALHAES'
+put 'people', '1', 'cf:BIRTHDAY', '30-09-1994'
+put 'people', '1', 'cf:BIRTH_LAT', '-7.069373'
+put 'people', '1', 'cf:BIRTH_LON', '-41.454076'
+put 'people', '1', 'cf:BIRTH_POINT', 'POINT(-41.454076 -7.069373)'
+
+put 'people', '2', 'cf:PID', '2'
+put 'people', '2', 'cf:NAME', 'JOSE'
+put 'people', '2', 'cf:SURNAME', 'MAGALHAES'
+put 'people', '2', 'cf:BIRTHDAY', '11-11-1960'
+put 'people', '2', 'cf:BIRTH_LAT', '-3.458996'
+put 'people', '2', 'cf:BIRTH_LON', '-40.211932'
+put 'people', '2', 'cf:BIRTH_POINT', 'POINT(-40.211932 -3.458996)'
+
+put 'people', '3', 'cf:PID', '3'
+put 'people', '3', 'cf:NAME', 'VERONICA'
+put 'people', '3', 'cf:SURNAME', 'NUNES DE BARROS MAGALHAES'
+put 'people', '3', 'cf:BIRTHDAY', '03-04-1964'
+put 'people', '3', 'cf:BIRTH_LAT', '-5.091247'
+put 'people', '3', 'cf:BIRTH_LON', '-42.811595'
+put 'people', '3', 'cf:BIRTH_POINT', 'POINT(-42.811595 -5.091247)'
+
+put 'people', '4', 'cf:PID', '4'
+put 'people', '4', 'cf:NAME', 'MARIA'
+put 'people', '4', 'cf:SURNAME', 'NUNES DE BARROS MAGALHAES'
+put 'people', '4', 'cf:BIRTHDAY', '18-05-2017'
+put 'people', '4', 'cf:BIRTH_LAT', '-22.979353'
+put 'people', '4', 'cf:BIRTH_LON', '-43.421564'
+put 'people', '4', 'cf:BIRTH_POINT', 'POINT(-43.421564 -22.979353)'
+
+
+put 'people', '5', 'cf:PID', '5'
+put 'people', '5', 'cf:NAME', 'GABRIEL'
+put 'people', '5', 'cf:SURNAME', 'NUNES DE BARROS MENDES'
+put 'people', '5', 'cf:BIRTHDAY', '22-08-1992'
+put 'people', '5', 'cf:BIRTH_LAT', '-5.083505'
+put 'people', '5', 'cf:BIRTH_LON', '-42.760863'
+put 'people', '5', 'cf:BIRTH_POINT', 'POINT(-42.760863 -5.083505)'
+
+
+

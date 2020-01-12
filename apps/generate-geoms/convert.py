@@ -8,7 +8,7 @@ import shapefile
 input_path = 'shapefiles/'
 output_path = 'csvs/'
 
-'''
+#'''
 input_file_path = input_path + 'brazil.shp'
 output_file_path = output_path + 'brazil.csv'
 attributes_raw = ['ISO', 'NAME_ISO']
@@ -29,7 +29,7 @@ attributes_raw = ['ISO', 'NAME_ISO']
 attributes_alias = ['ISO', 'NAME', 'GEOM']
 #'''
 
-#'''
+'''
 input_file_path = input_path + 'usa-states.shp'
 output_file_path = output_path + 'usa-states.csv'
 attributes_raw = ['NAME_1', 'ISO', 'NAME_0']

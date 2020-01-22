@@ -1,0 +1,2 @@
+SELECT count(*) from region where 
+ST_INTERSECTS(region_geo, 'POLYGON(( 0.999 0.999, 223.776 0.999, 223.776 498.501, 0.999 498.501, 0.999 0.999))')

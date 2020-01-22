@@ -6,6 +6,8 @@
 /apps/generate-geoms/csvs/*
 /apps/generate-geoms/finals/*
 /apps/generate-geoms/hbase/*
+/apps/generate-samara/tables-ssb/*
+/apps/generate-samara/tables-vssb/*
 
 # macOS
 .DS_Store

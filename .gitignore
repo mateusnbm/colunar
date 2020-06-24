@@ -8,6 +8,7 @@
 /apps/generate-geoms/hbase/*
 /apps/generate-samara/tables-ssb/*
 /apps/generate-samara/tables-vssb/*
+/apps/generate-samara-2/*
 
 # macOS
 .DS_Store

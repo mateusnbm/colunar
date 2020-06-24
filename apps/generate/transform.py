@@ -6,6 +6,35 @@
 import os
 import sys
 import json
+import time
+
+'''
+
+Something.
+
+'''
+
+def pp_db_size(n):
+    if n < 1001:
+        return ('{:.2f}'.format(round(n, 2)) + ' bytes')
+    elif n < 1000001:
+        return ('{:.2f}'.format(round((n/1000), 2)) + ' kilobytes')
+    elif n < 1000000001:
+        return ('{:.2f}'.format(round((n/1000000), 2)) + ' megabytes')
+    else:
+        return ('{:.2f}'.format(round((n/1000000000), 2)) + ' gigabytes')
+
+'''
+
+Something.
+
+'''
+
+def pp_time(n):
+    h = int(n/3600)
+    m = int((n-(h*3600))/60)
+    s = int(n-(h*3600)-(m*60))
+    return '{:02d}:{:02d}:{:02d}'.format(h, m, s)
 
 
 '''
@@ -69,8 +98,8 @@ Somehting.
 
 window_rows, window_columns = os.popen('stty size', 'r').read().split()
 
-sys.stdout.write('\n' * 6)
-sys.stdout.write('\033[F' * 5)
+sys.stdout.write('\n' * 8)
+sys.stdout.write('\033[F' * 7)
 
 
 '''
@@ -79,7 +108,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/T4.json', 'r')
+tf_file = open('./models/compare-no-geo/ROB-M12.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -152,6 +181,10 @@ for transform_i, transform in enumerate(tf_data):
     Generate code to create the tables and populate them.
     '''
 
+    up_count = 0
+    db_bytes = 0
+    abs_time = time.monotonic()
+
     for table_i, table in enumerate(transform_tables):
 
         table_name = table['table_name']
@@ -172,6 +205,8 @@ for transform_i, transform in enumerate(tf_data):
 
         for i, line in enumerate(ssb_tables[table_name_ssb]):
 
+            #if i > 4999: break
+
             data = line.split('|')
             rowkey = str(i) if table_rk_surrogate == True else determineRowKey(table, data)
             cmdprefix = 'put \'' + table_name + '\', \'' + rowkey + '\', '
@@ -184,6 +219,7 @@ for transform_i, transform in enumerate(tf_data):
                 for c_i, c in enumerate(cf_columns):
 
                     c_name = c['column_name']
+                    c_datatype = c['column_datatype']
                     c_ssb_table_name = c['ssb_table_name']
                     c_ssb_column_index = c['ssb_column_index']
 
@@ -222,7 +258,8 @@ for transform_i, transform in enumerate(tf_data):
 
                     c_cmd = cmdprefix
                     c_cmd += '\'' + (cf_name + ':' + c_name) + '\', '
-                    c_cmd += '\'' + c_data + '\''
+                    c_cmd += '\'' + c_data + '\', '
+                    c_cmd += '\'' + c_datatype + '\''
                     c_cmd += '\n'
 
                     hb_file.write(c_cmd)
@@ -237,8 +274,14 @@ for transform_i, transform in enumerate(tf_data):
                     c_log += 'Family: ' + str(cf_i+1) + '/' + str(len(table_column_families_data)) + '.' + (10 * ' ') + '\n'
                     c_log += 'Column: ' + str(c_i+1) + '/' + str(len(cf_columns)) + '.' + (10 * ' ') + '\n'
 
+                    db_bytes += len(c_cmd)
+                    current_time = time.monotonic()
+
+                    c_log += 'Size: ' + pp_db_size(db_bytes) + '.' + (10 * ' ') + '\n'
+                    c_log += 'Elapsed time: ' + pp_time(current_time-abs_time) + '.' + (10 * ' ') + '\n'
+
                     sys.stdout.write(c_log)
-                    sys.stdout.write('\033[F' * 5)
+                    sys.stdout.write('\033[F' * 7)
 
                 hb_file.write('\n')
 
@@ -254,4 +297,4 @@ for transform_i, transform in enumerate(tf_data):
 
     #break
 
-    sys.stdout.write('\n' * 6)
+    sys.stdout.write('\n' * 8)

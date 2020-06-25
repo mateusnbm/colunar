@@ -108,7 +108,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/compare-no-geo/ROB-M12.json', 'r')
+tf_file = open('./models/compare-no-geo/NLA.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -201,7 +201,7 @@ for transform_i, transform in enumerate(tf_data):
             families = table['table_column_families']
             families = [(', \''+ cf +'\'') for cf in families]
 
-            hb_file.write('\ncreate \'' + table_name +'\'' + ' '.join(families) + '\n\n')
+            hb_file.write('create \'' + table_name +'\'' + ' '.join(families) + '\n')
 
         for i, line in enumerate(ssb_tables[table_name_ssb]):
 
@@ -283,9 +283,9 @@ for transform_i, transform in enumerate(tf_data):
                     sys.stdout.write(c_log)
                     sys.stdout.write('\033[F' * 7)
 
-                hb_file.write('\n')
+                #hb_file.write('\n')
 
-            hb_file.write('\n')
+            #hb_file.write('\n')
 
             #if i == 0: break
 

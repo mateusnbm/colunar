@@ -172,7 +172,7 @@
                             {
                                 "column_name": "BA",
                                 "column_desc": "order_date_date_pk",
-                                "column_datatype": "string",
+                                "column_datatype": "int",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -410,7 +410,7 @@
                             {
                                 "column_name": "CA",
                                 "column_desc": "commit_date_date_pk",
-                                "column_datatype": "string",
+                                "column_datatype": "int",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -466,7 +466,7 @@
                             {
                                 "column_name": "CE",
                                 "column_desc": "commit_date_year",
-                                "column_datatype": "string",
+                                "column_datatype": "int",
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "year",

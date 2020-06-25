@@ -1,29 +1,24 @@
 
 import re
 import sys
+import time
 import struct
 import happybase
+
+def pp_time(n):
+    h = int(n/3600)
+    m = int((n-(h*3600))/60)
+    s = int(n-(h*3600)-(m*60))
+    return '{:02d}:{:02d}:{:02d}'.format(h, m, s)
 
 def formatted_data(d, t):
     if t == 'string':
         return d
     else:
         return struct.pack(">i", int(d))
-    if t == 'boolean':
-        return int(d).to_bytes(1, byteorder='big')
-    elif t == 'byte':
-        return int(d).to_bytes(1, byteorder='big')
-    elif t == 'short':
-        return int(d).to_bytes(2, byteorder='big')
-    elif t == 'int':
-        return int(d).to_bytes(4, byteorder='big')
-    elif t == 'long':
-        return int(d).to_bytes(8, byteorder='big')
-    else:
-        return d
 
-sys.stdout.write('\n' * 3)
-sys.stdout.write('\033[F' * 2)
+sys.stdout.write('\n' * 4)
+sys.stdout.write('\033[F' * 3)
 
 file = open('/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/ROB-M12/generic_table.txt', 'r')
 
@@ -81,6 +76,8 @@ ldata = {qualifiers: formatted_data(data, datatype)}
 table = connection.table(table_name)
 batch = table.batch(batch_size=1000)
 
+abs_time = time.monotonic()
+
 for i, line in enumerate(file):
 
     components = line.split('\'')[1::2]
@@ -99,10 +96,12 @@ for i, line in enumerate(file):
         lrowkey = rowkey
         ldata = {qualifiers: formatted_data(data, datatype)}
 
-    log = 'Line: ' + str(i+2) + '/' + str(lcount) + '.' + (10 * ' ') + '\n'
+    diff = time.monotonic()-abs_time
+    log = 'Line: ' + '{:,}'.format(i+2) + '/' + '{:,}'.format(lcount) + '.' + (10 * ' ') + '\n'
+    log = log + 'Elapsed time: ' + pp_time(diff) + '.' + (10 * ' ') + '\n'
 
     sys.stdout.write(log)
-    sys.stdout.write('\033[F' * 1)
+    sys.stdout.write('\033[F' * 2)
 
 batch.put(lrowkey, ldata)
 batch.send()
@@ -110,4 +109,4 @@ batch.send()
 file.close()
 connection.close()
 
-sys.stdout.write('\n' * 2)
+sys.stdout.write('\n' * 3)

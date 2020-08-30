@@ -11,7 +11,7 @@ CREATE TABLE part(
   atnull character varying(1),
   CONSTRAINT part_pk PRIMARY KEY (p_partkey)
 );
-copy part from 'C:\ssb\ssb-dados-sf1\part.tbl' with delimiter '|';
+copy part from '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_ssb/part.tbl' with delimiter '|';
 alter table part drop column atnull;
 
 
@@ -26,7 +26,7 @@ CREATE TABLE supplier(
   atnull character(1),
   CONSTRAINT supplier_pk PRIMARY KEY (s_suppkey)
 );
-copy supplier from 'C:\ssb\ssb-dados-sf1\supplier.tbl' with delimiter '|';
+copy supplier from 'C/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_ssb/supplier.tbl' with delimiter '|';
 alter table supplier drop column atnull;
 
 
@@ -51,7 +51,7 @@ CREATE TABLE date(
   atnull character(1),
   CONSTRAINT date_pk PRIMARY KEY (d_datekey)
 );
-copy date from 'C:\ssb\ssb-dados-sf1\date.tbl' with delimiter '|';
+copy date from '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_ssb/date.tbl' with delimiter '|';
 alter table date drop column atnull;
 
 
@@ -67,7 +67,7 @@ CREATE TABLE customer(
   atnull character(1),
   CONSTRAINT customer_pk PRIMARY KEY (c_custkey)
 );
-copy customer from 'C:\ssb\ssb-dados-sf1\customer.tbl' with delimiter '|';
+copy customer from '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_ssb/customer.tbl' with delimiter '|';
 alter table customer drop column atnull;
 
 
@@ -91,6 +91,6 @@ CREATE TABLE lineorder(
   lo_shipmode character(10),
   atnull character(1)  
 );
-copy lineorder from 'C:\ssb\ssb-dados-sf1\lineorder.tbl' with delimiter '|';
+copy lineorder from '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_ssb/lineorder.tbl' with delimiter '|';
 ALTER TABLE lineorder DROP COLUMN atnull;
 

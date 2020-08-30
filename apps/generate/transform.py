@@ -108,7 +108,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/compare-no-geo/NLA.json', 'r')
+tf_file = open('./models/roberio/M1-A-G3.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -185,12 +185,19 @@ for transform_i, transform in enumerate(tf_data):
     db_bytes = 0
     abs_time = time.monotonic()
 
+    # Iteramos sobre a lista de tabelas. Podemos passar por tabelas com o
+    # mesmo nome, neste caso, os dados são armazenados na mesma tabela já
+    # existente mas em linhas diferentes (normalização em tabela única).
+
     for table_i, table in enumerate(transform_tables):
 
         table_name = table['table_name']
         table_name_ssb = table['table_name_ssb']
         table_column_families_data = table['table_column_families_data']
         table_rk_surrogate = table['table_row_key']['surrogate']
+
+        # Se não existir um arquivo para a tabela, adicionamos o comando para
+        # a criação da tabela no HBase (nome da tabela e lista de famílias).
 
         hb_filepath = transform_path + table_name + '.txt'
         hb_file_exists = os.path.exists(hb_filepath)
@@ -203,9 +210,9 @@ for transform_i, transform in enumerate(tf_data):
 
             hb_file.write('create \'' + table_name +'\'' + ' '.join(families) + '\n')
 
-        for i, line in enumerate(ssb_tables[table_name_ssb]):
+        # ...
 
-            #if i > 4999: break
+        for i, line in enumerate(ssb_tables[table_name_ssb]):
 
             data = line.split('|')
             rowkey = str(i) if table_rk_surrogate == True else determineRowKey(table, data)
@@ -274,7 +281,7 @@ for transform_i, transform in enumerate(tf_data):
                     c_log += 'Family: ' + str(cf_i+1) + '/' + str(len(table_column_families_data)) + '.' + (10 * ' ') + '\n'
                     c_log += 'Column: ' + str(c_i+1) + '/' + str(len(cf_columns)) + '.' + (10 * ' ') + '\n'
 
-                    db_bytes += len(c_cmd)
+                    db_bytes += len(c_data)
                     current_time = time.monotonic()
 
                     c_log += 'Size: ' + pp_db_size(db_bytes) + '.' + (10 * ' ') + '\n'
@@ -283,11 +290,11 @@ for transform_i, transform in enumerate(tf_data):
                     sys.stdout.write(c_log)
                     sys.stdout.write('\033[F' * 7)
 
-                #hb_file.write('\n')
+                hb_file.write('\n')
 
-            #hb_file.write('\n')
+            hb_file.write('\n')
 
-            #if i == 0: break
+            if i == 0: break
 
         hb_file.close()
 

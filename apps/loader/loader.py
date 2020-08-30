@@ -20,7 +20,7 @@ def formatted_data(d, t):
 sys.stdout.write('\n' * 4)
 sys.stdout.write('\033[F' * 3)
 
-file = open('/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/ROB-M12/generic_table.txt', 'r')
+file = open('/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/DLA-CF/t-small.txt', 'r')
 
 for i, l in enumerate(file): pass
 lcount = i

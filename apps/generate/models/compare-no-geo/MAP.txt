@@ -1,0 +1,345 @@
+
+
+
+Variável 1: Número de tabelas.
+
+    - Uma tabela.
+    - Duas tabelas.
+    - Múltiplas tabelas.
+
+Variável 2: Número de famílias.
+
+    - Uma família.
+    - Duas famílias.
+    - Múltiplas famílias.
+
+Variável 3: Relacionamento entre fontes de dados numa tabela.
+
+    - Embarcar.
+    - Referenciar.
+
+
+
+
+Combinações:
+
+    [1] Uma tabela (fatos e dimensões em uma única tabela):
+
+        TABELA GENÉRICA
+
+            [2] Uma família (fatos e dimensões são armazenados na mesma família):
+ 
+            [2] Duas famílias (uma família para fatos e outra para as dimensões):                           <=========== [OTIMIZAÇÃO]
+
+            [2] Múltiplas famílias (fatos e dimensões possuem suas próprias famílias):
+
+    [1] Duas tabelas (uma tabela para fatos e outra para as dimensões):
+
+        TABELA DE FATOS:
+
+            [2] Uma família:
+
+            [2] Duas famílias:                                                                              <=========== [NÃO FAZ SENTIDO]
+
+            [2] Múltiplas famílias:                                                                         <=========== [NÃO FAZ SENTIDO]
+
+        TABELA DE DIMENSÕES:
+
+            [2] Uma família (dimensões são armazenadas na mesma família):
+
+            [2] Duas famílias:                                                                              <=========== [PODE FAZER SENTIDO NA PARTE GEOESPACIAL]
+
+            [2] Múltiplas famílias (cada dimensão possui sua própria família):
+
+    [1] Múltiplas tabelas (fatos e dimensões possuem suas próprias tabelas):
+
+        TABELA QUALQUER:
+
+            [2] Uma família: 
+
+            [2] Duas famílias:                                                                              <=========== [NÃO FAZ SENTIDO]
+
+            [2] Múltiplas famílias:                                                                         <=========== [NÃO FAZ SENTIDO]
+
+
+
+
+
+
+Combinações:
+
+    [1] Uma tabela (fatos e dimensões em uma única tabela):
+
+        [2] Uma família (fatos e dimensões são armazenados na mesma família):
+
+            [3] Embarcar (abordagem desnormalizada, redundância de dados das dimensões):
+
+                (*) Modelo 1T-1CF-EMB.
+
+                        Modelo Denormalized Logical Approach (DLA) apresentado no artigo Using the Column Oriented NoSQL model
+                        for Implementing Big Data Warehouses de 2015, do Dehdouh. Citado por vários outros artigos para comparação.
+                
+                (+) Bom para consultas envolvendo muitas dimensões. 
+
+                        Como os dados estão desnormalizados e armazenados numa mesma família, não existe a necessidade de
+                        junções e carregamento de arquivos adicionais de outras famílias, logo, este modelo tende a superar
+                        os demais que precisem realizar mais junções ou abrir mais arquivos a medida que mais dimensões sejam
+                        incorporadas nas consultas. 
+
+                (-) Muita redundância.
+
+                        Como toda abordagem desnormalizada, teremos muitos dados replicados. Dependendo do tamanho da base,
+                        este modelo pode ser impraticável por demandar muita memória física.
+
+                (-) Ruim para consultas envolvendo muitos atributos que poderiam estar agrupados em um grupo lógico (família).
+
+                        O HBase armazena as linhas e colunas em blocos contíguos de memória separados por família e tabela,
+                        logo, o número de colunas por família impacta no número de blocos que precisam ser carregados e lidos.
+                        Desta forma, para consultas que leiam muitos atributos de um mesmo grupo lógico, este modelo será pior
+                        do que modelos que tenham tais atributos separados em uma mesma família.
+
+                (?) Será melhor do que uma versão com múltiplas famílias se o número de bytes por linha for pequeno?
+
+                        Intenção de validar se o overhead do carregamento de arquivos de famílias é pior do que o overhead gerado
+                        pela grande concentração de atributos em uma mesma família. Este questionamento não foi encontrado na
+                        literatura e é util para ajudar na definição se dados devem ser separados ou combinados numa mesma família.
+                        Como exemplo, podemos pensar num cenário com colunas de inteiros e colunas de campos de texto.
+
+            [3] Referenciar (abordagem normalizada, fatos referenciam dimensões):
+
+                (*) Modelo 1T-1CF-REF.
+
+                        Não encontrado na literatura.
+                
+                (+) Sem redundância.
+
+                        Seguindo uma abordagem desnormalizada, este modelo não apresenta redundância.
+
+                (+) Facilidade para incorporação de mecanismo de hash (true big data, base sem esquema claro).
+
+                        Todos os dados são armazenados na mesma tabela, sem redundância e sem esquema predefinido. Assim,
+                        podemos controlar a disposição das linhas (de diferentes fontes) nessa supertabela através do uso
+                        de uma função de hash. Uma boa função será capaz de dispor dados relacionados no mesmo cluster, 
+                        diminuir o tráfego na rede e maximinar o poder computacional paralelo.
+                
+                (-) Necessidade de criar um mecanismo de distribuição de entradas para balancear o cluster (aplicar hash nas chaves).
+
+                        A definição dessa função de hash é uma tarefa difícil. Uma possibilidade simples para fins de testes
+                        preliminares poderia ser a distribuição aleatória dos dados, sendo necessário averiguar se o uso de sufixos
+                        melhora ou deteiora o desempenho.
+
+                (-) Com prefixos, os dados não serão distribuídos de forma igualitária no cluster.
+
+                        O HBase faz o particionamento horizontal das tabelas, distribuindo os pedações entre os nós do cluster.
+                        Neste caso, como temos apenas uma tabela, o uso de prefixos faria com que, eventualmente, cada nó do cluster
+                        ficasse responsável por uma fonte de dados (tabela no ambiente relacional).
+
+                (-) Com prefixos, a técnica de predicate pushdown não funcionaria apropriadamente.
+
+                        Pelos motivos explanados no item acima, como cada máquina possúi apenas entradas de uma única fonte, não 
+                        seria possível empregar a técnica de predicate pushdown e todos os dados teriam que ser trazidos para o nó
+                        principal para serem processados. O poder computacional paralelo não seria utilizado em sua plenitude.
+
+                (-) Sem prefixos, será necessário um tempo adicional para filtrar todas as entradas da tabela com base em sufixos ou colunas vazias.
+
+                        Como visto, o uso de prefixos não aparente ser viável, logo, temos que empregar o uso de sufixos ou de
+                        verificações da existência de colunas para filtrar os dados de tabelas. Essa filtragem pode ser muito
+                        custosa a ponto de inviabilizar a adoção deste modelo. 
+                
+                (?) Será muito custoso filtrar com base em sufixos?
+
+                        Precisaremos distinguir, pelo menos, linhas da tabela de fatos das demais e, para isso, precisamos avaliar
+                        se o emprego de sufixos é muito custoso ou alternativa viável. Exemplificando, as linhas da tabela de fatos
+                        poderiam ser filtradas pelo sufixo "_fato" presente nas chaves de linha.
+
+                (?) Será muito custoso filtrar com base na checagem se certas colunas não são vazias?
+
+                        Precisamos distinguir, pelo menos, linhas da tabela de fatos das demais e, para isso, precisamos avaliar
+                        se a verificação da nulidade de colunas é muito custoso ou alternativa viável. Exemplificando, as linhas
+                        da tabela de fatos poderiam ser filtradas pela presença da colunas intitulada "fato_pk".
+
+                (?) Custo de junção mais baixo do que modelos com abordagem normalizada tradicional?
+
+                        Determinar se o overhead do gerenciamento de informações de duas tabelas será superior a combinação de todas
+                        as fontes de dados (tabelas do ambiente relacional) numa mesma tabela do HBase. 
+
+                (?) Como distribuir as entradas de forma inteligente?
+
+                        A função hash que distribui entradas pelo cluster terá o poder de reduzir o tráfego pela rede e melhorar
+                        o uso do poder computacional paralelo, consequentemente, gerando um ganho de desempenho. Necessário avaliar
+                        como construir tal função, por exemplo, olhando princípios de localidade.
+
+        [2] Duas famílias (uma família para fatos e outra para as dimensões):
+
+
+            [3] Embarcar (abordagem desnormalizada, redundância de dados das dimensões):
+
+                (*) Modelo 1T-2CF-EMB.
+
+                        Este modelo foi encontrado na literatura sob a forma do FactDate do Scabora, no qual, fatos são
+                        combinados com a tabela de data numa única família as demais dimensões são dispostas numa outra
+                        família. Não encontramos na literatura uma versão que separe fatos e dimensões em duas famílias.
+
+                (+) Bom para consultas que só acessem atributos de uma das famílias.
+
+                        Relembrando que dados de famílias diferentes são armazenados em arquivos diferentes, este modelo
+                        terá um ganho de desempenho quando as consultas fizerem uso de atributos pertencentes a apenas uma
+                        das famílias e, em especial, quando tal família tiver um número menor de colunas em relação a outra.
+                        
+                (-) Muita redundância (pode ser impraticável dependendo da quantidade de dados).
+
+                        Como toda abordagem desnormalizada, teremos muitos dados replicados. Dependendo do tamanho da base,
+                        este modelo pode ser impraticável por demandar muita memória física.
+
+                (-) Overhead desnecessário se o padrão de acesso envolver as duas famílias.
+
+                        Se o padrão de acesso contemplar diversas consultas envolvendo as duas famílias, este modelo não
+                        será adequado, pois, terá um overhead desnecessário para a leitura de dois arquivos de famílias.
+                
+                (?) Seria bom para os casos em que seja feito um filtro em uma das famílias?
+
+                        Em primeiro momento, dado o ponto acima, julgamos que seja ruim para os casos envolvendo o acesso
+                        a atributos das duas famílias mas, por outro lado, pode ser interessante para os casos em que seja
+                        realizado um filtro em uma das famílias (especialmente, se tal família tiver menos colunas).
+
+            [3] Referenciar (abordagem normalizada, fatos referenciam dimensões):
+
+                (*) Modelo 1T-2CF-REF.
+
+                        Não encontrado na literatura.
+
+                (+) Será mais fácil filtrar linhas de uma determinada fonte.
+
+                        Com a existência de duas famílias, dois arquivos, será mais fácil filtrar linhas pertencentes a uma
+                        fonte (tabela no ambiente relacional). Por exemplo, separando fatos numa família e dimensões na outra,
+                        o overhead para encontrar fatos será zero (sem filtro por sufixo e nulidade).
+
+                (+) Bom para consultas que só acessem atributos de uma das famílias.
+                        
+                        Relembrando que dados de famílias diferentes são armazenados em arquivos diferentes, este modelo
+                        terá um ganho de desempenho quando as consultas fizerem uso de atributos pertencentes a apenas uma
+                        das famílias e, em especial, quando tal família tiver um número menor de colunas em relação a outra.
+
+                (-) Overhead desnecessário se o padrão de acesso envolver as duas famílias.
+
+                        Se o padrão de acesso contemplar diversas consultas envolvendo as duas famílias, este modelo não
+                        será adequado, pois, terá um overhead desnecessário para a leitura de dois arquivos de famílias.
+                
+                (?) Seria bom para os casos em que seja feito um filtro em uma das famílias?
+
+                        Em primeiro momento, dado o ponto acima, julgamos que seja ruim para os casos envolvendo o acesso
+                        a atributos das duas famílias mas, por outro lado, pode ser interessante para os casos em que seja
+                        realizado um filtro em uma das famílias (especialmente, se tal família tiver menos colunas).
+
+                (=) Além disso, mesmas ponderações do 1T-1CF-REF:
+
+                    (+) Sem redundância.
+                    (+) Facilidade para incorporação de mecanismo de hash (true big data, base sem esquema claro).
+                    (-) Necessidade de criar um mecanismo de distribuição de entradas para balancear o cluster (aplicar hash nas chaves).
+                    (-) Com prefixos, os dados não serão distribuídos de forma igualitária no cluster.
+                    (-) Com prefixos, a técnica de predicate pushdown não funcionaria apropriadamente.
+                    (-) Sem prefixos, será necessário um tempo adicional para filtrar todas as entradas da tabela com base em sufixos ou colunas vazias.
+                    (?) Será muito custoso filtrar com base em sufixos?
+                    (?) Será muito custoso filtrar com base na checagem se certas colunas não são vazias? 
+                    (?) Custo de junção mais baixo do que modelos com abordagem normalizada tradicional?
+                    (?) Como distribuir as entradas de forma inteligente?
+
+        [2] Múltiplas famílias (fatos e cada dimensões possuem sua própria família):
+
+            [3] Embarcar (abordagem desnormalizada, redundância de dados das dimensões):
+
+                xxx
+
+            [3] Referenciar (abordagem normalizada, fatos referenciam dimensões):
+
+                xxx
+
+    [1] Duas tabelas (uma tabela para fatos e outra para as dimensões):
+
+        [2] Uma família:
+
+            [3] Embarcar:
+
+            [3] Referenciar:
+
+        [2] Duas famílias:
+
+        [2] Múltiplas famílias:
+
+
+
+
+
+            - Fatos e dimensões (1T-2CF).
+
+                - 
+                -
+
+            - Fatos+Datas e dimensões (FactDate, 1T-2CF-FACTDATE).
+
+        - Múltiplas famílias (DLA-CF, 1T-MCF).
+
+    - Fatos e dimensões separadas em duas tabelas:
+
+        - Dimensões em uma única família (2T-1CF)
+        - Dimensões em múltiplas famílias (2T-MCF)
+
+    - Fatos e dimensões em múltiplas tabelas:
+
+        - Uma família por tabela (NLA, MT-1CF).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura 8.
+
+    NLA VS. NLA: 
+
+        O tempo cresce devido ao aumento do número de colunas que precisam ser trazidas pela rede.
+
+        É possível notar a existência de uma quase proporcionalidade nos incrementos de tempo (de 1, 2, 3 e 4 atributos).
+
+    NLA VS. DLA & DLA-CF: 
+
+        A abordagem normalizada leva mais tempo devido a junção de tabelas (lineorder & part).
+
+    DLA VS. DLA-CF:
+
+        É possível notar, em ambas, incrementos de tempo quase proporcionais com o aumento do número de atributos.
+
+        A diferença de tempo entre os modelos é muito pequena mas podemos argumentar que o DLA leva mais tempo devido  a 
+        quantidade maior de dados presentes em cada bloco lido, ou seja, menos entradas (linhas) por bloco e, consequentemente,
+        a necessidade da leitura de um número maior de blocos.
+
+        No caso do DLA-CF, todos os atributos da tabela part estão num arquivo (família) separado, vão existir mais entradas (linhas)
+        por bloco de dados lido e, consequentemente, serão lidos um número menor de blocos.
+
+Figura 7.
+
+    NLA VS. NLA: 
+
+        O número cresce devido ao aumento do número de junções e colunas trazidas pela rede.
+
+    NLA VS. DLA & DLA-CF: 
+
+        A abordagem normalizada leva mais tempo devido as junções.
+
+    DLA VS. DLA-CF:
+
+        Diferenças desprezíveis, podemos apenas concluir que existindo uma distribuição igualitária entre o número
+        de atributos lidos de cada família não irá criar discrepâncias entre o DLA e DLA-CF.
+
+
+
+
+

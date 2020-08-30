@@ -8,7 +8,6 @@
 import os
 import random
 import numpy as np
-import matplotlib.pyplot as plt
 
 from shapely.geometry import Point, Polygon
 
@@ -83,6 +82,8 @@ for i, line in enumerate(customers_lines):
     customer_address_pk = (i + 1)
     customer_pk = components[0]
     customer_city_name = components[3]
+    customer_nation_name = components[4]
+    customer_region_name = components[5]
 
     customer_city_polygons = cities[customer_city_name]
     customer_city_polygon = customer_city_polygons[0]
@@ -100,6 +101,9 @@ for i, line in enumerate(customers_lines):
 
     c_addresses_fp.write(str(customer_address_pk) + '|')
     c_addresses_fp.write(str(customer_pk) + '|')
+    c_addresses_fp.write(customer_city_name + '|')
+    c_addresses_fp.write(customer_nation_name + '|')
+    c_addresses_fp.write(customer_region_name + '|')
     c_addresses_fp.write('POINT(' + str(x) + ', ' + str(y) + ')' + '|\n')
 
 
@@ -116,6 +120,8 @@ for i, line in enumerate(suppliers_lines):
     supplier_address_pk = (i + 1)
     supplier_pk = components[0]
     supplier_city_name = components[3]
+    supplier_nation_name = components[4]
+    supplier_region_name = components[5]
 
     supplier_city_polygons = cities[supplier_city_name]
     supplier_city_polygon = supplier_city_polygons[0]
@@ -133,6 +139,9 @@ for i, line in enumerate(suppliers_lines):
 
     s_addresses_fp.write(str(supplier_address_pk) + '|')
     s_addresses_fp.write(str(supplier_pk) + '|')
+    s_addresses_fp.write(supplier_city_name + '|')
+    s_addresses_fp.write(supplier_nation_name + '|')
+    s_addresses_fp.write(supplier_region_name + '|')
     s_addresses_fp.write('POINT(' + str(x) + ' ' + str(y) + ')' + '|\n')
 
 

@@ -98,9 +98,20 @@ for line in customer_addr_lines:
     components = line.split('|')
 
     address_pk = components[0]
-    address_geometry = components[2]
+    address_city_name = components[2]
+    address_nation_name = components[3]
+    address_region_name = components[4]
+    address_geometry = components[5]
 
-    w_customers_fp.write(address_pk + '|' + address_geometry + '|\n')
+    address_city_pk = cities[address_city_name]
+    address_nation_pk = nations[address_nation_name]
+    address_region_pk = regions[address_region_name]
+
+    w_customers_fp.write(address_pk + '|')
+    w_customers_fp.write(address_city_pk + '|')
+    w_customers_fp.write(address_nation_pk + '|')
+    w_customers_fp.write(address_region_pk + '|')
+    w_customers_fp.write(address_geometry + '|\n')
 
 w_customers_fp.close()
 
@@ -111,27 +122,32 @@ for line in supplier_addr_lines:
     components = line.split('|')
 
     address_pk = components[0]
-    address_geometry = components[2]
+    address_city_name = components[2]
+    address_nation_name = components[3]
+    address_region_name = components[4]
+    address_geometry = components[5]
 
-    w_suppliers_fp.write(address_pk + '|' + address_geometry + '|\n')
+    address_city_pk = cities[address_city_name]
+    address_nation_pk = nations[address_nation_name]
+    address_region_pk = regions[address_region_name]
+
+    w_suppliers_fp.write(address_pk + '|')
+    w_suppliers_fp.write(address_city_pk + '|')
+    w_suppliers_fp.write(address_nation_pk + '|')
+    w_suppliers_fp.write(address_region_pk + '|')
+    w_suppliers_fp.write(address_geometry + '|\n')
 
 w_suppliers_fp.close()
 
 
 '''
 
-Update the city, nation and region tables. Remove some columns, leaving only
-the primary key and the geometry information.
+Update the city, nation and region tables. Replace nation and region references
+with their respective identifiers.
 
 '''
 
-paths = [
-    ('./data_ssb_geo/city.tbl', cities_lines),
-    ('./data_ssb_geo/nation.tbl', nations_lines),
-    ('./data_ssb_geo/region.tbl', regions_lines)
-]
-
-for path, lines in paths:
+for path, lines in [('./data_ssb_geo/city.tbl', cities_lines)]:
 
     fp = open(path, 'w+')
 
@@ -140,7 +156,41 @@ for path, lines in paths:
         components = line.split('|')
 
         pk = components[0]
-        geometry = components[-2]
+        nation_name = components[2]
+        nation_pk = nations[nation_name]
+        geometry = components[3]
+
+        fp.write(pk + '|' + nation_pk + '|' + geometry + '|\n')
+
+    fp.close()
+
+for path, lines in [('./data_ssb_geo/nation.tbl', nations_lines)]:
+
+    fp = open(path, 'w+')
+
+    for line in lines:
+
+        components = line.split('|')
+
+        pk = components[0]
+        region_name = components[2]
+        region_pk = regions[region_name]
+        geometry = components[3]
+
+        fp.write(pk + '|' + region_pk + '|' + geometry + '|\n')
+
+    fp.close()
+
+for path, lines in [('./data_ssb_geo/region.tbl', regions_lines)]:
+
+    fp = open(path, 'w+')
+
+    for line in lines:
+
+        components = line.split('|')
+
+        pk = components[0]
+        geometry = components[2]
 
         fp.write(pk + '|' + geometry + '|\n')
 

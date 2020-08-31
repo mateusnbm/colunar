@@ -8,6 +8,9 @@ import sys
 import json
 import time
 
+DEBUG_MODE = False
+tf_file = open('./models/roberio/M2-C-G3.json', 'r')
+
 '''
 
 Something.
@@ -108,7 +111,7 @@ Load the JSON file containing the HBase databases specification.
 
 '''
 
-tf_file = open('./models/roberio/M1-A-G3.json', 'r')
+#tf_file = open('./models/roberio/M1-A-G3.json', 'r')
 tf_data = json.load(tf_file)
 
 
@@ -225,10 +228,15 @@ for transform_i, transform in enumerate(tf_data):
 
                 for c_i, c in enumerate(cf_columns):
 
+                    c_disposable = False
                     c_name = c['column_name']
                     c_datatype = c['column_datatype']
                     c_ssb_table_name = c['ssb_table_name']
                     c_ssb_column_index = c['ssb_column_index']
+
+                    if 'column_disposable' in c:
+
+                        c_disposable = c['column_disposable'] and not DEBUG_MODE
 
                     if c_ssb_table_name == table_name_ssb:
 
@@ -269,7 +277,11 @@ for transform_i, transform in enumerate(tf_data):
                     c_cmd += '\'' + c_datatype + '\''
                     c_cmd += '\n'
 
-                    hb_file.write(c_cmd)
+                    if c_disposable == False:
+
+                        db_bytes += len(c_data)
+
+                        hb_file.write(c_cmd)
 
                     '''
                     Log progress status.
@@ -281,7 +293,6 @@ for transform_i, transform in enumerate(tf_data):
                     c_log += 'Family: ' + str(cf_i+1) + '/' + str(len(table_column_families_data)) + '.' + (10 * ' ') + '\n'
                     c_log += 'Column: ' + str(c_i+1) + '/' + str(len(cf_columns)) + '.' + (10 * ' ') + '\n'
 
-                    db_bytes += len(c_data)
                     current_time = time.monotonic()
 
                     c_log += 'Size: ' + pp_db_size(db_bytes) + '.' + (10 * ' ') + '\n'

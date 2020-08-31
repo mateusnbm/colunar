@@ -1,7 +1,7 @@
 [
     {
-        "transform_id": "M1-B-G1",
-        "transform_comments": "Model M1-B-G1 created on Aug 30, 2020 at 2:53 AM.",
+        "transform_id": "M1-C-G1",
+        "transform_comments": "Model M1-C-G1 created on Aug 30, 2020 at 9:37 PM.",
         "transform_tables": [
             {
                 "table_name": "t",
@@ -782,9 +782,7 @@
                             {
                                 "column_name": "di",
                                 "column_desc": "customer_address_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "CUA",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "address_fk",
@@ -950,9 +948,7 @@
                             {
                                 "column_name": "eh",
                                 "column_desc": "supplier_address_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "SUA",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "address_fk",
@@ -1144,25 +1140,7 @@
                                 ]
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "table_name": "t",
-                "table_name_ssb": "customer_addr",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": "CUA",
-                    "md5_hash": true,
-                    "components": [
-                        {
-                            "cf_name": "g",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [],
-                "table_column_families_data": [
+                    },
                     {
                         "column_f_name": "g",
                         "column_f_columns": [
@@ -1170,10 +1148,20 @@
                                 "column_name": "ga",
                                 "column_desc": "customer_addr_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
-                                "join_tables": []
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
                             },
                             {
                                 "column_name": "gb",
@@ -1182,28 +1170,19 @@
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "addr_pk",
-                                "join_tables": []
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "table_name": "t",
-                "table_name_ssb": "supplier_addr",
-                "table_row_key": {
-                    "surrogate": false,
-                    "prefix": "SUA",
-                    "md5_hash": true,
-                    "components": [
-                        {
-                            "cf_name": "h",
-                            "column_index": 0
-                        }
-                    ]
-                },
-                "table_column_families": [],
-                "table_column_families_data": [
+                    },
                     {
                         "column_f_name": "h",
                         "column_f_columns": [
@@ -1211,10 +1190,20 @@
                                 "column_name": "ha",
                                 "column_desc": "supplier_addr_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
-                                "join_tables": []
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 7
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
                             },
                             {
                                 "column_name": "hb",
@@ -1223,7 +1212,16 @@
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "addr_pk",
-                                "join_tables": []
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 7
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
                             }
                         ]
                     }

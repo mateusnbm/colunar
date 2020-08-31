@@ -1,7 +1,7 @@
 [
     {
         "transform_id": "M1-A-G3",
-        "transform_comments": "M1AG3",
+        "transform_comments": "Model M1-A-G3 created on Aug 30, 2020 at 2:22 AM.",
         "transform_tables": [
             {
                 "table_name": "t",
@@ -182,6 +182,7 @@
                                 "column_name": "ba",
                                 "column_desc": "order_date_date_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -425,6 +426,7 @@
                                 "column_name": "ca",
                                 "column_desc": "commit_date_date_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -668,6 +670,7 @@
                                 "column_name": "da",
                                 "column_desc": "customer_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "custkey",
@@ -793,7 +796,8 @@
                             {
                                 "column_name": "dj",
                                 "column_desc": "customer_city_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "CTY",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "customer",
@@ -809,7 +813,8 @@
                             {
                                 "column_name": "dk",
                                 "column_desc": "customer_nation_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "NAT",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "customer",
@@ -825,7 +830,8 @@
                             {
                                 "column_name": "dl",
                                 "column_desc": "customer_region_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "REG",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "customer",
@@ -847,6 +853,7 @@
                                 "column_name": "ea",
                                 "column_desc": "supplier_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "name",
@@ -958,7 +965,8 @@
                             {
                                 "column_name": "ei",
                                 "column_desc": "supplier_city_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "CTY",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "supplier",
@@ -974,7 +982,8 @@
                             {
                                 "column_name": "ej",
                                 "column_desc": "supplier_nation_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "NAT",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "supplier",
@@ -990,7 +999,8 @@
                             {
                                 "column_name": "ek",
                                 "column_desc": "supplier_region_fk",
-                                "column_datatype": "int",
+                                "column_datatype": "string",
+                                "column_disposable": true,
                                 "column_value_prefix": "REG",
                                 "column_md5_hash": true,
                                 "ssb_table_name": "supplier",
@@ -1012,6 +1022,7 @@
                                 "column_name": "fa",
                                 "column_desc": "part_part_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "partkey",
@@ -1143,6 +1154,7 @@
                                 "column_name": "ga",
                                 "column_desc": "customer_addr_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
@@ -1159,10 +1171,30 @@
                             },
                             {
                                 "column_name": "gb",
+                                "column_desc": "customer_addr_city_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "CTY",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "gc",
                                 "column_desc": "customer_addr_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "customer_addr",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 4,
                                 "ssb_column_name": "addr_pk",
                                 "join_tables": [
                                     {
@@ -1184,6 +1216,7 @@
                                 "column_name": "ha",
                                 "column_desc": "supplier_addr_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
@@ -1200,10 +1233,30 @@
                             },
                             {
                                 "column_name": "hb",
+                                "column_desc": "supplier_addr_city_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "CTY",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 7
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "hc",
                                 "column_desc": "supplier_addr_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "supplier_addr",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 4,
                                 "ssb_column_name": "addr_pk",
                                 "join_tables": [
                                     {
@@ -1251,10 +1304,12 @@
                             {
                                 "column_name": "ib",
                                 "column_desc": "city_nation_fk",
-                                "column_datatype": "int",
-                                "ssb_table_name": "nation",
-                                "ssb_column_index": 0,
-                                "ssb_column_name": "nation_pk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "NAT",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "nation_fk",
                                 "join_tables": []
                             },
                             {
@@ -1262,7 +1317,7 @@
                                 "column_desc": "city_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "city",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 2,
                                 "ssb_column_name": "city_geom",
                                 "join_tables": []
                             }
@@ -1300,10 +1355,21 @@
                             },
                             {
                                 "column_name": "jb",
+                                "column_desc": "nation_region_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "REG",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "region_fk",
+                                "join_tables": []
+                            },
+                            {
+                                "column_name": "jc",
                                 "column_desc": "nation_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "nation",
-                                "ssb_column_index": 1,
+                                "ssb_column_index": 2,
                                 "ssb_column_name": "nation_geom",
                                 "join_tables": []
                             }

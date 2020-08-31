@@ -1,7 +1,7 @@
 [
     {
-        "transform_id": "M1-B-G1",
-        "transform_comments": "Model M1-B-G1 created on Aug 30, 2020 at 2:53 AM.",
+        "transform_id": "M1-B-G3",
+        "transform_comments": "Model M1-B-G3 created on Aug 30, 2020 at 9:28 PM.",
         "transform_tables": [
             {
                 "table_name": "t",
@@ -798,9 +798,7 @@
                             {
                                 "column_name": "dj",
                                 "column_desc": "customer_city_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "CTY",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "city_fk",
@@ -814,9 +812,7 @@
                             {
                                 "column_name": "dk",
                                 "column_desc": "customer_nation_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "NAT",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "nation_fk",
@@ -830,9 +826,7 @@
                             {
                                 "column_name": "dl",
                                 "column_desc": "customer_region_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "REG",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 11,
                                 "ssb_column_name": "region_fk",
@@ -966,9 +960,7 @@
                             {
                                 "column_name": "ei",
                                 "column_desc": "supplier_city_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "CTY",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "city_fk",
@@ -982,9 +974,7 @@
                             {
                                 "column_name": "ej",
                                 "column_desc": "supplier_nation_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "NAT",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 9,
                                 "ssb_column_name": "nation_fk",
@@ -998,9 +988,7 @@
                             {
                                 "column_name": "ek",
                                 "column_desc": "supplier_region_fk",
-                                "column_datatype": "string",
-                                "column_value_prefix": "REG",
-                                "column_md5_hash": true,
+                                "column_datatype": "int",
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 10,
                                 "ssb_column_name": "region_fk",
@@ -1177,6 +1165,17 @@
                             },
                             {
                                 "column_name": "gb",
+                                "column_desc": "customer_city_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "CTY",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": []
+                            },
+                            {
+                                "column_name": "gc",
                                 "column_desc": "customer_addr_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "customer_addr",
@@ -1218,6 +1217,17 @@
                             },
                             {
                                 "column_name": "hb",
+                                "column_desc": "supplier_city_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "CTY",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": []
+                            },
+                            {
+                                "column_name": "hc",
                                 "column_desc": "supplier_addr_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "supplier_addr",
@@ -1259,6 +1269,17 @@
                             },
                             {
                                 "column_name": "ib",
+                                "column_desc": "city_nation_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "NAT",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "nation_fk",
+                                "join_tables": []
+                            },
+                            {
+                                "column_name": "ic",
                                 "column_desc": "city_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "city",
@@ -1300,6 +1321,17 @@
                             },
                             {
                                 "column_name": "jb",
+                                "column_desc": "nation_region_fk",
+                                "column_datatype": "string",
+                                "column_value_prefix": "REG",
+                                "column_md5_hash": true,
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "region_fk",
+                                "join_tables": []
+                            },
+                            {
+                                "column_name": "jc",
                                 "column_desc": "nation_geom",
                                 "column_datatype": "string",
                                 "ssb_table_name": "nation",

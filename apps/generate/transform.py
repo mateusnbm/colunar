@@ -9,7 +9,7 @@ import json
 import time
 
 DEBUG_MODE = False
-tf_file = open('./models/roberio/M4-C-G3.json', 'r')
+tf_file = open('./models/roberio/M3-A-G1.json', 'r')
 
 '''
 

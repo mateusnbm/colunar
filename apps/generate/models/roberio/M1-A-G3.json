@@ -1,7 +1,7 @@
 [
     {
         "transform_id": "M1-A-G3",
-        "transform_comments": "Model M1-A-G3 created on Aug 30, 2020 at 2:22 AM.",
+        "transform_comments": "Model M1-A-G3 created on Aug 31, 2020 at 11:23 PM.",
         "transform_tables": [
             {
                 "table_name": "t",
@@ -57,6 +57,7 @@
                                 "column_name": "ac",
                                 "column_desc": "line_order_customer_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "custkey"
@@ -65,6 +66,7 @@
                                 "column_name": "ad",
                                 "column_desc": "line_order_part_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
@@ -73,6 +75,7 @@
                                 "column_name": "ae",
                                 "column_desc": "line_order_supplier_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "suppkey"
@@ -81,6 +84,7 @@
                                 "column_name": "af",
                                 "column_desc": "line_order_order_date_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "orderdate"
@@ -161,6 +165,7 @@
                                 "column_name": "ap",
                                 "column_desc": "line_order_commit_date_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"
@@ -182,7 +187,6 @@
                                 "column_name": "ba",
                                 "column_desc": "order_date_date_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -426,7 +430,6 @@
                                 "column_name": "ca",
                                 "column_desc": "commit_date_date_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -670,7 +673,6 @@
                                 "column_name": "da",
                                 "column_desc": "customer_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "custkey",
@@ -783,6 +785,7 @@
                                 "column_name": "di",
                                 "column_desc": "customer_address_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 8,
                                 "ssb_column_name": "address_fk",
@@ -853,7 +856,6 @@
                                 "column_name": "ea",
                                 "column_desc": "supplier_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "name",
@@ -952,6 +954,7 @@
                                 "column_name": "eh",
                                 "column_desc": "supplier_address_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 7,
                                 "ssb_column_name": "address_fk",
@@ -1022,7 +1025,6 @@
                                 "column_name": "fa",
                                 "column_desc": "part_part_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "partkey",
@@ -1154,7 +1156,6 @@
                                 "column_name": "ga",
                                 "column_desc": "customer_addr_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "customer_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",
@@ -1216,7 +1217,6 @@
                                 "column_name": "ha",
                                 "column_desc": "supplier_addr_pk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "supplier_addr",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "addr_pk",

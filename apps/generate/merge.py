@@ -14,9 +14,9 @@ Read data.
 
 '''
 
-cities_fp = open('./data_geo/city.tbl', 'r')
-nations_fp = open('./data_geo/nation.tbl', 'r')
-regions_fp = open('./data_geo/region.tbl', 'r')
+cities_fp = open('./data_geo/cities.tbl', 'r')
+nations_fp = open('./data_geo/nations.tbl', 'r')
+regions_fp = open('./data_geo/regions.tbl', 'r')
 c_addr_fp = open('./data_geo/customer_addr.tbl', 'r')
 s_addr_fp = open('./data_geo/supplier_addr.tbl', 'r')
 

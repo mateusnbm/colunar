@@ -9,7 +9,12 @@ import json
 import time
 
 DEBUG_MODE = False
-tf_file = open('./models/roberio/M3-A-G1.json', 'r')
+COUNT_MODE = False
+
+tf_file = open('./models/roberio/M4-C-G3.json', 'r')
+
+print(tf_file)
+print('')
 
 '''
 
@@ -107,12 +112,13 @@ sys.stdout.write('\033[F' * 7)
 
 '''
 
-Load the JSON file containing the HBase databases specification.
+Load the JSON file containing the HBase schema specification.
 
 '''
 
-#tf_file = open('./models/roberio/M1-A-G3.json', 'r')
 tf_data = json.load(tf_file)
+
+tf_file.close()
 
 
 '''
@@ -206,7 +212,7 @@ for transform_i, transform in enumerate(tf_data):
         hb_file_exists = os.path.exists(hb_filepath)
         hb_file = open(hb_filepath, 'a+')
 
-        if hb_file_exists == False:
+        if hb_file_exists == False and COUNT_MODE == False:
 
             families = table['table_column_families']
             families = [(', \''+ cf +'\'') for cf in families]
@@ -244,7 +250,7 @@ for transform_i, transform in enumerate(tf_data):
 
                     else:
 
-                        c_join_tables = c["join_tables"][::-1]
+                        c_join_tables = c['join_tables'][::-1]
                         c_index = c_join_tables[0]['c_index']
                         c_join_pk = data[c_index]
 
@@ -262,7 +268,7 @@ for transform_i, transform in enumerate(tf_data):
                         c_fk_data = c_fk_row.split('|')
                         c_data = c_fk_data[c_ssb_column_index]
 
-                    if "column_value_prefix" in c:
+                    if 'column_value_prefix' in c:
 
                         c_value_prefix = c["column_value_prefix"]
                         c_data = (c_value_prefix + "+" + c_data)
@@ -279,9 +285,11 @@ for transform_i, transform in enumerate(tf_data):
 
                     if c_disposable == False:
 
-                        db_bytes += len(c_data)
+                        db_bytes += len(c_data) if c_datatype == 'string' else 4
 
-                        hb_file.write(c_cmd)
+                        if COUNT_MODE == False:
+
+                            hb_file.write(c_cmd)
 
                     '''
                     Log progress status.
@@ -301,18 +309,14 @@ for transform_i, transform in enumerate(tf_data):
                     sys.stdout.write(c_log)
                     sys.stdout.write('\033[F' * 7)
 
-                hb_file.write('\n')
+                #hb_file.write('\n')
 
-            hb_file.write('\n')
+            #hb_file.write('\n')
 
-            if i == 0: break
+            #if i == 0: break
 
         hb_file.close()
 
         #break
-
-    tf_file.close()
-
-    #break
 
     sys.stdout.write('\n' * 8)

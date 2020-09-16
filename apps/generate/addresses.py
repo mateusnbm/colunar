@@ -18,7 +18,7 @@ Read data.
 
 '''
 
-cities_fp = open('./data_geo/city.tbl', 'r')
+cities_fp = open('./data_geo/cities.tbl', 'r')
 customers_fp = open('./data_ssb/customer.tbl', 'r')
 suppliers_fp = open('./data_ssb/supplier.tbl', 'r')
 c_addresses_fp = open('./data_geo/customer_addr.tbl', 'w+')
@@ -104,7 +104,7 @@ for i, line in enumerate(customers_lines):
     c_addresses_fp.write(customer_city_name + '|')
     c_addresses_fp.write(customer_nation_name + '|')
     c_addresses_fp.write(customer_region_name + '|')
-    c_addresses_fp.write('POINT(' + str(x) + ', ' + str(y) + ')' + '|\n')
+    c_addresses_fp.write('POINT(' + str(x) + ' ' + str(y) + ')' + '|\n')
 
 
 '''

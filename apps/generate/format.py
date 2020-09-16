@@ -72,7 +72,7 @@ for i, line in enumerate(nations_lines):
     nation_pk = data[0]
     nation_name = data[1][1:-1]
     region_name = data[2][1:-1]
-    nation_geo = ','.join(data[3:])[13:-6][1:-1]
+    nation_geo = ','.join(data[3:])[20:-6][1:-1]
 
     nations_out_fp.write(nation_pk + '|')
     nations_out_fp.write(nation_name + '|')
@@ -89,7 +89,7 @@ for i, line in enumerate(regions_lines):
 
     region_pk = data[0]
     region_name = data[1][1:-1]
-    region_geo = ','.join(data[2:])[13:-6][1:-1]
+    region_geo = ','.join(data[2:])[20:-6][1:-1]
 
     regions_out_fp.write(region_pk + '|')
     regions_out_fp.write(region_name + '|')

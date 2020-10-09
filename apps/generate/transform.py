@@ -11,10 +11,9 @@ import time
 DEBUG_MODE = False
 COUNT_MODE = False
 
-tf_file = open('./models/roberio/M4-C-G3.json', 'r')
-
-print(tf_file)
-print('')
+model_path = sys.argv[1]
+destination_path = sys.argv[2]
+skip_lineorder = int(sys.argv[3])
 
 '''
 
@@ -116,8 +115,8 @@ Load the JSON file containing the HBase schema specification.
 
 '''
 
+tf_file = open(model_path, 'r')
 tf_data = json.load(tf_file)
-
 tf_file.close()
 
 
@@ -175,7 +174,7 @@ setup the database tables and code to populate them.
 for transform_i, transform in enumerate(tf_data):
 
     transform_id = transform['transform_id']
-    transform_path = ('./data_hbase/' + transform_id + '/')
+    transform_path = destination_path
     transform_tables = transform['transform_tables']
 
     '''
@@ -194,6 +193,12 @@ for transform_i, transform in enumerate(tf_data):
     db_bytes = 0
     abs_time = time.monotonic()
 
+    last_table_name = ''
+    last_rowkey = ''
+    last_cf_name = ''
+    last_c_name = ''
+    last_c_datatype = ''
+
     # Iteramos sobre a lista de tabelas. Podemos passar por tabelas com o
     # mesmo nome, neste caso, os dados são armazenados na mesma tabela já
     # existente mas em linhas diferentes (normalização em tabela única).
@@ -204,6 +209,11 @@ for transform_i, transform in enumerate(tf_data):
         table_name_ssb = table['table_name_ssb']
         table_column_families_data = table['table_column_families_data']
         table_rk_surrogate = table['table_row_key']['surrogate']
+
+        #print(table_name)
+
+        if skip_lineorder == 1:
+            if table_name_ssb == 'lineorder': continue
 
         # Se não existir um arquivo para a tabela, adicionamos o comando para
         # a criação da tabela no HBase (nome da tabela e lista de famílias).
@@ -231,6 +241,8 @@ for transform_i, transform in enumerate(tf_data):
 
                 cf_name = cf['column_f_name']
                 cf_columns = cf['column_f_columns']
+
+                #print(cf_name)
 
                 for c_i, c in enumerate(cf_columns):
 
@@ -277,13 +289,40 @@ for transform_i, transform in enumerate(tf_data):
                     Write the HBase command to the file.
                     '''
 
-                    c_cmd = cmdprefix
-                    c_cmd += '\'' + (cf_name + ':' + c_name) + '\', '
-                    c_cmd += '\'' + c_data + '\', '
-                    c_cmd += '\'' + c_datatype + '\''
-                    c_cmd += '\n'
-
                     if c_disposable == False:
+
+                        cmd_table_name = table_name
+                        cmd_rowkey = rowkey
+                        cmd_cf_name = cf_name
+                        cmd_c_name = c_name
+                        cmd_c_datatype = c_datatype
+
+                        if table_name == last_table_name:
+                            cmd_table_name = ''
+                        else:
+                            last_table_name = table_name
+                        if rowkey == last_rowkey:
+                            cmd_rowkey = ''
+                        else:
+                            last_rowkey = rowkey
+                        if cf_name == last_cf_name:
+                            cmd_cf_name = ''
+                        else:
+                            last_cf_name = cf_name
+                        if c_name == last_c_name:
+                            cmd_c_name = ''
+                        else:
+                            last_c_name = c_name
+                        if c_datatype == last_c_datatype:
+                            cmd_c_datatype = ''
+                        else:
+                            last_c_datatype = c_datatype
+
+                        c_cmd = 'put \'' + cmd_table_name + '\', \'' + cmd_rowkey + '\', '
+                        c_cmd += '\'' + (cmd_cf_name + ':' + cmd_c_name) + '\', '
+                        c_cmd += '\'' + c_data + '\', '
+                        c_cmd += '\'' + cmd_c_datatype + '\''
+                        c_cmd += '\n'
 
                         db_bytes += len(c_data) if c_datatype == 'string' else 4
 
@@ -313,7 +352,7 @@ for transform_i, transform in enumerate(tf_data):
 
             #hb_file.write('\n')
 
-            #if i == 0: break
+            #if i == 10: break
 
         hb_file.close()
 

@@ -8,7 +8,7 @@ import sys
 import json
 import time
 
-tf_path = './models/roberio/M4-B-G1.json'
+tf_path = sys.argv[1] #'./models/roberio/M2-A-G1.json'
 tf_file = open(tf_path, 'r')
 tf_data = json.load(tf_file)
 tf_file.close()
@@ -55,7 +55,7 @@ for transform_i, transform in enumerate(tf_data):
                         scala_tables[table_name]['columns'][c_name] = [c_desc, cf_name, c_name, c_datatype]
 
 
-    schema_path = ('./data_hbase/' + transform_id + '/queries.txt')
+    schema_path = ('./data_hbase/' + transform_id + '.scala')
     schema_file = open(schema_path, 'w+')
 
     schema_file.write('import spark.implicits._\n')
@@ -74,6 +74,8 @@ for transform_i, transform in enumerate(tf_data):
         columns_checklist = []
 
         table_name_ssb = data['ssb_name']
+
+        print(name + ' ' + table_name_ssb)
 
         schema_file.write('def ' + table_name_ssb + 'TableCatalog =\n')
         schema_file.write('    s"""{\n')
@@ -125,7 +127,8 @@ for transform_i, transform in enumerate(tf_data):
         schema_file.write('    load()\n\n')
 
         schema_file.write(table_name_ssb + 'TableDataFrame.createOrReplaceTempView("' + name + '")\n')
-        schema_file.write(table_name_ssb + 'TableDataFrame.show()\n\n')
+        #schema_file.write(table_name_ssb + 'TableDataFrame.show()\n')
+        schema_file.write('\n')
 
         if has_geo_cols == True:
 
@@ -150,7 +153,10 @@ for transform_i, transform in enumerate(tf_data):
 
             schema_file.write('var ' + table_name_ssb + 'SpatialTableDataFrame = session.sql(' + table_name_ssb + 'MakeGeomQuery)\n')
             schema_file.write(table_name_ssb + 'SpatialTableDataFrame.createOrReplaceTempView("' + name + '")\n')
-            schema_file.write(table_name_ssb + 'SpatialTableDataFrame.printSchema()\n')
-            schema_file.write(table_name_ssb + 'SpatialTableDataFrame.show()\n\n')
+            #schema_file.write(table_name_ssb + 'SpatialTableDataFrame.printSchema()\n')
+            #schema_file.write(table_name_ssb + 'SpatialTableDataFrame.show()\n')
+            schema_file.write('\n')
 
     schema_file.close()
+
+print('')

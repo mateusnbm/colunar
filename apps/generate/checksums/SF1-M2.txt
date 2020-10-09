@@ -1,0 +1,24 @@
+M2-A-G1 t.txt 35ca58512fff269b306568285cdddfaf7d7d6df8
+
+
+M2-A-G3 t.txt 7e92e07d911f97c2a4355583f570daa3bd95dcd6
+
+
+M2-B-G1 t.txt f2e367cc61b8de84249ca9b4900e4c921dfa7e18
+
+
+M2-B-G2 t.txt 768c2b246b64631b5d661f7ee50d67627a209632
+
+
+M2-B-G3 t.txt ce94f1b6ca5b07eb789dacce4bd17846c181b5ec
+
+
+M2-C-G1 t.txt ff990a8249feee2c16f4655a9c5c2a8e7add601d
+
+
+M2-C-G2 t.txt 49fa2cf9b8feb9cf311fec58ab32ee56128771ed
+
+
+M2-C-G3 t.txt 63bd6bf8f19e9f775e3c757d94fdf0817a7dd3fe
+
+

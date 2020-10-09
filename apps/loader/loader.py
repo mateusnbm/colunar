@@ -20,7 +20,23 @@ def formatted_data(d, t):
 sys.stdout.write('\n' * 4)
 sys.stdout.write('\033[F' * 3)
 
-file = open('/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/DLA-CF/t-small.txt', 'r')
+file = open(sys.argv[1], 'r')
+
+#path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/M4-B-G1'
+#path = '/Volumes/Mateus/COLUNAR-SF-1/M4/M4-B-G3'
+
+#file = open('/Volumes/Mateus/COLUNAR-SF-1/M4/a.txt', 'r')
+
+#file = open(path + '/a.txt', 'r')
+#file = open(path + '/b.txt', 'r')
+#file = open(path + '/c.txt', 'r')
+#file = open(path + '/d.txt', 'r')
+#file = open(path + '/e.txt', 'r')
+#file = open(path + '/f.txt', 'r')
+#file = open(path + '/g.txt', 'r')
+#file = open(path + '/h.txt', 'r')
+#file = open(path + '/i.txt', 'r')
+#file = open(path + '/j.txt', 'r')
 
 for i, l in enumerate(file): pass
 lcount = i
@@ -38,30 +54,6 @@ for family in families_names:
     families[family] = {}
 connection.create_table(table_name, families)
 
-'''
-import struct
-quantity = struct.pack(">i", 155190)
-print(quantity)
-table = connection.table(table_name)
-table.put(b'row-key', {b'A:boolean': formatted_data('1', 'boolean') })
-table.put(b'row-key', {b'A:byte': formatted_data(64, 'byte') })
-table.put(b'row-key', {b'A:short': b'\x00\x12'}) #formatted_data(16900, 'short') })
-table.put(b'row-key', {b'A:int': quantity }) #formatted_data(155190, 'int') })
-table.put(b'row-key', {b'A:long': formatted_data(155190, 'long') })
-table.put(b'row-key', {b'A:string': formatted_data('Zorro', 'string') })
-row = table.row(b'row-key')
-print(row)
-file.close()
-connection.close()
-exit()
-'''
-
-#print(table_name)
-#print(families)
-#file.close()
-#connection.close()
-#exit()
-
 line = file.readline()
 components = line.split('\'')[1::2]
 table_name = components[0]
@@ -78,13 +70,44 @@ batch = table.batch(batch_size=1000)
 
 abs_time = time.monotonic()
 
+last_rowkey = rowkey
+last_cf_name = qualifiers.split(':')[0]
+last_c_name = qualifiers.split(':')[1]
+last_c_datatype = datatype
+
 for i, line in enumerate(file):
+
+    #if i > 10000: break
 
     components = line.split('\'')[1::2]
     rowkey = components[1]
     qualifiers = components[2]
+    family = qualifiers.split(':')[0]
+    column = qualifiers.split(':')[1]
     data = components[3]
     datatype = components[4]
+
+    if rowkey == '':
+        rowkey = last_rowkey
+    else:
+        last_rowkey = rowkey
+
+    if family == '':
+        family = last_cf_name
+    else:
+        last_cf_name = family
+
+    if column == '':
+        column = last_c_name
+    else:
+        last_c_name = column
+
+    if datatype == '':
+        datatype = last_c_datatype
+    else:
+        last_c_datatype = datatype
+
+    qualifiers = family + ':' + column
 
     if lrowkey == rowkey:
 

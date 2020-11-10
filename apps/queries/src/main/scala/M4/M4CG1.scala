@@ -362,30 +362,38 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   h,
             |   i,
             |   j,
             |   a,
             |   e
-            | WHERE
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
             |
+            | WHERE
+            |
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.region_pk = c.customer_region_fk AND
             |   i.nation_pk = c.customer_nation_fk AND
             |   h.city_pk = c.customer_city_fk AND
-            |
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region
             |
             """.stripMargin
 
@@ -393,28 +401,36 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_nation,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   h,
             |   i,
             |   a,
             |   e
-            | WHERE
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |
+            | WHERE
+            |
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.nation_pk = c.customer_nation_fk AND
             |   h.city_pk = c.customer_city_fk AND
-            |
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk 
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_nation
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_nation
             |
             """.stripMargin
 
@@ -422,26 +438,34 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_city,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   h,
             |   a,
             |   e
+            |
             | WHERE
+            |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |
             |   h.city_pk = c.customer_city_fk AND
-            |
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_city
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_city
             |
             """.stripMargin
 
@@ -449,21 +473,30 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_address,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   a,
             |   e
+            |
             | WHERE
-            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963 AND
+            |
+            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_address
+            |
             | ORDER BY
+            |
             |   e.part_category,
             |   c.customer_address
             |
@@ -473,30 +506,39 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   h,
             |   i,
             |   a,
             |   e
-            | WHERE
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |
+            | WHERE
+            |
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.nation_pk = c.customer_nation_fk AND
             |   h.city_pk = c.customer_city_fk AND
-            |
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region,
+            |   c.customer_nation
             |
             """.stripMargin
 
@@ -504,30 +546,40 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   h,
             |   a,
             |   e
+            |
             | WHERE
+            |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |
             |   h.city_pk = c.customer_city_fk AND
-            |
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region,
+            |   c.customer_nation,
+            |   c.customer_city
             |
             """.stripMargin
 
@@ -535,27 +587,36 @@ object M4CG1 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   c.customer_address,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   c,
             |   a,
             |   e
+            |
             | WHERE
-            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963 AND
+            |
+            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   c.customer_address
+            |
             | ORDER BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
@@ -564,13 +625,30 @@ object M4CG1 {
             |
             """.stripMargin
 
-        session.time(session.sql(Q1).show())
-        //session.time(session.sql(Q2).show())
-        //session.time(session.sql(Q3).show())
-        //session.time(session.sql(Q4).show())
-        //session.time(session.sql(Q5).show())
-        //session.time(session.sql(Q6).show())
-        //session.time(session.sql(Q7).show())
+        for ( a <- 1 to 50 ) {
+            
+            println("TIME Q1 " + a)
+            session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))
+            
+            println("TIME Q2 " + a)
+            session.time(session.sql(Q2).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q2-" + a))
+
+            println("TIME Q3 " + a)
+            session.time(session.sql(Q3).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q3-" + a))
+
+            println("TIME Q4 " + a)
+            session.time(session.sql(Q4).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q4-" + a))
+
+            println("TIME Q5 " + a)
+            session.time(session.sql(Q5).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q5-" + a))
+
+            println("TIME Q6 " + a)
+            session.time(session.sql(Q6).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q6-" + a))
+
+            println("TIME Q7 " + a)
+            session.time(session.sql(Q7).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q7-" + a))
+
+        }
 
         session.stop()
 

@@ -5,6 +5,8 @@ import time
 import struct
 import happybase
 
+INTERACTIVE_MODE=True
+
 def pp_time(n):
     h = int(n/3600)
     m = int((n-(h*3600))/60)
@@ -17,10 +19,12 @@ def formatted_data(d, t):
     else:
         return struct.pack(">i", int(d))
 
-sys.stdout.write('\n' * 4)
-sys.stdout.write('\033[F' * 3)
+if INTERACTIVE_MODE==True:
+    sys.stdout.write('\n' * 4)
+    sys.stdout.write('\033[F' * 3)
 
 file = open(sys.argv[1], 'r')
+outs = open(sys.argv[2], 'a+')
 
 #path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/M4-B-G1'
 #path = '/Volumes/Mateus/COLUNAR-SF-1/M4/M4-B-G3'
@@ -123,13 +127,21 @@ for i, line in enumerate(file):
     log = 'Line: ' + '{:,}'.format(i+2) + '/' + '{:,}'.format(lcount) + '.' + (10 * ' ') + '\n'
     log = log + 'Elapsed time: ' + pp_time(diff) + '.' + (10 * ' ') + '\n'
 
-    sys.stdout.write(log)
-    sys.stdout.write('\033[F' * 2)
+    if INTERACTIVE_MODE==True:
+        sys.stdout.write(log)
+        sys.stdout.write('\033[F' * 2)
 
 batch.put(lrowkey, ldata)
 batch.send()
 
+outs.write('\n')
+outs.write(sys.argv[1] + '\n')
+outs.write(sys.argv[2] + '\n')
+outs.write(pp_time(diff) + '\n')
+
 file.close()
+outs.close()
 connection.close()
 
-sys.stdout.write('\n' * 3)
+if INTERACTIVE_MODE==True:
+    sys.stdout.write('\n' * 3)

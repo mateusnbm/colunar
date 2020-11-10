@@ -2,7 +2,7 @@
 #
 # download.sh
 #
-# sh download.sh M4-C-G1
+# sh download.sh SF1 M4-C-G1
 #
 
 M1_MODELS=(
@@ -68,7 +68,7 @@ M4_MODELS=(
 
 	)
 
-M1_LINKS=(
+M1_SF1_LINKS=(
 
 	https://drive.google.com/file/d/1p_227yHe6TBuzMhLQ4HQbm8T0sgAGXtj/view?usp=sharing
 	
@@ -82,7 +82,7 @@ M1_LINKS=(
 
 	)
 
-M2_LINKS=(
+M2_SF1_LINKS=(
 
 	https://drive.google.com/file/d/10a9YpQf-Gfuj6ysmLWBwfOaXgnYv_qoA/view?usp=sharing
 	https://drive.google.com/file/d/1Y2hhZ5r6aaxtZUAspG0nZfZvt8rVyElX/view?usp=sharing
@@ -97,7 +97,7 @@ M2_LINKS=(
 
 	)
 
-M3_LINKS=(
+M3_SF1_LINKS=(
 
 	https://drive.google.com/file/d/1HvRKucr1uCozGq18o4jcg-JfmZv6PLZg/view?usp=sharing
 
@@ -114,7 +114,7 @@ M3_LINKS=(
 
 	)
 
-M4_LINKS=(
+M4_SF1_LINKS=(
 
 	https://drive.google.com/file/d/1nUo6tXrTi7nmxjJeeKdO5pC-qNUZ9d7t/view?usp=sharing
 
@@ -131,22 +131,54 @@ M4_LINKS=(
 
 	)
 
-MODEL_ID=$1
+M4_SF10_LINKS=(
+
+	https://drive.google.com/file/d/1prGYnTLxaFs6jUAg51VowoxadElADzJj/view?usp=sharing
+
+	https://drive.google.com/file/d/1yybys1xK6lLMtGvip27TxLHFizjgKwOq/view?usp=sharing
+	https://drive.google.com/file/d/1rB1I0PQIemYzyjxt5VyPf1LrIiFZo3tP/view?usp=sharing
+
+	https://drive.google.com/file/d/1LkZ2APZlI0RK_lEeUXADYBa3HkDBU2Sz/view?usp=sharing
+	https://drive.google.com/file/d/12PhByuXIgfDsFEvd2UcOZTm9GJhSulFj/view?usp=sharing
+	https://drive.google.com/file/d/1YuWGThxWCmEeYWzYaHiNqpjran2hL6DL/view?usp=sharing
+
+	https://drive.google.com/file/d/1ngDVb9sQi-6j7WiiFWTqtvW9BhuVsrw6/view?usp=sharing
+	https://drive.google.com/file/d/11goWMqIirQ9jJH9_Bt-VWWu9830HX3B6/view?usp=sharing
+	https://drive.google.com/file/d/1qqulHLItHaT_2q1YM1lt64o8R__bwEeb/view?usp=sharing
+
+	)
+
+SF=$1
+MODEL_ID=$2
 MODEL_P0=$( echo $MODEL_ID | cut -c1-2 )
 MODEL_P1=$( echo $MODEL_ID | cut -c4-4 )
 MODEL_P2=$( echo $MODEL_ID | cut -c6-7 )
 
-for i in {0..6}; do if [ $MODEL_ID = ${M1_MODELS[$i]} ]; then LINK=${M1_LINKS[$i]}; fi done
-for i in {0..7}; do if [ $MODEL_ID = ${M2_MODELS[$i]} ]; then LINK=${M2_LINKS[$i]}; fi done
-for i in {0..8}; do if [ $MODEL_ID = ${M3_MODELS[$i]} ]; then LINK=${M3_LINKS[$i]}; fi done
-for i in {0..8}; do if [ $MODEL_ID = ${M4_MODELS[$i]} ]; then LINK=${M4_LINKS[$i]}; fi done
+if [ $SF = "SF1" ]; then
+
+	for i in {0..6}; do if [ $MODEL_ID = ${M1_MODELS[$i]} ]; then LINK=${M1_SF1_LINKS[$i]}; fi done
+	for i in {0..7}; do if [ $MODEL_ID = ${M2_MODELS[$i]} ]; then LINK=${M2_SF1_LINKS[$i]}; fi done
+	for i in {0..8}; do if [ $MODEL_ID = ${M3_MODELS[$i]} ]; then LINK=${M3_SF1_LINKS[$i]}; fi done
+	for i in {0..8}; do if [ $MODEL_ID = ${M4_MODELS[$i]} ]; then LINK=${M4_SF1_LINKS[$i]}; fi done
+
+fi
+
+if [ $SF = "SF10" ]; then
+
+	for i in {0..6}; do if [ $MODEL_ID = ${M1_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
+	for i in {0..7}; do if [ $MODEL_ID = ${M2_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
+	for i in {0..8}; do if [ $MODEL_ID = ${M3_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
+	for i in {0..8}; do if [ $MODEL_ID = ${M4_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
+
+fi
 
 FILE_ID=$( basename $( dirname $LINK ) )
-FILE_NAME="./tmp/$MODEL_P0/$MODEL_ID/$MODEL_ID.7z"
+FILE_NAME="./tmp/$SF/$MODEL_P0/$MODEL_ID/$MODEL_ID.7z"
 
 if [ ! -d ./tmp ]; then mkdir tmp; fi
-if [ ! -d ./tmp/$MODEL_P0 ]; then mkdir tmp/$MODEL_P0; fi
-if [ ! -d ./tmp/$MODEL_P0/$MODEL_ID ]; then mkdir tmp/$MODEL_P0/$MODEL_ID; else rm -rf tmp/$MODEL_P0/$MODEL_ID/*; fi
+if [ ! -d ./tmp/$SF ]; then mkdir tmp/$SF; fi
+if [ ! -d ./tmp/$SF/$MODEL_P0 ]; then mkdir tmp/$SF/$MODEL_P0; fi
+if [ ! -d ./tmp/$SF/$MODEL_P0/$MODEL_ID ]; then mkdir tmp/$SF/$MODEL_P0/$MODEL_ID; else rm -rf tmp/$SF/$MODEL_P0/$MODEL_ID/*; fi
 
 echo ""
 echo "Model: $MODEL_ID"
@@ -160,14 +192,14 @@ rm -rf cookie
 
 7z x $FILE_NAME
 
-mv ./$MODEL_ID/* ./tmp/$MODEL_P0/$MODEL_ID/
+mv ./$MODEL_ID/* ./tmp/$SF/$MODEL_P0/$MODEL_ID/
 rm -rf ./$MODEL_ID
 
 echo ""
 echo "Computing checksums..."
 echo ""
 
-for FILE in ./tmp/$MODEL_P0/$MODEL_ID/*.txt; do
+for FILE in ./tmp/$SF/$MODEL_P0/$MODEL_ID/*.txt; do
 
 	RESULT="ERROR"
 

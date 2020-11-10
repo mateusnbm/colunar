@@ -5,10 +5,10 @@
 # transform model_path destination_path
 #
 
-OUTPUT=./checksums/SF1-M4.txt
+OUTPUT=./checksums/SF10-M4.txt
 
 GROUP=M4
-FOLDER=COLUNAR-SF-1
+FOLDER=COLUNAR-SF-10
 
 MODELS=(
 
@@ -18,7 +18,6 @@ MODELS=(
     A-G3
 
     B-G1
-    B-G2
     B-G3
 
     C-G1

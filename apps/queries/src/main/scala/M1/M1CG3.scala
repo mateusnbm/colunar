@@ -16,7 +16,7 @@ object M1CG3 {
         val session =
             SparkSession.
             builder().
-            appName("GeosparkSample").
+            appName("M1-C-G3").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -224,10 +224,6 @@ object M1CG3 {
         var lineorderSpatialTableDataFrame = session.sql(lineorderMakeGeomQuery)
         lineorderSpatialTableDataFrame.createOrReplaceTempView("t")
 
-
-
-
-
         var Q1 = 
             s"""
             |
@@ -258,7 +254,8 @@ object M1CG3 {
             |
             | ORDER BY
             |
-            |   a.part_category
+            |   a.part_category,
+            |   a.customer_region
             |
             """.stripMargin
 
@@ -290,7 +287,8 @@ object M1CG3 {
             |
             | ORDER BY
             |
-            |   a.part_category
+            |   a.part_category,
+            |   a.customer_nation
             |
             """.stripMargin
 
@@ -320,7 +318,8 @@ object M1CG3 {
             |
             | ORDER BY
             |
-            |   a.part_category
+            |   a.part_category,
+            |   a.customer_city
             |
             """.stripMargin
 
@@ -339,7 +338,7 @@ object M1CG3 {
             |
             | WHERE
             |
-            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963 
+            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 
             |
             | GROUP BY
             |
@@ -383,7 +382,9 @@ object M1CG3 {
             |
             | ORDER BY
             |
-            |   a.part_category
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation
             |
             """.stripMargin
 
@@ -417,7 +418,10 @@ object M1CG3 {
             |
             | ORDER BY
             |
-            |   a.part_category
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city
             |
             """.stripMargin
 
@@ -439,7 +443,7 @@ object M1CG3 {
             |
             | WHERE
             |
-            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963
+            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18
             |
             | GROUP BY
             |
@@ -459,29 +463,32 @@ object M1CG3 {
             |
             """.stripMargin
 
+        for ( a <- 1 to 50 ) {
 
-        //session.time(session.sql(Q1).show())
-        //session.time(session.sql(Q2).show())
-        //session.time(session.sql(Q3).show())
-        //session.time(session.sql(Q4).show())
-        //session.time(session.sql(Q5).show())
-        //session.time(session.sql(Q6).show())
-        //session.time(session.sql(Q7).show())
+            println("TIME Q1 " + a)
+            session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))
 
+            println("TIME Q2 " + a)
+            session.time(session.sql(Q2).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q2-" + a))
 
-        val df1 = session.sql(Q1)
-        //val df2 = session.sql(Q2)
-        //val df3 = session.sql(Q3)
-        //val df4 = session.sql(Q4)
-        //val df5 = session.sql(Q5)
-        //val df6 = session.sql(Q6)
-        //val df7 = session.sql(Q7)
+            println("TIME Q3 " + a)
+            session.time(session.sql(Q3).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q3-" + a))
 
-        df1.coalesce(1).write.csv("file:/Users/mateusnbm/Desktop/workspace/colunar/apps/queries/data.csv")
+            println("TIME Q4 " + a)
+            session.time(session.sql(Q4).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q4-" + a))
 
+            println("TIME Q5 " + a)
+            session.time(session.sql(Q5).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q5-" + a))
+
+            println("TIME Q6 " + a)
+            session.time(session.sql(Q6).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q6-" + a))
+
+            println("TIME Q7 " + a)
+            session.time(session.sql(Q7).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q7-" + a))
+
+        }
 
         session.stop()
-
 
     }
 

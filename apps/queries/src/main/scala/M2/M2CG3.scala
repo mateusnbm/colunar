@@ -9,15 +9,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object M1CG3 {
+object M2CG3 {
 
     def main(args: Array[String]) {
-
 
         val session =
             SparkSession.
             builder().
-            appName("GeosparkSample").
+            appName("M2-C-G3").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -201,36 +200,42 @@ object M1CG3 {
         var lineorderSpatialTableDataFrame = session.sql(lineorderMakeGeomQuery)
         lineorderSpatialTableDataFrame.createOrReplaceTempView("t")
 
-
-
         var Q1 = 
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM t WHERE nation_pk IS NOT NULL) i,
             |   (SELECT * FROM t WHERE region_pk IS NOT NULL) j,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
-            | WHERE
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
             |
+            | WHERE
+            |
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
             |   j.id = i.nation_region_fk AND
             |   i.id = h.city_nation_fk AND
             |   h.id = c.customer_city_fk AND
-            |
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region
             |
             """.stripMargin
 
@@ -238,28 +243,36 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_nation,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM t WHERE nation_pk IS NOT NULL) i,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
-            | WHERE
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |
+            | WHERE
+            |
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.id = h.city_nation_fk AND
             |   h.id = c.customer_city_fk AND
-            |
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id 
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_nation
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_nation
             |
             """.stripMargin
 
@@ -267,26 +280,34 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_city,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
+            |
             | WHERE
+            |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |
             |   h.id = c.customer_city_fk AND
-            |
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_city
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_city
             |
             """.stripMargin
 
@@ -294,21 +315,30 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_address,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
+            |
             | WHERE
-            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963 AND
+            |
+            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_address
+            |
             | ORDER BY
+            |
             |   e.part_category,
             |   c.customer_address
             |
@@ -318,30 +348,39 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM t WHERE nation_pk IS NOT NULL) i,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
-            | WHERE
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |
+            | WHERE
+            |
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.id = h.city_nation_fk AND
             |   h.id = c.customer_city_fk AND
-            |
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region,
+            |   c.customer_nation
             |
             """.stripMargin
 
@@ -349,30 +388,40 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
+            |
             | WHERE
+            |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |
             |   h.id = c.customer_city_fk AND
-            |
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city
+            |
             | ORDER BY
-            |   e.part_category
+            |
+            |   e.part_category,
+            |   c.customer_region,
+            |   c.customer_nation,
+            |   c.customer_city
             |
             """.stripMargin
 
@@ -380,27 +429,36 @@ object M1CG3 {
             s"""
             |
             | SELECT 
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   c.customer_address,
             |   SUM(a.line_order_quantity)
+            |
             | FROM
+            |
             |   (SELECT * FROM t WHERE customer_pk IS NOT NULL) c,
             |   (SELECT * FROM t WHERE line_order_order_number_pk IS NOT NULL) a,
             |   (SELECT * FROM t WHERE part_part_pk IS NOT NULL) e
+            |
             | WHERE
-            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 12.2249248224963 AND
+            |
+            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
+            |
             | GROUP BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
             |   c.customer_city,
             |   c.customer_address
+            |
             | ORDER BY
+            |
             |   e.part_category,
             |   c.customer_region,
             |   c.customer_nation,
@@ -409,21 +467,32 @@ object M1CG3 {
             |
             """.stripMargin
 
+        for ( a <- 1 to 50 ) {
 
+            println("TIME Q1 " + a)
+            session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))
 
-        val df1 = session.sql(Q1)
-        //val df2 = session.sql(Q2)
-        //val df3 = session.sql(Q3)
-        //val df4 = session.sql(Q4)
-        //val df5 = session.sql(Q5)
-        //val df6 = session.sql(Q6)
-        //val df7 = session.sql(Q7)
+            println("TIME Q2 " + a)
+            session.time(session.sql(Q2).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q2-" + a))
 
-        df1.coalesce(1).write.csv("file:/home/mateusnbm/Desktop/queries/data.csv")
+            println("TIME Q3 " + a)
+            session.time(session.sql(Q3).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q3-" + a))
 
+            println("TIME Q4 " + a)
+            session.time(session.sql(Q4).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q4-" + a))
+
+            println("TIME Q5 " + a)
+            session.time(session.sql(Q5).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q5-" + a))
+
+            println("TIME Q6 " + a)
+            session.time(session.sql(Q6).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q6-" + a))
+
+            println("TIME Q7 " + a)
+            session.time(session.sql(Q7).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q7-" + a))
+
+        }
 
         session.stop()
-
 
     }
 

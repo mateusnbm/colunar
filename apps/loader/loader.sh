@@ -1,0 +1,194 @@
+#
+# loader.sh
+#
+# sh loader.sh SF1 M3-A-G1
+#
+
+SF=$1
+MODEL_ID=$2
+
+MODEL_P0=$( echo $MODEL_ID | cut -c1-2 )
+MODEL_P1=$( echo $MODEL_ID | cut -c4-4 )
+MODEL_P2=$( echo $MODEL_ID | cut -c6-7 )
+
+LOADER_PATH=/home/mateus/apps/loader/loader.py
+BASE_PATH=/home/mateus/apps/downloader/tmp/$SF/$MODEL_P0/$MODEL_ID
+LOAD_TIMES_FILEPATH=/home/mateus/results/raw/$MODEL_P0$MODEL_P1$MODEL_P2/times-loads.txt
+
+
+
+if [ $MODEL_ID = "M1-A-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M1-B-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M1-B-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M1-B-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M1-C-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M1-C-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M1-C-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+
+if [ $MODEL_ID = "M2-A-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M2-A-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M2-B-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M2-B-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M2-B-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M2-C-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M2-C-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M2-C-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+
+if [ $MODEL_ID = "M3-X-XX" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M3-A-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M3-A-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M3-B-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M3-B-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M3-B-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M3-C-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M3-C-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M3-C-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+
+if [ $MODEL_ID = "M4-X-XX" ]; then
+    python3 $LOADER_PATH $BASE_PATH/a.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M4-A-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M4-A-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/i.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/j.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M4-B-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/f.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/g.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/i.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/j.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M4-B-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/f.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/g.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M4-B-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/f.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/g.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/i.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/j.txt $LOAD_TIMES_FILEPATH
+fi
+
+
+if [ $MODEL_ID = "M4-C-G1" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/i.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/j.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M4-C-G2" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+fi
+if [ $MODEL_ID = "M4-C-G3" ]; then
+    python3 $LOADER_PATH $BASE_PATH/b.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/c.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/e.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/h.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/i.txt $LOAD_TIMES_FILEPATH
+    python3 $LOADER_PATH $BASE_PATH/j.txt $LOAD_TIMES_FILEPATH
+fi
+

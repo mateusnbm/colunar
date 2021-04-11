@@ -226,7 +226,7 @@ object M2BG1 {
             |
             | WHERE
             |
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.id = c.customer_region_fk AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id

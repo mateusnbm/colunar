@@ -236,7 +236,7 @@ object M1BG2 {
             |
             | WHERE
             |
-            |   ST_Contains(f.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(f.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   f.id = a.customer_address_fk 
             |
             | GROUP BY

@@ -1,5 +1,0 @@
-
-/home/mateus/apps/downloader/tmp/SF1/M4/M4-X-XX/a.txt
-/home/mateus/results/raw/M4XXX/times-loads.txt
-00:49:36
-

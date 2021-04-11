@@ -1,6 +1,8 @@
 #
 # transform.py
 #
+# python3 transform.py ./models/roberio/M1/M1-C-G2.json ./data_hbase/M1CG2/ 0
+#
 
 
 import os

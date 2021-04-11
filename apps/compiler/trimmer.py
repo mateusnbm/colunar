@@ -7,7 +7,8 @@ import re
 import csv
 import sys
 
-truthtable_path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/compiler/truthtable/'
+#truthtable_path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/compiler/truthtable/SF1/'
+truthtable_path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/compiler/truthtable/SF10/'
 
 for k in range(0, 7):
 

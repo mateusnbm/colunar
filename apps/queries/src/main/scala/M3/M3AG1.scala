@@ -215,7 +215,7 @@ object M3AG1 {
             |
             | WHERE
             |
-            |   ST_Contains(c.customer_region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(c.customer_region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
             |

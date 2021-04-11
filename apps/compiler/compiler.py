@@ -1,7 +1,7 @@
 #
 # compiler.py
 #
-# python3 compiler.py M4CG1
+# python3 compiler.py SF1 M4CG1
 #
 
 import os
@@ -13,14 +13,21 @@ import subprocess
 
 results_path = '/home/mateus/results/raw/'
 #results_path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/compiler/'
-
-truthtable_path = '/home/mateus/results/truthtable/'
 #truthtable_path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/compiler/truthtable/'
 
-model_name = sys.argv[1]
+scale_factor = sys.argv[1]
+model_name = sys.argv[2]
 model_name_p0 = model_name[0:2]
 model_name_p1 = model_name[2:3]
 model_name_p2 = model_name[3:5]
+
+if scale_factor == 'SF1':
+
+    truthtable_path = '/home/mateus/results/truthtable/SF1/'
+
+elif scale_factor == 'SF10':
+    
+    truthtable_path = '/home/mateus/results/truthtable/SF10/'
 
 times_loads_file = open((results_path + model_name + '/times-loads.txt'), 'r')
 times_queries_file = open((results_path + model_name + '/times-queries.txt'), 'r')

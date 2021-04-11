@@ -224,18 +224,14 @@ object M3CG1 {
             | FROM
             |
             |   (SELECT * FROM b WHERE customer_pk IS NOT NULL) c,
-            |   (SELECT * FROM b WHERE city_pk IS NOT NULL) h,
-            |   (SELECT * FROM b WHERE nation_pk IS NOT NULL) i,
             |   (SELECT * FROM b WHERE region_pk IS NOT NULL) j,
             |   a,
             |   (SELECT * FROM b WHERE part_part_pk IS NOT NULL) e
             |
             | WHERE
             |
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.id = c.customer_region_fk AND
-            |   i.id = c.customer_nation_fk AND
-            |   h.id = c.customer_city_fk AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
             |
@@ -263,7 +259,6 @@ object M3CG1 {
             | FROM
             |
             |   (SELECT * FROM b WHERE customer_pk IS NOT NULL) c,
-            |   (SELECT * FROM b WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM b WHERE nation_pk IS NOT NULL) i,
             |   a,
             |   (SELECT * FROM b WHERE part_part_pk IS NOT NULL) e
@@ -272,7 +267,6 @@ object M3CG1 {
             |
             |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.id = c.customer_nation_fk AND
-            |   h.id = c.customer_city_fk AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id 
             |
@@ -369,7 +363,6 @@ object M3CG1 {
             | FROM
             |
             |   (SELECT * FROM b WHERE customer_pk IS NOT NULL) c,
-            |   (SELECT * FROM b WHERE city_pk IS NOT NULL) h,
             |   (SELECT * FROM b WHERE nation_pk IS NOT NULL) i,
             |   a,
             |   (SELECT * FROM b WHERE part_part_pk IS NOT NULL) e
@@ -378,7 +371,6 @@ object M3CG1 {
             |
             |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.id = c.customer_nation_fk AND
-            |   h.id = c.customer_city_fk AND
             |   c.id = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.id
             |

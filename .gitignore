@@ -11,6 +11,9 @@
 /apps/generate-samara/tables-ssb/*
 /apps/generate-samara/tables-vssb/*
 /apps/generate-samara-2/*
+/apps/download/tmp/*
+/apps/compiler/M4CG1.zip
+/apps/fixer/*.tbl
 
 # macOS
 .DS_Store

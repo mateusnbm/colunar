@@ -374,7 +374,7 @@ object M4AG3 {
             |
             | WHERE
             |
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.region_pk = i.nation_region_fk AND
             |   i.nation_pk = h.city_nation_fk AND
             |   h.city_pk = c.customer_addr_city_fk AND

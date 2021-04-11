@@ -370,8 +370,6 @@ object M4CG1 {
             | FROM
             |
             |   c,
-            |   h,
-            |   i,
             |   j,
             |   a,
             |   e
@@ -380,8 +378,6 @@ object M4CG1 {
             |
             |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.region_pk = c.customer_region_fk AND
-            |   i.nation_pk = c.customer_nation_fk AND
-            |   h.city_pk = c.customer_city_fk AND
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
             |
@@ -409,7 +405,6 @@ object M4CG1 {
             | FROM
             |
             |   c,
-            |   h,
             |   i,
             |   a,
             |   e
@@ -418,7 +413,6 @@ object M4CG1 {
             |
             |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.nation_pk = c.customer_nation_fk AND
-            |   h.city_pk = c.customer_city_fk AND
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk 
             |
@@ -515,7 +509,6 @@ object M4CG1 {
             | FROM
             |
             |   c,
-            |   h,
             |   i,
             |   a,
             |   e
@@ -524,7 +517,6 @@ object M4CG1 {
             |
             |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   i.nation_pk = c.customer_nation_fk AND
-            |   h.city_pk = c.customer_city_fk AND
             |   c.customer_pk = a.line_order_customer_fk AND
             |   a.line_order_part_fk = e.part_part_pk
             |

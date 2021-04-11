@@ -1,3 +1,4 @@
+#
 #!/bin/bash
 #
 # download.sh
@@ -77,7 +78,7 @@ M1_SF1_LINKS=(
 	https://drive.google.com/file/d/1VKcN-4hzY0JvsIpteFg226cdV0_6oQ3z/view?usp=sharing
 
 	https://drive.google.com/file/d/1-fjmPzyYlzKaWejFs43WQnmZgYYdSPc9/view?usp=sharing
-	https://drive.google.com/file/d/1FGfmQ0vrOEqX83NBtOvVKEfVX6z09A5w/view?usp=sharing
+	https://drive.google.com/file/d/1Z6hvei6On92RCuLOZ1nwE-CCqQI5PiKe/view?usp=sharing
 	https://drive.google.com/file/d/1WaL9DQT4hZ5spCTEEUuIMxgqpd5GqcDG/view?usp=sharing
 
 	)
@@ -89,7 +90,7 @@ M2_SF1_LINKS=(
 
 	https://drive.google.com/file/d/1ywht8hU7sxp79pG80ZF-0nllWvA0rVc8/view?usp=sharing
 	https://drive.google.com/file/d/1o4RfWQ4aS6-NfXU-nyhDxovgomdhLIGL/view?usp=sharing
-	https://drive.google.com/file/d/1GKhvP78lU7olpde_L85igEMrYFZYCosu/view?usp=sharing
+	https://drive.google.com/file/d/1rIKr2ZUkMxmQYeP2XZwMmjYU77NJ-_JO/view?usp=sharing
 
 	https://drive.google.com/file/d/16nkpc-Celk4ST7vbhn_bArIXKUzjyP-F/view?usp=sharing
 	https://drive.google.com/file/d/1eBZriZQu8-OnMzhiYtswpZAV7GPvkQwy/view?usp=sharing
@@ -106,7 +107,7 @@ M3_SF1_LINKS=(
 
 	https://drive.google.com/file/d/1y_GFuuzTmJkPgVbE4ZFY4-AIoeNXpFpG/view?usp=sharing
 	https://drive.google.com/file/d/1wmRXTKyVfYHW8Hu5rtIgqStH9J4buxiL/view?usp=sharing
-	https://drive.google.com/file/d/16nlxq5UkUoTnHRZivLX2fLU4jZ_L5yER/view?usp=sharing
+	https://drive.google.com/file/d/11XAajcPnJ1_Yi7RtXqWiNypz3w3R3nYB/view?usp=sharing
 
 	https://drive.google.com/file/d/1RK-rhLi2ii8y9OsXp9pmHq_GjpAj8g9l/view?usp=sharing
 	https://drive.google.com/file/d/11luzx1VeURd3g93JMOrnzMH9toRl3fuL/view?usp=sharing
@@ -131,20 +132,37 @@ M4_SF1_LINKS=(
 
 	)
 
+M3_SF10_LINKS=(
+
+	https://drive.google.com/file/d/17LQKuhGORmr2Iu5WNR1a-_31yIQmf0QP/view?usp=sharing
+
+	https://drive.google.com/file/d/1BzSArI3OTYLSUWSpAWDfFEAr55kzXsb3/view?usp=sharing
+	https://drive.google.com/file/d/14D6BNe0_Fco-2-nsZ3mbIvvqElluoYCi/view?usp=sharing
+
+	https://drive.google.com/file/d/1Y6ApPPC-SlPnUZ6ZBIjHUBhTWIaXR4Rn/view?usp=sharing
+	https://drive.google.com/file/d/1RGHglYnHebzP7ldKOlgW0GpV5NHyFB1T/view?usp=sharing
+	https://drive.google.com/file/d/1VjzwwggUMnMlQNNcCGK1Bc9qPLoQwxkf/view?usp=sharing
+
+	https://drive.google.com/file/d/1NwnaNzFICimgOtavgIOCWP3wo0S3hGDm/view?usp=sharing
+	https://drive.google.com/file/d/1H4YXSDTiF3hsR0H1JjVozaZ3m6LlC5_k/view?usp=sharing
+	https://drive.google.com/file/d/1WeXilm3LhclEcIWB16xyNBuVerFXx2P8/view?usp=sharing
+
+	)
+
 M4_SF10_LINKS=(
 
-	https://drive.google.com/file/d/1prGYnTLxaFs6jUAg51VowoxadElADzJj/view?usp=sharing
+	https://drive.google.com/file/d/1HoLdBclSFxmRmjyyeeh1JU9S7wICKXUB/view?usp=sharing
 
-	https://drive.google.com/file/d/1yybys1xK6lLMtGvip27TxLHFizjgKwOq/view?usp=sharing
-	https://drive.google.com/file/d/1rB1I0PQIemYzyjxt5VyPf1LrIiFZo3tP/view?usp=sharing
+	M4-A-G1
+	https://drive.google.com/file/d/1Z0TSmoI-lLjxsZzvIiG5A0BQDEa1A9wC/view?usp=sharing
 
-	https://drive.google.com/file/d/1LkZ2APZlI0RK_lEeUXADYBa3HkDBU2Sz/view?usp=sharing
-	https://drive.google.com/file/d/12PhByuXIgfDsFEvd2UcOZTm9GJhSulFj/view?usp=sharing
-	https://drive.google.com/file/d/1YuWGThxWCmEeYWzYaHiNqpjran2hL6DL/view?usp=sharing
+	https://drive.google.com/file/d/1kT81xAEJmXgOMrZAqT5GorHgG-DTPFWb/view?usp=sharing
+	M4-B-G2
+	https://drive.google.com/file/d/1jQnHs4REe8755hV0H-LaopUi78A37Wnv/view?usp=sharing
 
-	https://drive.google.com/file/d/1ngDVb9sQi-6j7WiiFWTqtvW9BhuVsrw6/view?usp=sharing
-	https://drive.google.com/file/d/11goWMqIirQ9jJH9_Bt-VWWu9830HX3B6/view?usp=sharing
-	https://drive.google.com/file/d/1qqulHLItHaT_2q1YM1lt64o8R__bwEeb/view?usp=sharing
+	https://drive.google.com/file/d/1AoTtVWnUelRBxSktqocXWJnNyuiZe__2/view?usp=sharing
+	https://drive.google.com/file/d/12mSK56g3Z3g0SW2BhyrcvYqKBpMlQCGm/view?usp=sharing
+	https://drive.google.com/file/d/1BdcEnt5vOqoB33BId699dSxBpien-bK0/view?usp=sharing
 
 	)
 
@@ -165,9 +183,9 @@ fi
 
 if [ $SF = "SF10" ]; then
 
-	for i in {0..6}; do if [ $MODEL_ID = ${M1_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
-	for i in {0..7}; do if [ $MODEL_ID = ${M2_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
-	for i in {0..8}; do if [ $MODEL_ID = ${M3_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
+	for i in {0..6}; do if [ $MODEL_ID = ${M1_MODELS[$i]} ]; then LINK=${M1_SF10_LINKS[$i]}; fi done
+	for i in {0..7}; do if [ $MODEL_ID = ${M2_MODELS[$i]} ]; then LINK=${M2_SF10_LINKS[$i]}; fi done
+	for i in {0..8}; do if [ $MODEL_ID = ${M3_MODELS[$i]} ]; then LINK=${M3_SF10_LINKS[$i]}; fi done
 	for i in {0..8}; do if [ $MODEL_ID = ${M4_MODELS[$i]} ]; then LINK=${M4_SF10_LINKS[$i]}; fi done
 
 fi
@@ -195,27 +213,39 @@ rm -rf cookie
 mv ./$MODEL_ID/* ./tmp/$SF/$MODEL_P0/$MODEL_ID/
 rm -rf ./$MODEL_ID
 
-echo ""
-echo "Computing checksums..."
-echo ""
+if [ $SF = "SF1" ]; then
 
-for FILE in ./tmp/$SF/$MODEL_P0/$MODEL_ID/*.txt; do
+	echo ""
+	echo "Computing checksums..."
+	echo ""
 
-	RESULT="ERROR"
+	for FILE in ./tmp/$SF/$MODEL_P0/$MODEL_ID/*.txt; do
 
-	TRUTH_TABLE_PATH="./checksums/SF1-ALL.txt"
-	TRUTH_TABLE_ID="$MODEL_ID $( basename $FILE )"
-	TRUTH_TABLE_LINE=$( grep "^$TRUTH_TABLE_ID" $TRUTH_TABLE_PATH )
-	TRUTH_TABLE_COMPONENTS=($TRUTH_TABLE_LINE)
-	TRUTH_TABLE_SUM=${TRUTH_TABLE_COMPONENTS[2]}
+		RESULT="ERROR"
 
-	DOWNLOADED_FILE_SUM=$(shasum $FILE | cut -d " " -f 1)
+		TRUTH_TABLE_PATH="./checksums/SF1-ALL.txt"
+		TRUTH_TABLE_ID="$MODEL_ID $( basename $FILE )"
+		TRUTH_TABLE_LINE=$( grep "^$TRUTH_TABLE_ID" $TRUTH_TABLE_PATH )
+		TRUTH_TABLE_COMPONENTS=($TRUTH_TABLE_LINE)
+		TRUTH_TABLE_SUM=${TRUTH_TABLE_COMPONENTS[2]}
 
-	if [ $TRUTH_TABLE_SUM = $DOWNLOADED_FILE_SUM ]; then RESULT="MATCH"; fi
+		DOWNLOADED_FILE_SUM=$(shasum $FILE | cut -d " " -f 1)
 
-	echo "$MODEL $(basename $FILE) $DOWNLOADED_FILE_SUM $TRUTH_TABLE_SUM $RESULT"
+		if [ $TRUTH_TABLE_SUM = $DOWNLOADED_FILE_SUM ]; then RESULT="MATCH"; fi
 
-done
+		echo "$MODEL $(basename $FILE) $DOWNLOADED_FILE_SUM $TRUTH_TABLE_SUM $RESULT"
+
+	done
+
+fi
+
+if [ $SF = "SF10" ]; then
+
+	echo ""
+	echo "Ignored checksum verification."
+	echo ""
+
+fi
 
 echo ""
 

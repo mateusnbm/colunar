@@ -242,7 +242,7 @@ object M1CG3 {
             |
             | WHERE
             |
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)'))AND
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
             |   j.id = i.nation_region_fk AND
             |   i.id = h.city_nation_fk AND
             |   h.id = a.customer_city_fk

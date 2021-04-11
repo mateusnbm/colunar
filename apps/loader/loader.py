@@ -1,3 +1,8 @@
+#
+# loader.sh
+#
+# python3 $LOADER_PATH $BASE_PATH/d.txt $LOAD_TIMES_FILEPATH 1
+#
 
 import re
 import sys
@@ -5,7 +10,7 @@ import time
 import struct
 import happybase
 
-INTERACTIVE_MODE=True
+INTERACTIVE_MODE=False
 
 def pp_time(n):
     h = int(n/3600)
@@ -25,22 +30,7 @@ if INTERACTIVE_MODE==True:
 
 file = open(sys.argv[1], 'r')
 outs = open(sys.argv[2], 'a+')
-
-#path = '/Users/mateusnbm/Desktop/workspace/colunar/apps/generate/data_hbase/M4-B-G1'
-#path = '/Volumes/Mateus/COLUNAR-SF-1/M4/M4-B-G3'
-
-#file = open('/Volumes/Mateus/COLUNAR-SF-1/M4/a.txt', 'r')
-
-#file = open(path + '/a.txt', 'r')
-#file = open(path + '/b.txt', 'r')
-#file = open(path + '/c.txt', 'r')
-#file = open(path + '/d.txt', 'r')
-#file = open(path + '/e.txt', 'r')
-#file = open(path + '/f.txt', 'r')
-#file = open(path + '/g.txt', 'r')
-#file = open(path + '/h.txt', 'r')
-#file = open(path + '/i.txt', 'r')
-#file = open(path + '/j.txt', 'r')
+should_create_table = (int(sys.argv[3]) ==  1)
 
 for i, l in enumerate(file): pass
 lcount = i
@@ -49,14 +39,17 @@ file.seek(0, 0)
 connection = happybase.Connection(host='localhost')
 connection.open()
 
-families = {}
-line = file.readline()
-components = line.split('\'')[1::2]
-table_name = components[0]
-families_names = components[1:]
-for family in families_names:
-    families[family] = {}
-connection.create_table(table_name, families)
+if should_create_table == True:
+
+    families = {}
+    line = file.readline()
+    components = line.split('\'')[1::2]
+    table_name = components[0]
+    families_names = components[1:]
+    for family in families_names:
+        families[family] = {}
+
+    connection.create_table(table_name, families)
 
 line = file.readline()
 components = line.split('\'')[1::2]
@@ -80,8 +73,6 @@ last_c_name = qualifiers.split(':')[1]
 last_c_datatype = datatype
 
 for i, line in enumerate(file):
-
-    #if i > 10000: break
 
     components = line.split('\'')[1::2]
     rowkey = components[1]

@@ -1,0 +1,1527 @@
+[
+    {
+        "transform_id": "CG1-GG1-FDH-FN-SH",
+        "transform_comments": "",
+        "transform_tables": [
+            {
+                "table_name": "a",
+                "table_name_ssb": "lineorder",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "a",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "a",
+                            "column_index": 1
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "a"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "a",
+                        "column_f_columns": [
+                            {
+                                "column_name": "aa",
+                                "column_desc": "line_order_order_number_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "orderkey"
+                            },
+                            {
+                                "column_name": "ab",
+                                "column_desc": "line_order_line_number_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "linenumber"
+                            },
+                            {
+                                "column_name": "ac",
+                                "column_desc": "line_order_customer_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "custkey"
+                            },
+                            {
+                                "column_name": "ad",
+                                "column_desc": "line_order_part_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "partkey"
+                            },
+                            {
+                                "column_name": "ae",
+                                "column_desc": "line_order_supplier_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "suppkey"
+                            },
+                            {
+                                "column_name": "af",
+                                "column_desc": "line_order_order_date_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "orderdate"
+                            },
+                            {
+                                "column_name": "ag",
+                                "column_desc": "line_order_order_priority",
+                                "column_datatype": "string",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "ordpriority"
+                            },
+                            {
+                                "column_name": "ah",
+                                "column_desc": "line_order_shipping_priority",
+                                "column_datatype": "string",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "shippriority"
+                            },
+                            {
+                                "column_name": "ai",
+                                "column_desc": "line_order_quantity",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "quantity"
+                            },
+                            {
+                                "column_name": "aj",
+                                "column_desc": "line_order_extended_price",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "extendedprice"
+                            },
+                            {
+                                "column_name": "ak",
+                                "column_desc": "line_order_order_total_price",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "ordtotalprice"
+                            },
+                            {
+                                "column_name": "al",
+                                "column_desc": "line_order_discount",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 11,
+                                "ssb_column_name": "discount"
+                            },
+                            {
+                                "column_name": "am",
+                                "column_desc": "line_order_revenue",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 12,
+                                "ssb_column_name": "revenue"
+                            },
+                            {
+                                "column_name": "an",
+                                "column_desc": "line_order_supply_cost",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 13,
+                                "ssb_column_name": "supplycost"
+                            },
+                            {
+                                "column_name": "ao",
+                                "column_desc": "line_order_tax",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 14,
+                                "ssb_column_name": "tax"
+                            },
+                            {
+                                "column_name": "ap",
+                                "column_desc": "line_order_commit_date_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 15,
+                                "ssb_column_name": "commitdate"
+                            },
+                            {
+                                "column_name": "aq",
+                                "column_desc": "line_order_shipping_mode",
+                                "column_datatype": "string",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 16,
+                                "ssb_column_name": "shipmode"
+                            }
+                        ]
+                    }
+                ]
+            }, {
+                "table_name": "b",
+                "table_name_ssb": "lineorder",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "b",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "c",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "d",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "e",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "f",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "g",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "h",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "i",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "j",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "k",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "l",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "m",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "n",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "b",
+                    "c",
+                    "d",
+                    "e",
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "k",
+                    "l",
+                    "m",
+                    "n"
+                ],
+                "table_column_families_data": [
+                    {
+                        "column_f_name": "b",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ba",
+                                "column_desc": "order_date_date_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "datekey",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bb",
+                                "column_desc": "order_date_date",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "date",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bc",
+                                "column_desc": "order_date_day_of_week",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "dayofweek",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bd",
+                                "column_desc": "order_date_month",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "month",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "be",
+                                "column_desc": "order_date_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "year",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bf",
+                                "column_desc": "order_date_year_month_num",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "yearmonthnum",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bg",
+                                "column_desc": "order_date_year_month",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "yearmonth",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bh",
+                                "column_desc": "order_date_day_num_in_week",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "daynuminweek",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bi",
+                                "column_desc": "order_date_day_num_in_month",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "daynuminmonth",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bj",
+                                "column_desc": "order_date_day_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "daynuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bk",
+                                "column_desc": "order_date_month_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "monthnuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bl",
+                                "column_desc": "order_date_week_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 11,
+                                "ssb_column_name": "weeknuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bm",
+                                "column_desc": "order_date_selling_season",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 12,
+                                "ssb_column_name": "sellingseason",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bn",
+                                "column_desc": "order_date_last_day_in_week_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 13,
+                                "ssb_column_name": "lastdayinweekfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bo",
+                                "column_desc": "order_date_last_day_in_month_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 14,
+                                "ssb_column_name": "lastdayinmonthfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bp",
+                                "column_desc": "order_date_holiday_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 15,
+                                "ssb_column_name": "holidayfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "bq",
+                                "column_desc": "order_date_weekday_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 16,
+                                "ssb_column_name": "weekday_fl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "c",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ca",
+                                "column_desc": "commit_date_date_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "datekey",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cb",
+                                "column_desc": "commit_date_date",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "date",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cc",
+                                "column_desc": "commit_date_day_of_week",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "dayofweek",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cd",
+                                "column_desc": "commit_date_month",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "month",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ce",
+                                "column_desc": "commit_date_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "year",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cf",
+                                "column_desc": "commit_date_year_month_num",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "yearmonthnum",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cg",
+                                "column_desc": "commit_date_year_month",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "yearmonth",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ch",
+                                "column_desc": "commit_date_day_num_in_week",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "daynuminweek",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ci",
+                                "column_desc": "commit_date_day_num_in_month",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "daynuminmonth",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cj",
+                                "column_desc": "commit_date_day_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "daynuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ck",
+                                "column_desc": "commit_date_month_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "monthnuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cl",
+                                "column_desc": "commit_date_week_num_in_year",
+                                "column_datatype": "int",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 11,
+                                "ssb_column_name": "weeknuminyear",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cm",
+                                "column_desc": "commit_date_selling_season",
+                                "column_datatype": "string",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 12,
+                                "ssb_column_name": "sellingseason",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cn",
+                                "column_desc": "commit_date_last_day_in_week_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 13,
+                                "ssb_column_name": "lastdayinweekfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "co",
+                                "column_desc": "commit_date_last_day_in_month_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 14,
+                                "ssb_column_name": "lastdayinmonthfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cp",
+                                "column_desc": "commit_date_holiday_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 15,
+                                "ssb_column_name": "holidayfl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "cq",
+                                "column_desc": "commit_date_weekday_fl",
+                                "column_datatype": "boolean",
+                                "ssb_table_name": "date",
+                                "ssb_column_index": 16,
+                                "ssb_column_name": "weekday_fl",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 15
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "d",
+                        "column_f_columns": [
+                            {
+                                "column_name": "da",
+                                "column_desc": "customer_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "custkey",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "db",
+                                "column_desc": "customer_name",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "name",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dc",
+                                "column_desc": "customer_address",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "address",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dd",
+                                "column_desc": "customer_city",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "city",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "de",
+                                "column_desc": "customer_nation",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "nation",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "df",
+                                "column_desc": "customer_region",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "region",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dg",
+                                "column_desc": "customer_phone",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "phone",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dh",
+                                "column_desc": "customer_marketing_segment",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "mkt_segment",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "di",
+                                "column_desc": "customer_address_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "address_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dj",
+                                "column_desc": "customer_city_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dk",
+                                "column_desc": "customer_nation_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "nation_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "dl",
+                                "column_desc": "customer_region_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer",
+                                "ssb_column_index": 11,
+                                "ssb_column_name": "region_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "e",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ea",
+                                "column_desc": "supplier_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "suppkey",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "eb",
+                                "column_desc": "supplier_name",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "name",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ec",
+                                "column_desc": "supplier_address",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "address",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ed",
+                                "column_desc": "supplier_city",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "city",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ee",
+                                "column_desc": "supplier_nation",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "nation",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ef",
+                                "column_desc": "supplier_region",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "region",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "eg",
+                                "column_desc": "supplier_phone",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "phone",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "eh",
+                                "column_desc": "supplier_address_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "address_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ei",
+                                "column_desc": "supplier_city_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "city_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ej",
+                                "column_desc": "supplier_nation_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 9,
+                                "ssb_column_name": "nation_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ek",
+                                "column_desc": "supplier_region_fk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier",
+                                "ssb_column_index": 10,
+                                "ssb_column_name": "region_fk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "f",
+                        "column_f_columns": [
+                            {
+                                "column_name": "fa",
+                                "column_desc": "part_part_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "partkey",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fb",
+                                "column_desc": "part_name",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "name",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fc",
+                                "column_desc": "part_mfgr",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "mfgr",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fd",
+                                "column_desc": "part_category",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 3,
+                                "ssb_column_name": "category",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fe",
+                                "column_desc": "part_brand",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "brand1",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ff",
+                                "column_desc": "part_color",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 5,
+                                "ssb_column_name": "color",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fg",
+                                "column_desc": "part_type",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 6,
+                                "ssb_column_name": "type",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fh",
+                                "column_desc": "part_size",
+                                "column_datatype": "int",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 7,
+                                "ssb_column_name": "size",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "fi",
+                                "column_desc": "part_container",
+                                "column_datatype": "string",
+                                "ssb_table_name": "part",
+                                "ssb_column_index": 8,
+                                "ssb_column_name": "container",
+                                "join_tables": [
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 3
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "g",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ga",
+                                "column_desc": "customer_addr_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "addr_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "gb",
+                                "column_desc": "customer_addr_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "customer_addr",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "addr_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "h",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ha",
+                                "column_desc": "customer_city_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "city_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 9
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "hb",
+                                "column_desc": "customer_city_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "city_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 9
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "i",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ia",
+                                "column_desc": "customer_nation_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "nation_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 10
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "ib",
+                                "column_desc": "customer_nation_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "nation_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 10
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "j",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ja",
+                                "column_desc": "customer_region_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "nation_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 11
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "jb",
+                                "column_desc": "customer_region_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "region_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "customer",
+                                        "c_index": 11
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "k",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ka",
+                                "column_desc": "supplier_addr_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "addr_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 7
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "kb",
+                                "column_desc": "supplier_addr_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "supplier_addr",
+                                "ssb_column_index": 4,
+                                "ssb_column_name": "addr_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 7
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "l",
+                        "column_f_columns": [
+                            {
+                                "column_name": "la",
+                                "column_desc": "supplier_city_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "city_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "lb",
+                                "column_desc": "supplier_city_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "city",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "city_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 8
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "m",
+                        "column_f_columns": [
+                            {
+                                "column_name": "ma",
+                                "column_desc": "supplier_nation_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "nation_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 9
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "mb",
+                                "column_desc": "supplier_nation_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "nation",
+                                "ssb_column_index": 2,
+                                "ssb_column_name": "nation_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 9
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "column_f_name": "n",
+                        "column_f_columns": [
+                            {
+                                "column_name": "na",
+                                "column_desc": "supplier_region_pk",
+                                "column_datatype": "int",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 0,
+                                "ssb_column_name": "nation_pk",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 10
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "column_name": "nb",
+                                "column_desc": "supplier_region_geom",
+                                "column_datatype": "string",
+                                "ssb_table_name": "region",
+                                "ssb_column_index": 1,
+                                "ssb_column_name": "region_geom",
+                                "join_tables": [
+                                    {
+                                        "c_table": "supplier",
+                                        "c_index": 10
+                                    },
+                                    {
+                                        "c_table": "lineorder",
+                                        "c_index": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

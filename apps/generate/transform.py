@@ -85,6 +85,7 @@ def determineRowKey(table, data):
         c = cf['column_f_columns'][c_column_index]
 
         c_name = c['column_name']
+        c_datatype = c['column_datatype']
         c_ssb_table_name = c['ssb_table_name']
         c_ssb_column_index = c['ssb_column_index']
 
@@ -94,7 +95,30 @@ def determineRowKey(table, data):
 
         else:
 
-            table_rk += 'NOT_IMPLEMENTED'
+            c_join_tables = c['join_tables'][::-1]
+            c_index = c_join_tables[0]['c_index']
+            c_join_pk = data[c_index]
+
+            for join in c_join_tables[1:]:
+
+                iter_c_table = join['c_table']
+                iter_c_index = join['c_index']
+
+                iter_line = readTableLine(iter_c_table, c_join_pk)
+                iter_attrs = iter_line.split('|')
+
+                c_join_pk = iter_attrs[iter_c_index]
+
+            c_fk_row = readTableLine(c_ssb_table_name, c_join_pk)
+            c_fk_data = c_fk_row.split('|')
+            c_data = c_fk_data[c_ssb_column_index]
+
+            if 'column_value_prefix' in c:
+
+                c_value_prefix = c["column_value_prefix"]
+                c_data = (c_value_prefix + "+" + c_data)
+
+            table_rk += c_data+'+'
 
     return table_rk[:-1]
 
@@ -260,7 +284,19 @@ for transform_i, transform in enumerate(tf_data):
 
                     if c_ssb_table_name == table_name_ssb:
 
-                        c_data = data[c_ssb_column_index]
+                        if 'ssb_column_indexes' not in c:
+
+                            c_data = data[c_ssb_column_index]
+
+                        else:
+
+                            c_data = ''
+
+                            for multi_index in c['ssb_column_indexes']:
+
+                                c_data += data[multi_index]+'+'
+
+                            c_data = c_data[:-1]
 
                     else:
 
@@ -354,7 +390,7 @@ for transform_i, transform in enumerate(tf_data):
 
             #hb_file.write('\n')
 
-            if i == 5: break
+            #if i == 5: break
 
         hb_file.close()
 

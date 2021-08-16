@@ -1,10 +1,10 @@
 [
     {
-        "transform_id": "CG1-GG1-FDD-FN-SH [M1-A-G1]",
+        "transform_id": "CG1-GG1-FDH-FN-SH",
         "transform_comments": "",
         "transform_tables": [
             {
-                "table_name": "t",
+                "table_name": "a",
                 "table_name_ssb": "lineorder",
                 "table_row_key": {
                     "surrogate": false,
@@ -21,20 +21,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "a",
-                    "b",
-                    "c",
-                    "d",
-                    "e",
-                    "f",
-                    "g",
-                    "h",
-                    "i",
-                    "j",
-                    "k",
-                    "l",
-                    "m",
-                    "n"
+                    "a"
                 ],
                 "table_column_families_data": [
                     {
@@ -60,7 +47,6 @@
                                 "column_name": "ac",
                                 "column_desc": "line_order_customer_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "custkey"
@@ -69,7 +55,6 @@
                                 "column_name": "ad",
                                 "column_desc": "line_order_part_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
@@ -78,7 +63,6 @@
                                 "column_name": "ae",
                                 "column_desc": "line_order_supplier_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "suppkey"
@@ -87,7 +71,6 @@
                                 "column_name": "af",
                                 "column_desc": "line_order_order_date_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "orderdate"
@@ -168,7 +151,6 @@
                                 "column_name": "ap",
                                 "column_desc": "line_order_commit_date_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"
@@ -180,9 +162,70 @@
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 16,
                                 "ssb_column_name": "shipmode"
+                            },
+                            {
+                                "column_name": "ar",
+                                "column_desc": "date_date_cust_supp_part",
+                                "column_datatype": "string",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 0,
+                                "ssb_column_indexes": [
+                                    5,
+                                    15,
+                                    2,
+                                    4,
+                                    3
+                                ],
+                                "ssb_column_name": "inexistent"
                             }
                         ]
-                    },
+                    }
+                ]
+            }, {
+                "table_name": "b",
+                "table_name_ssb": "lineorder",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "b",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "c",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "d",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "e",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "f",
+                            "column_index": 0
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "b",
+                    "c",
+                    "d",
+                    "e",
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "k",
+                    "l",
+                    "m",
+                    "n"
+                ],
+                "table_column_families_data": [
                     {
                         "column_f_name": "b",
                         "column_f_columns": [

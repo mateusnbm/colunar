@@ -1,6 +1,8 @@
 #
 # zqueries.py
 #
+# python3 zqueries.py ./models/mateus/CG1-GG1/CG1-GG1-FDN-FN-SH.json
+#
 
 
 import os

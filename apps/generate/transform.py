@@ -11,7 +11,7 @@ import json
 import time
 
 DEBUG_MODE = False
-COUNT_MODE = False
+COUNT_MODE = True #False
 
 model_path = sys.argv[1]
 destination_path = sys.argv[2]

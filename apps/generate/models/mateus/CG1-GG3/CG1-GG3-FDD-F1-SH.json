@@ -21,14 +21,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "a",
-                    "b",
-                    "c",
-                    "d",
-                    "e",
-                    "f",
-                    "g",
-                    "k"
+                    "a"
                 ],
                 "table_column_families_data": [
                     {
@@ -178,7 +171,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "b",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "ba",
@@ -421,7 +414,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "c",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "ca",
@@ -664,7 +657,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "d",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "da",
@@ -837,7 +830,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "e",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "ea",
@@ -996,7 +989,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "f",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "fa",
@@ -1127,7 +1120,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "g",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "ga",
@@ -1168,7 +1161,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "k",
+                        "column_f_name": "a",
                         "column_f_columns": [
                             {
                                 "column_name": "ka",

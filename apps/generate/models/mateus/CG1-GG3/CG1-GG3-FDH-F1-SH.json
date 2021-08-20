@@ -1,10 +1,10 @@
 [
     {
-        "transform_id": "CG1-GG3-FDD-FN-SH",
+        "transform_id": "CG1-GG3-FDH-FN-SH",
         "transform_comments": "",
         "transform_tables": [
             {
-                "table_name": "t",
+                "table_name": "a",
                 "table_name_ssb": "lineorder",
                 "table_row_key": {
                     "surrogate": false,
@@ -21,14 +21,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "a",
-                    "b",
-                    "c",
-                    "d",
-                    "e",
-                    "f",
-                    "g",
-                    "k"
+                    "a"
                 ],
                 "table_column_families_data": [
                     {
@@ -54,7 +47,6 @@
                                 "column_name": "ac",
                                 "column_desc": "line_order_customer_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "custkey"
@@ -63,7 +55,6 @@
                                 "column_name": "ad",
                                 "column_desc": "line_order_part_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
@@ -72,7 +63,6 @@
                                 "column_name": "ae",
                                 "column_desc": "line_order_supplier_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "suppkey"
@@ -81,7 +71,6 @@
                                 "column_name": "af",
                                 "column_desc": "line_order_order_date_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "orderdate"
@@ -162,7 +151,6 @@
                                 "column_name": "ap",
                                 "column_desc": "line_order_commit_date_fk",
                                 "column_datatype": "int",
-                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"
@@ -174,9 +162,59 @@
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 16,
                                 "ssb_column_name": "shipmode"
+                            },
+                            {
+                                "column_name": "ar",
+                                "column_desc": "date_date_cust_supp_part",
+                                "column_datatype": "string",
+                                "ssb_table_name": "lineorder",
+                                "ssb_column_index": 0,
+                                "ssb_column_indexes": [
+                                    5,
+                                    15,
+                                    2,
+                                    4,
+                                    3
+                                ],
+                                "ssb_column_name": "inexistent"
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                "table_name": "b",
+                "table_name_ssb": "lineorder",
+                "table_row_key": {
+                    "surrogate": false,
+                    "prefix": null,
+                    "components": [
+                        {
+                            "cf_name": "b",
+                            "column_index": 0
+                        },
+                        {
+                            "cf_name": "b",
+                            "column_index": 17
+                        },
+                        {
+                            "cf_name": "b",
+                            "column_index": 34
+                        },
+                        {
+                            "cf_name": "b",
+                            "column_index": 46
+                        },
+                        {
+                            "cf_name": "b",
+                            "column_index": 57
+                        }
+                    ]
+                },
+                "table_column_families": [
+                    "b"
+                ],
+                "table_column_families_data": [
                     {
                         "column_f_name": "b",
                         "column_f_columns": [
@@ -417,12 +455,7 @@
                                         "c_index": 5
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "c",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "ca",
                                 "column_desc": "commit_date_date_pk",
@@ -660,12 +693,7 @@
                                         "c_index": 15
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "d",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "da",
                                 "column_desc": "customer_pk",
@@ -833,12 +861,7 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "e",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "ea",
                                 "column_desc": "supplier_pk",
@@ -992,12 +1015,7 @@
                                         "c_index": 4
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "f",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "fa",
                                 "column_desc": "part_part_pk",
@@ -1123,12 +1141,7 @@
                                         "c_index": 3
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "g",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "ga",
                                 "column_desc": "customer_addr_pk",
@@ -1164,12 +1177,7 @@
                                         "c_index": 2
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "column_f_name": "k",
-                        "column_f_columns": [
+                            },
                             {
                                 "column_name": "ka",
                                 "column_desc": "supplier_addr_pk",

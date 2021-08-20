@@ -11,7 +11,7 @@ import json
 import time
 
 DEBUG_MODE = False
-COUNT_MODE = True #False
+COUNT_MODE = False
 
 model_path = sys.argv[1]
 destination_path = sys.argv[2]
@@ -390,7 +390,7 @@ for transform_i, transform in enumerate(tf_data):
 
             #hb_file.write('\n')
 
-            #if i == 5: break
+            if i == 5: break
 
         hb_file.close()
 

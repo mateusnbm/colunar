@@ -1,6 +1,6 @@
 [
     {
-        "transform_id": "CG3-GG2-FDN-FN-SH [M4-C-G2]",
+        "transform_id": "CG3-GG2-FDN-F1-SH",
         "transform_comments": "",
         "transform_tables": [
             {
@@ -358,8 +358,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "c",
-                    "f"
+                    "c"
                 ],
                 "table_column_families_data": [
                     {
@@ -479,7 +478,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "f",
+                        "column_f_name": "c",
                         "column_f_columns": [
                             {
                                 "column_name": "fa",
@@ -527,8 +526,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "d",
-                    "g"
+                    "d"
                 ],
                 "table_column_families_data": [
                     {
@@ -639,7 +637,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "g",
+                        "column_f_name": "d",
                         "column_f_columns": [
                             {
                                 "column_name": "ga",
@@ -792,9 +790,7 @@
                     ]
                 },
                 "table_column_families": [
-                    "h",
-                    "i",
-                    "j"
+                    "h"
                 ],
                 "table_column_families_data": [
                     {
@@ -821,7 +817,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "i",
+                        "column_f_name": "h",
                         "column_f_columns": [
                             {
                                 "column_name": "ia",
@@ -854,7 +850,7 @@
                         ]
                     },
                     {
-                        "column_f_name": "j",
+                        "column_f_name": "h",
                         "column_f_columns": [
                             {
                                 "column_name": "ja",

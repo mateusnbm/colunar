@@ -1,6 +1,6 @@
 [
     {
-        "transform_id": "CG2-GG1-FDD-FN-SH",
+        "transform_id": "CG2-GG1-FDH-F1-SH",
         "transform_comments": "",
         "transform_tables": [
             {
@@ -47,6 +47,7 @@
                                 "column_name": "ac",
                                 "column_desc": "line_order_customer_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 2,
                                 "ssb_column_name": "custkey"
@@ -55,6 +56,7 @@
                                 "column_name": "ad",
                                 "column_desc": "line_order_part_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 3,
                                 "ssb_column_name": "partkey"
@@ -63,6 +65,7 @@
                                 "column_name": "ae",
                                 "column_desc": "line_order_supplier_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 4,
                                 "ssb_column_name": "suppkey"
@@ -71,6 +74,7 @@
                                 "column_name": "af",
                                 "column_desc": "line_order_order_date_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 5,
                                 "ssb_column_name": "orderdate"
@@ -151,6 +155,7 @@
                                 "column_name": "ap",
                                 "column_desc": "line_order_commit_date_fk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "lineorder",
                                 "ssb_column_index": 15,
                                 "ssb_column_name": "commitdate"

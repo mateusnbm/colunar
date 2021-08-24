@@ -1,6 +1,6 @@
 [
     {
-        "transform_id": "CG1-GG3-FDN-FN-SH [M4-C-G3]",
+        "transform_id": "CG1-GG3-FDN-FN-SH",
         "transform_comments": "",
         "transform_tables": [
             {
@@ -191,6 +191,7 @@
                                 "column_name": "ba",
                                 "column_desc": "date_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "date",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "datekey",
@@ -369,6 +370,7 @@
                                 "column_name": "ca",
                                 "column_desc": "customer_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "customer",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "custkey",
@@ -538,6 +540,7 @@
                                 "column_name": "da",
                                 "column_desc": "supplier_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "supplier",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "suppkey",
@@ -697,6 +700,7 @@
                                 "column_name": "ea",
                                 "column_desc": "part_part_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "part",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "partkey",
@@ -802,6 +806,7 @@
                                 "column_name": "ha",
                                 "column_desc": "city_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_pk",
@@ -853,6 +858,7 @@
                                 "column_name": "ia",
                                 "column_desc": "nation_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "nation",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "nation_pk",
@@ -904,6 +910,7 @@
                                 "column_name": "ja",
                                 "column_desc": "region_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "region",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "region_pk",

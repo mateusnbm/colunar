@@ -4,7 +4,7 @@
         "transform_comments": "",
         "transform_tables": [
             {
-                "table_name": "t",
+                "table_name": "a",
                 "table_name_ssb": "lineorder",
                 "table_row_key": {
                     "surrogate": false,

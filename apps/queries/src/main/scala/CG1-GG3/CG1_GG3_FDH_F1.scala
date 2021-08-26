@@ -1,5 +1,5 @@
 //
-// CG1-GG3-FDH-FN
+// CG1-GG3-FDH-F1
 //
 
 
@@ -11,14 +11,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object CG1_GG3_FDH_FN {
+object CG1_GG3_FDH_F1 {
 
     def main(args: Array[String]) {
 
         val session =
             SparkSession.
             builder().
-            appName("CG1-GG3-FDH-FN").
+            appName("CG1-GG3-FDH-F1").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -249,6 +249,7 @@ object CG1_GG3_FDH_FN {
         var cityMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |city_nation_fk,
                 |ST_GeomFromWKT(city_geom) AS city_geom
             |FROM h
@@ -285,6 +286,7 @@ object CG1_GG3_FDH_FN {
         var nationMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |nation_region_fk,
                 |ST_GeomFromWKT(nation_geom) AS nation_geom
             |FROM i
@@ -320,6 +322,7 @@ object CG1_GG3_FDH_FN {
         var regionMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |ST_GeomFromWKT(region_geom) AS region_geom
             |FROM j
             """.stripMargin

@@ -1255,6 +1255,7 @@
                                 "column_name": "ha",
                                 "column_desc": "city_pk",
                                 "column_datatype": "int",
+                                "column_disposable": true,
                                 "ssb_table_name": "city",
                                 "ssb_column_index": 0,
                                 "ssb_column_name": "city_pk",

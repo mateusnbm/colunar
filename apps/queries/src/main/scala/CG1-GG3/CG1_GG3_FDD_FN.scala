@@ -237,6 +237,7 @@ object CG1_GG3_FDD_FN {
         var cityMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |city_nation_fk,
                 |ST_GeomFromWKT(city_geom) AS city_geom
             |FROM h
@@ -273,6 +274,7 @@ object CG1_GG3_FDD_FN {
         var nationMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |nation_region_fk,
                 |ST_GeomFromWKT(nation_geom) AS nation_geom
             |FROM i
@@ -308,6 +310,7 @@ object CG1_GG3_FDD_FN {
         var regionMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |ST_GeomFromWKT(region_geom) AS region_geom
             |FROM j
             """.stripMargin

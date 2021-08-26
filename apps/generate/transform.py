@@ -219,11 +219,11 @@ for transform_i, transform in enumerate(tf_data):
     db_bytes = 0
     abs_time = time.monotonic()
 
-    last_table_name = ''
-    last_rowkey = ''
-    last_cf_name = ''
-    last_c_name = ''
-    last_c_datatype = ''
+    #last_table_name = ''
+    #last_rowkey = ''
+    #last_cf_name = ''
+    #last_c_name = ''
+    #last_c_datatype = ''
 
     # Iteramos sobre a lista de tabelas. Podemos passar por tabelas com o
     # mesmo nome, neste caso, os dados são armazenados na mesma tabela já
@@ -264,6 +264,12 @@ for transform_i, transform in enumerate(tf_data):
             cmdprefix = 'put \'' + table_name + '\', \'' + rowkey + '\', '
 
             for cf_i, cf in enumerate(table_column_families_data):
+
+                last_table_name = ''
+                last_rowkey = ''
+                last_cf_name = ''
+                last_c_name = ''
+                last_c_datatype = ''
 
                 cf_name = cf['column_f_name']
                 cf_columns = cf['column_f_columns']
@@ -390,7 +396,7 @@ for transform_i, transform in enumerate(tf_data):
 
             #hb_file.write('\n')
 
-            if i == 5: break
+            if i == 10000: break
 
         hb_file.close()
 

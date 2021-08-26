@@ -110,7 +110,8 @@ for i, line in enumerate(file):
 
     else:
 
-        batch.put(lrowkey, ldata)
+        put_rowkey = struct.pack(">i", int(lrowkey)) if lrowkey.isdigit() else lrowkey
+        batch.put(put_rowkey, ldata)
         lrowkey = rowkey
         ldata = {qualifiers: formatted_data(data, datatype)}
 
@@ -122,7 +123,8 @@ for i, line in enumerate(file):
         sys.stdout.write(log)
         sys.stdout.write('\033[F' * 2)
 
-batch.put(lrowkey, ldata)
+put_rowkey = struct.pack(">i", int(lrowkey)) if lrowkey.isdigit() else lrowkey
+batch.put(put_rowkey, ldata)
 batch.send()
 
 outs.write('\n')

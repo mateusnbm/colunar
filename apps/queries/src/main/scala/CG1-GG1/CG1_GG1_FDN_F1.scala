@@ -145,6 +145,7 @@ object CG1_GG1_FDN_F1 {
         var customerMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |customer_name,
                 |customer_address,
                 |customer_city,
@@ -206,6 +207,7 @@ object CG1_GG1_FDN_F1 {
         var supplierMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |supplier_name,
                 |supplier_address,
                 |supplier_city,

@@ -140,6 +140,7 @@ object CG1_GG3_FDN_F1 {
         var customerMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |customer_name,
                 |customer_address,
                 |customer_city,
@@ -191,6 +192,7 @@ object CG1_GG3_FDN_F1 {
         var supplierMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |supplier_name,
                 |supplier_address,
                 |supplier_city,
@@ -265,6 +267,7 @@ object CG1_GG3_FDN_F1 {
         var cityMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |city_nation_fk,
                 |ST_GeomFromWKT(city_geom) AS city_geom
             |FROM h
@@ -301,6 +304,7 @@ object CG1_GG3_FDN_F1 {
         var nationMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |nation_region_fk,
                 |ST_GeomFromWKT(nation_geom) AS nation_geom
             |FROM i
@@ -336,6 +340,7 @@ object CG1_GG3_FDN_F1 {
         var regionMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |ST_GeomFromWKT(region_geom) AS region_geom
             |FROM j
             """.stripMargin

@@ -616,7 +616,7 @@ object CG1_GG3_FDN_F1 {
             |
             """.stripMargin
 
-        for ( a <- 1 to 5 ) {
+        for ( a <- 1 to 30 ) {
 
             println("TIME Q1 " + a)
             session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))

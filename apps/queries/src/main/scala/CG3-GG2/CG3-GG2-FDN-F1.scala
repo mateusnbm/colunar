@@ -1,5 +1,5 @@
 //
-// CG3-GG2-FDN-F1-SH
+// CG3-GG2-FDN-F1
 //
 
 
@@ -11,14 +11,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object CG3_GG2_FDN_F1_SH {
+object CG3_GG2_FDN_F1 {
 
     def main(args: Array[String]) {
 
         val session =
             SparkSession.
             builder().
-            appName("CG3-GG2-FDN-F1-SH").
+            appName("CG3-GG2-FDN-F1").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -541,7 +541,7 @@ object CG3_GG2_FDN_F1_SH {
             |
             """.stripMargin
 
-        for ( a <- 1 to 5 ) {
+        for ( a <- 1 to 30 ) {
 
             println("TIME Q1 " + a)
             session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))

@@ -1,5 +1,5 @@
 //
-// CG3-GG2-FDH-FN-SH
+// CG2-GG3-FDH-F1
 //
 
 
@@ -11,14 +11,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object CG3_GG2_FDH_FN_SH {
+object CG2_GG3_FDH_F1 {
 
     def main(args: Array[String]) {
 
         val session =
             SparkSession.
             builder().
-            appName("CG3-GG2-FDH-FN-SH").
+            appName("CG2-GG3-FDH-F1").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -89,53 +89,49 @@ object CG3_GG2_FDH_FN_SH {
                     |"order_date_last_day_in_month_fl": {"cf":"b", "col":"bo", "type":"boolean"},
                     |"order_date_holiday_fl":           {"cf":"b", "col":"bp", "type":"boolean"},
                     |"order_date_weekday_fl":           {"cf":"b", "col":"bq", "type":"boolean"},
-                    |"commit_date_date_pk":             {"cf":"c", "col":"ca", "type":"int"},
-                    |"commit_date_date":                {"cf":"c", "col":"cb", "type":"string"},
-                    |"commit_date_day_of_week":         {"cf":"c", "col":"cc", "type":"string"},
-                    |"commit_date_month":               {"cf":"c", "col":"cd", "type":"string"},
-                    |"commit_date_year":                {"cf":"c", "col":"ce", "type":"int"},
-                    |"commit_date_year_month_num":      {"cf":"c", "col":"cf", "type":"int"},
-                    |"commit_date_year_month":          {"cf":"c", "col":"cg", "type":"string"},
-                    |"commit_date_day_num_in_week":     {"cf":"c", "col":"ch", "type":"int"},
-                    |"commit_date_day_num_in_month":    {"cf":"c", "col":"ci", "type":"int"},
-                    |"commit_date_day_num_in_year":     {"cf":"c", "col":"cj", "type":"int"},
-                    |"commit_date_month_num_in_year":   {"cf":"c", "col":"ck", "type":"int"},
-                    |"commit_date_week_num_in_year":    {"cf":"c", "col":"cl", "type":"int"},
-                    |"commit_date_selling_season":      {"cf":"c", "col":"cm", "type":"string"},
-                    |"commit_date_last_day_in_week_fl": {"cf":"c", "col":"cn", "type":"boolean"},
-                    |"commit_date_last_day_in_month_fl":{"cf":"c", "col":"co", "type":"boolean"},
-                    |"commit_date_holiday_fl":          {"cf":"c", "col":"cp", "type":"boolean"},
-                    |"commit_date_weekday_fl":          {"cf":"c", "col":"cq", "type":"boolean"},
-                    |"customer_pk":                     {"cf":"d", "col":"da", "type":"int"},
-                    |"customer_name":                   {"cf":"d", "col":"db", "type":"string"},
-                    |"customer_address":                {"cf":"d", "col":"dc", "type":"string"},
-                    |"customer_city":                   {"cf":"d", "col":"dd", "type":"string"},
-                    |"customer_nation":                 {"cf":"d", "col":"de", "type":"string"},
-                    |"customer_region":                 {"cf":"d", "col":"df", "type":"string"},
-                    |"customer_phone":                  {"cf":"d", "col":"dg", "type":"string"},
-                    |"customer_marketing_segment":      {"cf":"d", "col":"dh", "type":"string"},
-                    |"customer_city_fk":                {"cf":"d", "col":"dj", "type":"int"},
-                    |"supplier_pk":                     {"cf":"e", "col":"ea", "type":"int"},
-                    |"supplier_name":                   {"cf":"e", "col":"eb", "type":"string"},
-                    |"supplier_address":                {"cf":"e", "col":"ec", "type":"string"},
-                    |"supplier_city":                   {"cf":"e", "col":"ed", "type":"string"},
-                    |"supplier_nation":                 {"cf":"e", "col":"ee", "type":"string"},
-                    |"supplier_region":                 {"cf":"e", "col":"ef", "type":"string"},
-                    |"supplier_phone":                  {"cf":"e", "col":"eg", "type":"string"},
-                    |"supplier_city_fk":                {"cf":"e", "col":"ei", "type":"int"},
-                    |"part_part_pk":                    {"cf":"f", "col":"fa", "type":"int"},
-                    |"part_name":                       {"cf":"f", "col":"fb", "type":"string"},
-                    |"part_mfgr":                       {"cf":"f", "col":"fc", "type":"string"},
-                    |"part_category":                   {"cf":"f", "col":"fd", "type":"string"},
-                    |"part_brand":                      {"cf":"f", "col":"fe", "type":"string"},
-                    |"part_color":                      {"cf":"f", "col":"ff", "type":"string"},
-                    |"part_type":                       {"cf":"f", "col":"fg", "type":"string"},
-                    |"part_size":                       {"cf":"f", "col":"fh", "type":"int"},
-                    |"part_container":                  {"cf":"f", "col":"fi", "type":"string"},
-                    |"customer_addr_pk":                {"cf":"g", "col":"ga", "type":"int"},
-                    |"customer_addr_geom":              {"cf":"g", "col":"gb", "type":"string"},
-                    |"supplier_addr_pk":                {"cf":"k", "col":"ka", "type":"int"},
-                    |"supplier_addr_geom":              {"cf":"k", "col":"kb", "type":"string"}
+                    |"commit_date_date_pk":             {"cf":"b", "col":"ca", "type":"int"},
+                    |"commit_date_date":                {"cf":"b", "col":"cb", "type":"string"},
+                    |"commit_date_day_of_week":         {"cf":"b", "col":"cc", "type":"string"},
+                    |"commit_date_month":               {"cf":"b", "col":"cd", "type":"string"},
+                    |"commit_date_year":                {"cf":"b", "col":"ce", "type":"int"},
+                    |"commit_date_year_month_num":      {"cf":"b", "col":"cf", "type":"int"},
+                    |"commit_date_year_month":          {"cf":"b", "col":"cg", "type":"string"},
+                    |"commit_date_day_num_in_week":     {"cf":"b", "col":"ch", "type":"int"},
+                    |"commit_date_day_num_in_month":    {"cf":"b", "col":"ci", "type":"int"},
+                    |"commit_date_day_num_in_year":     {"cf":"b", "col":"cj", "type":"int"},
+                    |"commit_date_month_num_in_year":   {"cf":"b", "col":"ck", "type":"int"},
+                    |"commit_date_week_num_in_year":    {"cf":"b", "col":"cl", "type":"int"},
+                    |"commit_date_selling_season":      {"cf":"b", "col":"cm", "type":"string"},
+                    |"commit_date_last_day_in_week_fl": {"cf":"b", "col":"cn", "type":"boolean"},
+                    |"commit_date_last_day_in_month_fl":{"cf":"b", "col":"co", "type":"boolean"},
+                    |"commit_date_holiday_fl":          {"cf":"b", "col":"cp", "type":"boolean"},
+                    |"commit_date_weekday_fl":          {"cf":"b", "col":"cq", "type":"boolean"},
+                    |"customer_pk":                     {"cf":"b", "col":"da", "type":"int"},
+                    |"customer_name":                   {"cf":"b", "col":"db", "type":"string"},
+                    |"customer_address":                {"cf":"b", "col":"dc", "type":"string"},
+                    |"customer_city":                   {"cf":"b", "col":"dd", "type":"string"},
+                    |"customer_nation":                 {"cf":"b", "col":"de", "type":"string"},
+                    |"customer_region":                 {"cf":"b", "col":"df", "type":"string"},
+                    |"customer_phone":                  {"cf":"b", "col":"dg", "type":"string"},
+                    |"customer_marketing_segment":      {"cf":"b", "col":"dh", "type":"string"},
+                    |"customer_address_fk":             {"cf":"b", "col":"di", "type":"int"},
+                    |"supplier_pk":                     {"cf":"b", "col":"ea", "type":"int"},
+                    |"supplier_name":                   {"cf":"b", "col":"eb", "type":"string"},
+                    |"supplier_address":                {"cf":"b", "col":"ec", "type":"string"},
+                    |"supplier_city":                   {"cf":"b", "col":"ed", "type":"string"},
+                    |"supplier_nation":                 {"cf":"b", "col":"ee", "type":"string"},
+                    |"supplier_region":                 {"cf":"b", "col":"ef", "type":"string"},
+                    |"supplier_phone":                  {"cf":"b", "col":"eg", "type":"string"},
+                    |"supplier_address_fk":             {"cf":"b", "col":"eh", "type":"int"},
+                    |"part_part_pk":                    {"cf":"b", "col":"fa", "type":"int"},
+                    |"part_name":                       {"cf":"b", "col":"fb", "type":"string"},
+                    |"part_mfgr":                       {"cf":"b", "col":"fc", "type":"string"},
+                    |"part_category":                   {"cf":"b", "col":"fd", "type":"string"},
+                    |"part_brand":                      {"cf":"b", "col":"fe", "type":"string"},
+                    |"part_color":                      {"cf":"b", "col":"ff", "type":"string"},
+                    |"part_type":                       {"cf":"b", "col":"fg", "type":"string"},
+                    |"part_size":                       {"cf":"b", "col":"fh", "type":"int"},
+                    |"part_container":                  {"cf":"b", "col":"fi", "type":"string"}
                     |
                 |}
             |}""".stripMargin
@@ -148,78 +144,79 @@ object CG3_GG2_FDH_FN_SH {
 
         secondLineorderTableDataFrame.createOrReplaceTempView("b")
 
-        var secondLineorderMakeGeomQuery = 
+        def customer_addrTableCatalog =
+            s"""{
+                |"table":{
+                    |"namespace":"default",
+                    |"name":"f"
+                |},
+                |"rowkey":"key",
+                |"columns":{
+                    |
+                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
+                    |
+                    |"customer_addr_city_fk":           {"cf":"f", "col":"fb", "type":"int"},
+                    |"customer_addr_geom":              {"cf":"f", "col":"fc", "type":"string"}
+                    |
+                |}
+            |}""".stripMargin
+
+        val customer_addrTableDataFrame = 
+            session.
+            read.option(HBaseTableCatalog.tableCatalog, customer_addrTableCatalog).
+            format("org.apache.spark.sql.execution.datasources.hbase").
+            load()
+
+        customer_addrTableDataFrame.createOrReplaceTempView("f")
+
+        var customer_addrMakeGeomQuery = 
             s"""
             |SELECT
-                |order_date_date_pk,
-                |order_date_date,
-                |order_date_day_of_week,
-                |order_date_month,
-                |order_date_year,
-                |order_date_year_month_num,
-                |order_date_year_month,
-                |order_date_day_num_in_week,
-                |order_date_day_num_in_month,
-                |order_date_day_num_in_year,
-                |order_date_month_num_in_year,
-                |order_date_week_num_in_year,
-                |order_date_selling_season,
-                |order_date_last_day_in_week_fl,
-                |order_date_last_day_in_month_fl,
-                |order_date_holiday_fl,
-                |order_date_weekday_fl,
-                |commit_date_date_pk,
-                |commit_date_date,
-                |commit_date_day_of_week,
-                |commit_date_month,
-                |commit_date_year,
-                |commit_date_year_month_num,
-                |commit_date_year_month,
-                |commit_date_day_num_in_week,
-                |commit_date_day_num_in_month,
-                |commit_date_day_num_in_year,
-                |commit_date_month_num_in_year,
-                |commit_date_week_num_in_year,
-                |commit_date_selling_season,
-                |commit_date_last_day_in_week_fl,
-                |commit_date_last_day_in_month_fl,
-                |commit_date_holiday_fl,
-                |commit_date_weekday_fl,
-                |customer_pk,
-                |customer_name,
-                |customer_address,
-                |customer_city,
-                |customer_nation,
-                |customer_region,
-                |customer_phone,
-                |customer_marketing_segment,
-                |customer_city_fk,
-                |supplier_pk,
-                |supplier_name,
-                |supplier_address,
-                |supplier_city,
-                |supplier_nation,
-                |supplier_region,
-                |supplier_phone,
-                |supplier_city_fk,
-                |part_part_pk,
-                |part_name,
-                |part_mfgr,
-                |part_category,
-                |part_brand,
-                |part_color,
-                |part_type,
-                |part_size,
-                |part_container,
-                |customer_addr_pk,
-                |ST_GeomFromWKT(customer_addr_geom) AS customer_addr_geom,
-                |supplier_addr_pk,
-                |ST_GeomFromWKT(supplier_addr_geom) AS supplier_addr_geom
-            |FROM b
+                |id,
+                |customer_addr_city_fk,
+                |ST_GeomFromWKT(customer_addr_geom) AS customer_addr_geom
+            |FROM f
             """.stripMargin
 
-        var secondLineorderSpatialTableDataFrame = session.sql(secondLineorderMakeGeomQuery)
-        secondLineorderSpatialTableDataFrame.createOrReplaceTempView("b")
+        var customer_addrSpatialTableDataFrame = session.sql(customer_addrMakeGeomQuery)
+        customer_addrSpatialTableDataFrame.createOrReplaceTempView("f")
+
+        def supplier_addrTableCatalog =
+            s"""{
+                |"table":{
+                    |"namespace":"default",
+                    |"name":"g"
+                |},
+                |"rowkey":"key",
+                |"columns":{
+                    |
+                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
+                    |
+                    |"supplier_addr_city_fk":           {"cf":"g", "col":"gb", "type":"int"},
+                    |"supplier_addr_geom":              {"cf":"g", "col":"gc", "type":"string"}
+                    |
+                |}
+            |}""".stripMargin
+
+        val supplier_addrTableDataFrame = 
+            session.
+            read.option(HBaseTableCatalog.tableCatalog, supplier_addrTableCatalog).
+            format("org.apache.spark.sql.execution.datasources.hbase").
+            load()
+
+        supplier_addrTableDataFrame.createOrReplaceTempView("g")
+
+        var supplier_addrMakeGeomQuery = 
+            s"""
+            |SELECT
+                |id,
+                |supplier_addr_city_fk,
+                |ST_GeomFromWKT(supplier_addr_geom) AS supplier_addr_geom
+            |FROM g
+            """.stripMargin
+
+        var supplier_addrSpatialTableDataFrame = session.sql(supplier_addrMakeGeomQuery)
+        supplier_addrSpatialTableDataFrame.createOrReplaceTempView("g")
 
         def cityTableCatalog =
             s"""{
@@ -232,11 +229,8 @@ object CG3_GG2_FDH_FN_SH {
                     |
                     |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
                     |
-                    |"city_geom":                       {"cf":"h", "col":"hb", "type":"string"},
-                    |"nation_pk":                       {"cf":"i", "col":"ia", "type":"int"},
-                    |"nation_geom":                     {"cf":"i", "col":"ib", "type":"string"},
-                    |"region_pk":                       {"cf":"j", "col":"ja", "type":"int"},
-                    |"region_geom":                     {"cf":"j", "col":"jb", "type":"string"}
+                    |"city_nation_fk":                  {"cf":"h", "col":"hb", "type":"int"},
+                    |"city_geom":                       {"cf":"h", "col":"hc", "type":"string"}
                     |
                 |}
             |}""".stripMargin
@@ -253,16 +247,85 @@ object CG3_GG2_FDH_FN_SH {
             s"""
             |SELECT
                 |id,
-                |ST_GeomFromWKT(city_geom) AS city_geom,
-                |nation_pk,
-                |ST_GeomFromWKT(nation_geom) AS nation_geom,
-                |region_pk,
-                |ST_GeomFromWKT(region_geom) AS region_geom
+                |city_nation_fk,
+                |ST_GeomFromWKT(city_geom) AS city_geom
             |FROM h
             """.stripMargin
 
         var citySpatialTableDataFrame = session.sql(cityMakeGeomQuery)
         citySpatialTableDataFrame.createOrReplaceTempView("h")
+
+        def nationTableCatalog =
+            s"""{
+                |"table":{
+                    |"namespace":"default",
+                    |"name":"i"
+                |},
+                |"rowkey":"key",
+                |"columns":{
+                    |
+                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
+                    |
+                    |"nation_region_fk":                {"cf":"i", "col":"ib", "type":"int"},
+                    |"nation_geom":                     {"cf":"i", "col":"ic", "type":"string"}
+                    |
+                |}
+            |}""".stripMargin
+
+        val nationTableDataFrame = 
+            session.
+            read.option(HBaseTableCatalog.tableCatalog, nationTableCatalog).
+            format("org.apache.spark.sql.execution.datasources.hbase").
+            load()
+
+        nationTableDataFrame.createOrReplaceTempView("i")
+
+        var nationMakeGeomQuery = 
+            s"""
+            |SELECT
+                |id,
+                |nation_region_fk,
+                |ST_GeomFromWKT(nation_geom) AS nation_geom
+            |FROM i
+            """.stripMargin
+
+        var nationSpatialTableDataFrame = session.sql(nationMakeGeomQuery)
+        nationSpatialTableDataFrame.createOrReplaceTempView("i")
+
+        def regionTableCatalog =
+            s"""{
+                |"table":{
+                    |"namespace":"default",
+                    |"name":"j"
+                |},
+                |"rowkey":"key",
+                |"columns":{
+                    |
+                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
+                    |
+                    |"region_geom":                     {"cf":"j", "col":"jb", "type":"string"}
+                    |
+                |}
+            |}""".stripMargin
+
+        val regionTableDataFrame = 
+            session.
+            read.option(HBaseTableCatalog.tableCatalog, regionTableCatalog).
+            format("org.apache.spark.sql.execution.datasources.hbase").
+            load()
+
+        regionTableDataFrame.createOrReplaceTempView("j")
+
+        var regionMakeGeomQuery = 
+            s"""
+            |SELECT
+                |id,
+                |ST_GeomFromWKT(region_geom) AS region_geom
+            |FROM j
+            """.stripMargin
+
+        var regionSpatialTableDataFrame = session.sql(regionMakeGeomQuery)
+        regionSpatialTableDataFrame.createOrReplaceTempView("j")
 
         var Q1 = 
             s"""
@@ -275,14 +338,20 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   h,
+            |   i,
+            |   j,
             |   a,
             |   b
             |
             | WHERE
             |
-            |   ST_Contains(h.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
+            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   j.id = i.nation_region_fk AND
+            |   i.id = h.city_nation_fk AND
+            |   h.id = f.customer_addr_city_fk AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -308,14 +377,18 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   h,
+            |   i,
             |   a,
             |   b
             |
             | WHERE
             |
-            |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   i.id = h.city_nation_fk AND
+            |   h.id = f.customer_addr_city_fk AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -341,6 +414,7 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   h,
             |   a,
             |   b
@@ -348,7 +422,8 @@ object CG3_GG2_FDH_FN_SH {
             | WHERE
             |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
+            |   h.id = f.customer_addr_city_fk AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -374,12 +449,14 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   a,
             |   b
             |
             | WHERE
             |
-            |   ST_Distance(b.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
+            |   ST_Distance(f.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -406,14 +483,18 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   h,
+            |   i,
             |   a,
             |   b
             |
             | WHERE
             |
-            |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
+            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   i.id = h.city_nation_fk AND
+            |   h.id = f.customer_addr_city_fk AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -443,6 +524,7 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   h,
             |   a,
             |   b
@@ -450,7 +532,8 @@ object CG3_GG2_FDH_FN_SH {
             | WHERE
             |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
+            |   h.id = f.customer_addr_city_fk AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -483,12 +566,14 @@ object CG3_GG2_FDH_FN_SH {
             |
             | FROM
             |
+            |   f,
             |   a,
             |   b
             |
             | WHERE
             |
-            |   ST_Distance(b.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
+            |   ST_Distance(f.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
+            |   f.id = b.customer_address_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -509,7 +594,7 @@ object CG3_GG2_FDH_FN_SH {
             |
             """.stripMargin
 
-        for ( a <- 1 to 5 ) {
+        for ( a <- 1 to 30 ) {
 
             println("TIME Q1 " + a)
             session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))

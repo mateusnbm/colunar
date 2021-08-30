@@ -1,5 +1,5 @@
 //
-// CG3-GG1-FDD-F1-SH
+// CG3-GG2-FDD-F1
 //
 
 
@@ -11,14 +11,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object CG3_GG1_FDD_F1_SH {
+object CG3_GG2_FDD_F1 {
 
     def main(args: Array[String]) {
 
         val session =
             SparkSession.
             builder().
-            appName("CG3-GG1-FDD-F1-SH").
+            appName("CG3-GG2-FDD-F1").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -91,8 +91,6 @@ object CG3_GG1_FDD_F1_SH {
                     |"customer_phone":                  {"cf":"a", "col":"dg", "type":"string"},
                     |"customer_marketing_segment":      {"cf":"a", "col":"dh", "type":"string"},
                     |"customer_city_fk":                {"cf":"a", "col":"dj", "type":"int"},
-                    |"customer_nation_fk":              {"cf":"a", "col":"dk", "type":"int"},
-                    |"customer_region_fk":              {"cf":"a", "col":"dl", "type":"int"},
                     |"supplier_pk":                     {"cf":"a", "col":"ea", "type":"int"},
                     |"supplier_name":                   {"cf":"a", "col":"eb", "type":"string"},
                     |"supplier_address":                {"cf":"a", "col":"ec", "type":"string"},
@@ -101,8 +99,6 @@ object CG3_GG1_FDD_F1_SH {
                     |"supplier_region":                 {"cf":"a", "col":"ef", "type":"string"},
                     |"supplier_phone":                  {"cf":"a", "col":"eg", "type":"string"},
                     |"supplier_city_fk":                {"cf":"a", "col":"ei", "type":"int"},
-                    |"supplier_nation_fk":              {"cf":"a", "col":"ej", "type":"int"},
-                    |"supplier_region_fk":              {"cf":"a", "col":"ek", "type":"int"},
                     |"part_part_pk":                    {"cf":"a", "col":"fa", "type":"int"},
                     |"part_name":                       {"cf":"a", "col":"fb", "type":"string"},
                     |"part_mfgr":                       {"cf":"a", "col":"fc", "type":"string"},
@@ -186,8 +182,6 @@ object CG3_GG1_FDD_F1_SH {
                 |customer_phone,
                 |customer_marketing_segment,
                 |customer_city_fk,
-                |customer_nation_fk,
-                |customer_region_fk,
                 |supplier_pk,
                 |supplier_name,
                 |supplier_address,
@@ -196,8 +190,6 @@ object CG3_GG1_FDD_F1_SH {
                 |supplier_region,
                 |supplier_phone,
                 |supplier_city_fk,
-                |supplier_nation_fk,
-                |supplier_region_fk,
                 |part_part_pk,
                 |part_name,
                 |part_mfgr,
@@ -228,7 +220,11 @@ object CG3_GG1_FDD_F1_SH {
                     |
                     |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
                     |
-                    |"city_geom":                       {"cf":"h", "col":"hb", "type":"string"}
+                    |"city_geom":                       {"cf":"h", "col":"hb", "type":"string"},
+                    |"nation_pk":                       {"cf":"h", "col":"ia", "type":"int"},
+                    |"nation_geom":                     {"cf":"h", "col":"ib", "type":"string"},
+                    |"region_pk":                       {"cf":"h", "col":"ja", "type":"int"},
+                    |"region_geom":                     {"cf":"h", "col":"jb", "type":"string"}
                     |
                 |}
             |}""".stripMargin
@@ -245,82 +241,16 @@ object CG3_GG1_FDD_F1_SH {
             s"""
             |SELECT
                 |id,
-                |ST_GeomFromWKT(city_geom) AS city_geom
+                |ST_GeomFromWKT(city_geom) AS city_geom,
+                |nation_pk,
+                |ST_GeomFromWKT(nation_geom) AS nation_geom,
+                |region_pk,
+                |ST_GeomFromWKT(region_geom) AS region_geom
             |FROM h
             """.stripMargin
 
         var citySpatialTableDataFrame = session.sql(cityMakeGeomQuery)
         citySpatialTableDataFrame.createOrReplaceTempView("h")
-
-        def nationTableCatalog =
-            s"""{
-                |"table":{
-                    |"namespace":"default",
-                    |"name":"i"
-                |},
-                |"rowkey":"key",
-                |"columns":{
-                    |
-                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
-                    |
-                    |"nation_geom":                     {"cf":"i", "col":"ib", "type":"string"}
-                    |
-                |}
-            |}""".stripMargin
-
-        val nationTableDataFrame = 
-            session.
-            read.option(HBaseTableCatalog.tableCatalog, nationTableCatalog).
-            format("org.apache.spark.sql.execution.datasources.hbase").
-            load()
-
-        nationTableDataFrame.createOrReplaceTempView("i")
-
-        var nationMakeGeomQuery = 
-            s"""
-            |SELECT
-                |id,
-                |ST_GeomFromWKT(nation_geom) AS nation_geom
-            |FROM i
-            """.stripMargin
-
-        var nationSpatialTableDataFrame = session.sql(nationMakeGeomQuery)
-        nationSpatialTableDataFrame.createOrReplaceTempView("i")
-
-        def regionTableCatalog =
-            s"""{
-                |"table":{
-                    |"namespace":"default",
-                    |"name":"j"
-                |},
-                |"rowkey":"key",
-                |"columns":{
-                    |
-                    |"id":                              {"cf":"rowkey", "col":"key", "type":"int"},
-                    |
-                    |"region_geom":                     {"cf":"j", "col":"jb", "type":"string"}
-                    |
-                |}
-            |}""".stripMargin
-
-        val regionTableDataFrame = 
-            session.
-            read.option(HBaseTableCatalog.tableCatalog, regionTableCatalog).
-            format("org.apache.spark.sql.execution.datasources.hbase").
-            load()
-
-        regionTableDataFrame.createOrReplaceTempView("j")
-
-        var regionMakeGeomQuery = 
-            s"""
-            |SELECT
-                |id,
-                |ST_GeomFromWKT(region_geom) AS region_geom
-            |FROM j
-            """.stripMargin
-
-        var regionSpatialTableDataFrame = session.sql(regionMakeGeomQuery)
-        regionSpatialTableDataFrame.createOrReplaceTempView("j")
 
         var Q1 = 
             s"""
@@ -333,13 +263,13 @@ object CG3_GG1_FDD_F1_SH {
             |
             | FROM
             |
-            |   j,
+            |   h,
             |   a
             |
             | WHERE
             |
-            |   ST_Contains(j.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   j.id = a.customer_region_fk
+            |   ST_Contains(h.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
@@ -364,13 +294,13 @@ object CG3_GG1_FDD_F1_SH {
             |
             | FROM
             |
-            |   i,
+            |   h,
             |   a
             |
             | WHERE
             |
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   i.id = a.customer_nation_fk
+            |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
@@ -456,13 +386,13 @@ object CG3_GG1_FDD_F1_SH {
             |
             | FROM
             |
-            |   i,
+            |   h,
             |   a
             |
             | WHERE
             |
-            |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   i.id = a.customer_nation_fk
+            |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
@@ -553,11 +483,11 @@ object CG3_GG1_FDD_F1_SH {
             |
             """.stripMargin
 
-        for ( a <- 1 to 5 ) {
-            
+        for ( a <- 1 to 30 ) {
+
             println("TIME Q1 " + a)
             session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))
-            
+
             println("TIME Q2 " + a)
             session.time(session.sql(Q2).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q2-" + a))
 

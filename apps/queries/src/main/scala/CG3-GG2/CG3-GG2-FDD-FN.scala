@@ -1,5 +1,5 @@
 //
-// CG3-GG2-FDH-F1-SH
+// CG3-GG2-FDD-FN
 //
 
 
@@ -11,14 +11,14 @@ import org.datasyslab.geosparksql.utils.GeoSparkSQLRegistrator
 import org.datasyslab.geosparkviz.core.Serde.GeoSparkVizKryoRegistrator
 
 
-object CG3_GG2_FDH_F1_SH {
+object CG3_GG2_FDD_FN {
 
     def main(args: Array[String]) {
 
         val session =
             SparkSession.
             builder().
-            appName("CG3-GG2-FDH-F1-SH").
+            appName("CG3-GG2-FDD-FN").
             config("spark.serializer", classOf[KryoSerializer].getName).
             config("spark.kryo.registrator", classOf[GeoSparkVizKryoRegistrator].getName).
             getOrCreate()
@@ -48,30 +48,6 @@ object CG3_GG2_FDH_F1_SH {
                     |"line_order_supply_cost":          {"cf":"a", "col":"an", "type":"int"},
                     |"line_order_tax":                  {"cf":"a", "col":"ao", "type":"int"},
                     |"line_order_shipping_mode":        {"cf":"a", "col":"aq", "type":"string"},
-                    |"date_date_cust_supp_part":        {"cf":"a", "col":"ar", "type":"string"}
-                    |
-                |}
-            |}""".stripMargin
-
-        val lineorderTableDataFrame = 
-            session.
-            read.option(HBaseTableCatalog.tableCatalog, lineorderTableCatalog).
-            format("org.apache.spark.sql.execution.datasources.hbase").
-            load()
-
-        lineorderTableDataFrame.createOrReplaceTempView("a")
-
-        def secondLineorderTableCatalog =
-            s"""{
-                |"table":{
-                    |"namespace":"default",
-                    |"name":"b"
-                |},
-                |"rowkey":"key",
-                |"columns":{
-                    |
-                    |"id":                              {"cf":"rowkey", "col":"key", "type":"string"},
-                    |
                     |"order_date_date_pk":              {"cf":"b", "col":"ba", "type":"int"},
                     |"order_date_date":                 {"cf":"b", "col":"bb", "type":"string"},
                     |"order_date_day_of_week":          {"cf":"b", "col":"bc", "type":"string"},
@@ -89,68 +65,80 @@ object CG3_GG2_FDH_F1_SH {
                     |"order_date_last_day_in_month_fl": {"cf":"b", "col":"bo", "type":"boolean"},
                     |"order_date_holiday_fl":           {"cf":"b", "col":"bp", "type":"boolean"},
                     |"order_date_weekday_fl":           {"cf":"b", "col":"bq", "type":"boolean"},
-                    |"commit_date_date_pk":             {"cf":"b", "col":"ca", "type":"int"},
-                    |"commit_date_date":                {"cf":"b", "col":"cb", "type":"string"},
-                    |"commit_date_day_of_week":         {"cf":"b", "col":"cc", "type":"string"},
-                    |"commit_date_month":               {"cf":"b", "col":"cd", "type":"string"},
-                    |"commit_date_year":                {"cf":"b", "col":"ce", "type":"int"},
-                    |"commit_date_year_month_num":      {"cf":"b", "col":"cf", "type":"int"},
-                    |"commit_date_year_month":          {"cf":"b", "col":"cg", "type":"string"},
-                    |"commit_date_day_num_in_week":     {"cf":"b", "col":"ch", "type":"int"},
-                    |"commit_date_day_num_in_month":    {"cf":"b", "col":"ci", "type":"int"},
-                    |"commit_date_day_num_in_year":     {"cf":"b", "col":"cj", "type":"int"},
-                    |"commit_date_month_num_in_year":   {"cf":"b", "col":"ck", "type":"int"},
-                    |"commit_date_week_num_in_year":    {"cf":"b", "col":"cl", "type":"int"},
-                    |"commit_date_selling_season":      {"cf":"b", "col":"cm", "type":"string"},
-                    |"commit_date_last_day_in_week_fl": {"cf":"b", "col":"cn", "type":"boolean"},
-                    |"commit_date_last_day_in_month_fl":{"cf":"b", "col":"co", "type":"boolean"},
-                    |"commit_date_holiday_fl":          {"cf":"b", "col":"cp", "type":"boolean"},
-                    |"commit_date_weekday_fl":          {"cf":"b", "col":"cq", "type":"boolean"},
-                    |"customer_pk":                     {"cf":"b", "col":"da", "type":"int"},
-                    |"customer_name":                   {"cf":"b", "col":"db", "type":"string"},
-                    |"customer_address":                {"cf":"b", "col":"dc", "type":"string"},
-                    |"customer_city":                   {"cf":"b", "col":"dd", "type":"string"},
-                    |"customer_nation":                 {"cf":"b", "col":"de", "type":"string"},
-                    |"customer_region":                 {"cf":"b", "col":"df", "type":"string"},
-                    |"customer_phone":                  {"cf":"b", "col":"dg", "type":"string"},
-                    |"customer_marketing_segment":      {"cf":"b", "col":"dh", "type":"string"},
-                    |"customer_city_fk":                {"cf":"b", "col":"dj", "type":"int"},
-                    |"supplier_pk":                     {"cf":"b", "col":"ea", "type":"int"},
-                    |"supplier_name":                   {"cf":"b", "col":"eb", "type":"string"},
-                    |"supplier_address":                {"cf":"b", "col":"ec", "type":"string"},
-                    |"supplier_city":                   {"cf":"b", "col":"ed", "type":"string"},
-                    |"supplier_nation":                 {"cf":"b", "col":"ee", "type":"string"},
-                    |"supplier_region":                 {"cf":"b", "col":"ef", "type":"string"},
-                    |"supplier_phone":                  {"cf":"b", "col":"eg", "type":"string"},
-                    |"supplier_city_fk":                {"cf":"b", "col":"ei", "type":"int"},
-                    |"part_part_pk":                    {"cf":"b", "col":"fa", "type":"int"},
-                    |"part_name":                       {"cf":"b", "col":"fb", "type":"string"},
-                    |"part_mfgr":                       {"cf":"b", "col":"fc", "type":"string"},
-                    |"part_category":                   {"cf":"b", "col":"fd", "type":"string"},
-                    |"part_brand":                      {"cf":"b", "col":"fe", "type":"string"},
-                    |"part_color":                      {"cf":"b", "col":"ff", "type":"string"},
-                    |"part_type":                       {"cf":"b", "col":"fg", "type":"string"},
-                    |"part_size":                       {"cf":"b", "col":"fh", "type":"int"},
-                    |"part_container":                  {"cf":"b", "col":"fi", "type":"string"},
-                    |"customer_addr_pk":                {"cf":"b", "col":"ga", "type":"int"},
-                    |"customer_addr_geom":              {"cf":"b", "col":"gb", "type":"string"},
-                    |"supplier_addr_pk":                {"cf":"b", "col":"ka", "type":"int"},
-                    |"supplier_addr_geom":              {"cf":"b", "col":"kb", "type":"string"}
+                    |"commit_date_date_pk":             {"cf":"c", "col":"ca", "type":"int"},
+                    |"commit_date_date":                {"cf":"c", "col":"cb", "type":"string"},
+                    |"commit_date_day_of_week":         {"cf":"c", "col":"cc", "type":"string"},
+                    |"commit_date_month":               {"cf":"c", "col":"cd", "type":"string"},
+                    |"commit_date_year":                {"cf":"c", "col":"ce", "type":"int"},
+                    |"commit_date_year_month_num":      {"cf":"c", "col":"cf", "type":"int"},
+                    |"commit_date_year_month":          {"cf":"c", "col":"cg", "type":"string"},
+                    |"commit_date_day_num_in_week":     {"cf":"c", "col":"ch", "type":"int"},
+                    |"commit_date_day_num_in_month":    {"cf":"c", "col":"ci", "type":"int"},
+                    |"commit_date_day_num_in_year":     {"cf":"c", "col":"cj", "type":"int"},
+                    |"commit_date_month_num_in_year":   {"cf":"c", "col":"ck", "type":"int"},
+                    |"commit_date_week_num_in_year":    {"cf":"c", "col":"cl", "type":"int"},
+                    |"commit_date_selling_season":      {"cf":"c", "col":"cm", "type":"string"},
+                    |"commit_date_last_day_in_week_fl": {"cf":"c", "col":"cn", "type":"boolean"},
+                    |"commit_date_last_day_in_month_fl":{"cf":"c", "col":"co", "type":"boolean"},
+                    |"commit_date_holiday_fl":          {"cf":"c", "col":"cp", "type":"boolean"},
+                    |"commit_date_weekday_fl":          {"cf":"c", "col":"cq", "type":"boolean"},
+                    |"customer_pk":                     {"cf":"d", "col":"da", "type":"int"},
+                    |"customer_name":                   {"cf":"d", "col":"db", "type":"string"},
+                    |"customer_address":                {"cf":"d", "col":"dc", "type":"string"},
+                    |"customer_city":                   {"cf":"d", "col":"dd", "type":"string"},
+                    |"customer_nation":                 {"cf":"d", "col":"de", "type":"string"},
+                    |"customer_region":                 {"cf":"d", "col":"df", "type":"string"},
+                    |"customer_phone":                  {"cf":"d", "col":"dg", "type":"string"},
+                    |"customer_marketing_segment":      {"cf":"d", "col":"dh", "type":"string"},
+                    |"customer_city_fk":                {"cf":"d", "col":"dj", "type":"int"},
+                    |"supplier_pk":                     {"cf":"e", "col":"ea", "type":"int"},
+                    |"supplier_name":                   {"cf":"e", "col":"eb", "type":"string"},
+                    |"supplier_address":                {"cf":"e", "col":"ec", "type":"string"},
+                    |"supplier_city":                   {"cf":"e", "col":"ed", "type":"string"},
+                    |"supplier_nation":                 {"cf":"e", "col":"ee", "type":"string"},
+                    |"supplier_region":                 {"cf":"e", "col":"ef", "type":"string"},
+                    |"supplier_phone":                  {"cf":"e", "col":"eg", "type":"string"},
+                    |"supplier_city_fk":                {"cf":"e", "col":"ei", "type":"int"},
+                    |"part_part_pk":                    {"cf":"f", "col":"fa", "type":"int"},
+                    |"part_name":                       {"cf":"f", "col":"fb", "type":"string"},
+                    |"part_mfgr":                       {"cf":"f", "col":"fc", "type":"string"},
+                    |"part_category":                   {"cf":"f", "col":"fd", "type":"string"},
+                    |"part_brand":                      {"cf":"f", "col":"fe", "type":"string"},
+                    |"part_color":                      {"cf":"f", "col":"ff", "type":"string"},
+                    |"part_type":                       {"cf":"f", "col":"fg", "type":"string"},
+                    |"part_size":                       {"cf":"f", "col":"fh", "type":"int"},
+                    |"part_container":                  {"cf":"f", "col":"fi", "type":"string"},
+                    |"customer_addr_pk":                {"cf":"g", "col":"ga", "type":"int"},
+                    |"customer_addr_geom":              {"cf":"g", "col":"gb", "type":"string"},
+                    |"supplier_addr_pk":                {"cf":"k", "col":"ka", "type":"int"},
+                    |"supplier_addr_geom":              {"cf":"k", "col":"kb", "type":"string"}
                     |
                 |}
             |}""".stripMargin
 
-        val secondLineorderTableDataFrame = 
+        val lineorderTableDataFrame = 
             session.
-            read.option(HBaseTableCatalog.tableCatalog, secondLineorderTableCatalog).
+            read.option(HBaseTableCatalog.tableCatalog, lineorderTableCatalog).
             format("org.apache.spark.sql.execution.datasources.hbase").
             load()
 
-        secondLineorderTableDataFrame.createOrReplaceTempView("b")
+        lineorderTableDataFrame.createOrReplaceTempView("a")
 
-        var secondLineorderMakeGeomQuery = 
+        var lineorderMakeGeomQuery = 
             s"""
             |SELECT
+                |line_order_order_number_pk,
+                |line_order_line_number_pk,
+                |line_order_order_priority,
+                |line_order_shipping_priority,
+                |line_order_quantity,
+                |line_order_extended_price,
+                |line_order_order_total_price,
+                |line_order_discount,
+                |line_order_revenue,
+                |line_order_supply_cost,
+                |line_order_tax,
+                |line_order_shipping_mode,
                 |order_date_date_pk,
                 |order_date_date,
                 |order_date_day_of_week,
@@ -215,11 +203,11 @@ object CG3_GG2_FDH_F1_SH {
                 |ST_GeomFromWKT(customer_addr_geom) AS customer_addr_geom,
                 |supplier_addr_pk,
                 |ST_GeomFromWKT(supplier_addr_geom) AS supplier_addr_geom
-            |FROM b
+            |FROM a
             """.stripMargin
 
-        var secondLineorderSpatialTableDataFrame = session.sql(secondLineorderMakeGeomQuery)
-        secondLineorderSpatialTableDataFrame.createOrReplaceTempView("b")
+        var lineorderSpatialTableDataFrame = session.sql(lineorderMakeGeomQuery)
+        lineorderSpatialTableDataFrame.createOrReplaceTempView("a")
 
         def cityTableCatalog =
             s"""{
@@ -269,31 +257,29 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_region,
+            |   a.part_category,
+            |   a.customer_region,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
             |   h,
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
             |   ST_Contains(h.region_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
-            |   b.id = a.date_date_cust_supp_part
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_region
+            |   a.part_category,
+            |   a.customer_region
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_region
+            |   a.part_category,
+            |   a.customer_region
             |
             """.stripMargin
 
@@ -302,31 +288,29 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_nation,
+            |   a.part_category,
+            |   a.customer_nation,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
             |   h,
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
             |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
-            |   b.id = a.date_date_cust_supp_part
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_nation
+            |   a.part_category,
+            |   a.customer_nation
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_nation
+            |   a.part_category,
+            |   a.customer_nation
             |
             """.stripMargin
 
@@ -335,31 +319,29 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_city,
+            |   a.part_category,
+            |   a.customer_city,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
             |   h,
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
-            |   b.id = a.date_date_cust_supp_part
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_city
+            |   a.part_category,
+            |   a.customer_city
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_city
+            |   a.part_category,
+            |   a.customer_city
             |
             """.stripMargin
 
@@ -368,29 +350,27 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_address,
+            |   a.part_category,
+            |   a.customer_address,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
-            |   ST_Distance(b.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
-            |   b.id = a.date_date_cust_supp_part
+            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_address
+            |   a.part_category,
+            |   a.customer_address
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_address
+            |   a.part_category,
+            |   a.customer_address
             |
             """.stripMargin
 
@@ -399,34 +379,32 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
             |   h,
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
             |   ST_Contains(h.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
-            |   b.id = a.date_date_cust_supp_part
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation
             |
             """.stripMargin
 
@@ -435,37 +413,35 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city,
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
             |   h,
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = b.customer_city_fk AND
-            |   b.id = a.date_date_cust_supp_part
+            |   h.id = a.customer_city_fk
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city
             |
             """.stripMargin
 
@@ -474,42 +450,40 @@ object CG3_GG2_FDH_F1_SH {
             |
             | SELECT 
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city,
-            |   b.customer_address,
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city,
+            |   a.customer_address,
             |   SUM(a.line_order_quantity)
             |
             | FROM
             |
-            |   a,
-            |   b
+            |   a
             |
             | WHERE
             |
-            |   ST_Distance(b.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18 AND
-            |   b.id = a.date_date_cust_supp_part
+            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18
             |
             | GROUP BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city,
-            |   b.customer_address
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city,
+            |   a.customer_address
             |
             | ORDER BY
             |
-            |   b.part_category,
-            |   b.customer_region,
-            |   b.customer_nation,
-            |   b.customer_city,
-            |   b.customer_address
+            |   a.part_category,
+            |   a.customer_region,
+            |   a.customer_nation,
+            |   a.customer_city,
+            |   a.customer_address
             |
             """.stripMargin
 
-        for ( a <- 1 to 5 ) {
+        for ( a <- 1 to 30 ) {
 
             println("TIME Q1 " + a)
             session.time(session.sql(Q1).coalesce(1).write.mode("overwrite").format("csv").save("/user/mateus/results/Q1-" + a))

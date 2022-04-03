@@ -151,6 +151,7 @@ object CG1_GG3_FDH_FN {
         var secondLineorderMakeGeomQuery = 
             s"""
             |SELECT
+                |id,
                 |order_date_date_pk,
                 |order_date_date,
                 |order_date_day_of_week,

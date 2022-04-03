@@ -1,0 +1,725 @@
+Benchmarking large-scale data management for Internet of Things
+An Open Tool Architecture for Security Testing of NoSQL-Based Applications
+Towards an Understanding of Facets and Exemplars of Big Data Applications
+From Big Data Platforms to Smarter Solution, with Intelligent Learning: [PAV] 4 - Pave the Way for Intelligence
+HGrid: A Data Model for Large Geospatial Data Sets in HBase
+Overview of the Method for Choosing the Most Suitable Database System According to Certain Criteria
+Experiences of Using a Hybrid Cloud to Construct an Environmental Virtual Observatory
+EncKV: An Encrypted Key-Value Store with Rich Queries
+Big Data Framework for Scalable and Efficient Biomedical Literature Mining in the Cloud
+Testing Spatial Data Deliverance in SQL and NoSQL Database Using NodeJS Fullstack Web App
+A Framework to Convert NoSQL to Relational Model
+Emerging Trends in Big Data Analytics—A Study
+OSCOR: An Orientation Sensor Data Correction System for Mobile Generated Contents
+Multiple Nested Schema of HBase for Migration from SQL
+Weighted Moore–Penrose generalized matrix inverse: MySQL vs. Cassandra database storage system
+Incrementally maintaining materialized temporal views in column-oriented NOSQL databases with partial deltas
+The Changing Face of Information Technology
+Dremel: A Decade of Interactive SQL Analysis at Web Scale
+Maintaining NoSQL Database Quality During Conceptual Model Evolution
+Schema design advisor model for RDBMS to NoSQL database migration
+Denormalizing data into schema-free databases
+Block as a Value for SQL over NoSQL
+Civic Issues Reporting and Involvement of Volunteers as a Phenomenon in the Czech Republic
+SynopSys: Large Graph Analytics in the SAP HANA Database through Summarization
+Towards GeoSpatial Semantic Data Management: Strengths, Weaknesses, and Challenges Ahead
+A study into the capabilities of NoSQL databases in handling a highly heterogeneous tree
+Big Data Analytics: A Literature Review Paper
+MobiS: A Distributed Paradigm of Mobile Sensor Data Analytics for Evaluating Environmental Exposures
+Ontology Driven Meta-Modeling for NoSQL Databases: A Conceptual Perspective
+Resolving Data Interoperability in Ubiquitous Health Profile Using Semi-Structured Storage and Processing
+Survey on NoSQL database
+Qserv: A Distributed Shared-Nothing Database for the LSST Catalog
+Reduce Data Processing Time in NoSQL Databases Based on Grover's Algorithm
+An adaptive hierarchical caching scheme for remotely sensed database
+DoubleFaceAD: A New Datastore Driver Architecture to Optimize Fanout Query Performance
+A survey of open source tools for machine learning with big data in the Hadoop ecosystem
+AUDIT: approving and tracking updates with dependencies in collaborative databases
+JS4Geo: a canonical JSON Schema for geographic data suitable to NoSQL databases
+Exploiting IoT Data Crossings for Gradual Pattern Mining Through Parallel Processing
+Big data management of sea surface wind data
+An OAIS-Based Hospital Information System on the Cloud: Analysis of a NoSQL Column-Oriented Approach
+Cassandra vs MySQL: Modelling and querying format
+Database Technologies in the World of Big Data
+Improvement of path analysis algorithm in social networks based on HBase
+Optimization Techniques in Data Management: A Survey
+A scalable generic transaction model scenario for distributed NoSQL databases
+From Relations to Multi-Dimensional Maps: A SQL-to-HBase Transformation Methodology
+A Focused Crawler for Web Feature Service and Web Map Service Discovering
+Hybrid Collaborative Model for Evidence-Based Healthcare Practice
+Interview: Michael Brodie, Leading Database Researcher, Industry Leader, Thinker
+Analytics for the Internet of Things: A Survey
+mDHT: a multi-level-indexed DHT algorithm to extra-large-scale data retrieval on HDFS/Hadoop architecture
+Research on Cross-Media Retrieval of Collaborative Plotted Multimedia Data Based on Container-Based Cloud Platform and Deep Learning
+Analysis of NoSQL schema design approaches using HBase for GIS data
+Hybrid Transactional/Analytical Processing: A Survey
+A Call to Arms: Revisiting Database Design
+SIGMOD '15: Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data
+SA '17: SIGGRAPH Asia 2017 Courses
+Design and implementation of hardware cache mechanism and NIC for column-oriented databases
+Lessons Learned with Laser Scanning Point Cloud Management in Hadoop HBase
+iSWoT: Service Oriented Architecture in the Cloud for the Semantic Web of Things
+Enabling Serverless Deployment of Large-Scale AI Workloads
+Columnar NoSQL CUBE: Agregation operator for columnar NoSQL data warehouse
+A review of NoSQL data stores
+Performance Evaluation of a MongoDB and Hadoop Platform for Scientific Data Analysis
+Performance Analysis on Voluntary Geographic Information Systems with Document-Based NoSQL Database
+Ecoxight: Discovery, Exploration, and Analysis of Business Ecosystems Using Interactive Visualization
+Survey of Real-Time Processing Systems for Big Data
+A survey of RDF management technologies and benchmark datasets
+Classifying Big Data Analytic Approaches: A Generic Architecture
+From document warehouse to column-oriented NoSQL document warehouse
+Big Data Techniques For Supporting Accurate Predictions of Energy Production From Renewable Sources
+HBase storage schemas for massive spatial vector data
+BBoxDB: a distributed and highly available key-bounding-box-value store
+Information System for Automated Multicriterial Analytical Control of Geomagnetic Field and Space Weather Parameters
+Protection of Big Data Privacy on Multiple Cloud Providers by Asymmetric Security Scheme
+Testbeds, Attacks, and Dataset Generation for Big Data Cluster: A System Application for Big Data Platform Security Analysis
+Data Modeling for Analytical Queries on Document-Oriented DBMS
+A repository for scalable model management
+IoT-Based Big Data Storage Systems in Cloud Computing
+A Query-oriented Adaptive Indexing Technique for Smart Grid Big Data Analytics
+Performance Scaling of Cassandra on High-Thread Count Servers
+Benchmarking geospatial database on Kubernetes cluster
+Analysis of Mining, Visual Analytics Tools and Techniques in Space and Time
+Clood CBR: Towards Microservices Oriented Case-Based Reasoning
+NoSQL Databases: A Step to Database Scalability in Web Environment
+Big data analytics: a survey
+Asymmetric-Partition Replication for Highly Scalable Distributed Transaction Processing in Practice
+Big data and knowledge management: How to implement conceptual models in NoSQL systems'
+CloudDBGuard: A framework for encrypted data storage in NoSQL wide column stores
+Knowledge Discovery in the SCADA Databases Used for the Municipal Power Supply System
+Towards an Emulation Tool Based on Ontologies and Data Life Cycles for Studying Smart Buildings
+Multi-Cloud Provisioning and Load Distribution for Three-Tier Applications
+Optimal Geospatial Query Placement in Cloud
+A Distributed System for Storing and Processing Data from Earth-Observing Satellites: System Design and Performance Evaluation of the Visualisation Tool
+Framework for Implementing a Big Data Ecosystem in Organizations
+The Era of Big Spatial Data
+Big Data: A Research Agenda
+Towards a Novel Architecture of Smart Campuses Based on Spatial Data Infrastructure and Distributed Ontology
+MongoDB-Based Modular Ontology Building for Big Data Integration
+A dynamic data dissemination mechanism for Cassandra NoSQL data store
+Towards a use case driven evaluation of database systems for RDF data storage - A case study for statistical data
+Calculating Error Bars on Inferences from Web Data
+HGeoHashBase: an optimized storage model of spatial objects for location-based services
+A Distributed Sensor Network for Waste Water Management Plant Protection
+Incorporating NoSQL into a Database Course
+MyCassandra: A Cloud Storage Supporting Both Read Heavy and Write Heavy Workloads
+Experimenting Lucene Index on HBase in an HPC Environment
+Big Data: A Survey
+Modeling temporal aspects of sensor data for MongoDB NoSQL database
+A Location-Based Architecture for Video Stream Selection in the Context of IoMT
+An efficient distributed index for geospatial databases
+A Parallel Input-Output System for Resolving Spatial Data Challenges: An Agent-Based Model Case Study
+GenoVault: a cloud based genomics repository
+Migration from RDBMS to Column-Oriented NoSQL: Lessons Learned and Open Problems
+Hybrid HBase: Leveraging Flash SSDs to Improve Cost per Throughput of HBase
+Towards Designing Conceptual Data Models for Big Data Warehouses: The Genomics Case
+Increasing the capacity for integration of automated test systems of electrotechnical products
+Big Data as a Service from an Urban Information System
+Design and implementation of real-time log analysis system of map world platform
+Evaluation of a NoSQL database for storing big geospatial raster data
+Storing and Querying Semi-structured Spatio-Temporal Data in HBase
+Online Deduplication for Databases
+Effectively and Efficiently Supporting Crowd-Enabled Databases via NoSQL Paradigms
+Distributed snapshot maintenance in wide-column NoSQL databases using partitioned incremental ETL pipelines
+Ontology based data integration of NoSQL datastores
+Khanan: Performance comparison and programming α-miner algorithm in column-oriented and relational database query languages
+Spatio-Temporal Event Discovery in the Big Social Data Era
+NoSQL Database
+Big geo data management: An exploration with social media and telecommunications open data
+Pragamana: Performance comparison and programming alpha-miner algorithm in relational database query language and NoSQL column-oriented using apache phoenix
+WWW '19: Companion Proceedings of The 2019 World Wide Web Conference
+Big Data 2.0 Processing Systems: Taxonomy and Open Challenges
+Identification of (near) Real-Time Traffic Congestion in the Cities of Australia through Twitter
+Cross-System NoSQL Data Transformations with NotaQL
+Providing Big Data Applications with Fault-Tolerant Data Migration across Heterogeneous NoSQL Databases
+Graph NoSQL Data Warehouse Creation
+On the State of NoSQL Benchmarks
+DataLab: A Version Data Management and Analytics System
+Report on the First International Workshop on Cloud Intelligence (Cloud-I 2012)
+Performance Analysis of RDBMS and No SQL Databases: PostgreSQL, MongoDB and Neo4j
+Design and evaluation of a high-concurrency web map tile service framework on a high performance cluster
+A Storage Model for Large Scale Web-Based Learning Systems Based on Concept Tree
+Ontology Driven Conceptualization of Context-Dependent Data Streams and Streaming Databases
+Document-oriented versus Column-oriented Data Storage for Social Graph Data Warehouse
+Data Integration and NoSQL Systems: A State of the Art
+Integration and management of sensor data for rainfall monitoring
+GI2NK Geographic Information: Need to Know Towards a More Demand-Driven Geospatial Workforce Education/Training System
+The modeling of big traffic data processing based on cloud computing
+NoSQL Breakdown: A Large-Scale Analysis of Misconfigured NoSQL Services
+Design Tradeoffs of Data Access Methods
+NoSQL Database for Storing Historic Records in Monitoring Systems: Selection Process
+A Survey on NoSQL Stores
+AT-GIS: Highly Parallel Spatial Query Processing with Associative Transducers
+GraphMap: scalable iterative graph processing using NoSQL
+Decorating the cloud: enabling annotation management in MapReduce
+Multimedia Big Data Analytics: A Survey
+An in-kernel NOSQL cache for range queries using FPGA NIC
+Graph databases: Contextualization and exploratory study [Bases de dados em grafos: Contextualização e estudo exploratório]
+Location-Aware WBAN Data Monitoring System Based on NoSQL
+Data Warhouses of Hybrid Type: Features of Construction
+Druid: A Real-Time Analytical Data Store
+MDA transformation process of a data conceptual schema into a NoSQL logical schema [Processus de transformation MDA d'un schéma conceptuel de données en un schéma logique NoSQL]
+Access-aware in-memory data cache middleware for relational databases
+NoSQL databases: Critical analysis and comparison
+A Conceptual Framework for Pragmatic Interoperability
+Big Data warehouse: Building columnar NoSQL OLAP cubes
+Toward Efficient Processing of Spatio-Temporal Workloads in a Distributed In-Memory System
+Persisting big-data: The NoSQL landscape
+BIM Big Data Storage in WebVRGIS
+A Concept of a Virtual Research Environment for Long-Term Ecological Projects with Free and Open Source Software
+Big data monetization throughout Big Data Value Chain: a comprehensive review
+Re-thinking Kernelized MLS Database Architectures in the Context of Cloud-Scale Data Stores
+A Tensor Based Data Model for Polystore: An Application to Social Networks Data
+Integrated Internet of Things and Analysis Framework for Industrial Applications Using a Multi Tiered Analysis Architecture
+Semantic-based Big Data integration framework using scalable distributed ontology matching strategy
+Sphinx: Empowering Impala for Efficient Execution of SQL Queries on Big Spatial Data
+MiniCrypt: Reconciling Encryption and Compression for Big Data Stores
+Performance Evaluation of NoSQL Multi-Model Data Stores in Polyglot Persistence Applications
+The SusCity Big Data Warehousing Approach for Smart Cities
+Heterogenität überwinden mit der Datentransformationssprache NotaQL
+Nosql for storage and retrieval of large lidar data collections
+An open tool architecture for security testing of NoSQL-based applications
+Efficient storage of heterogeneous geospatial data in spatial databases
+Evaluating partitioning and bucketing strategies for Hive-based Big Data Warehousing systems
+A Big Data Architecture for Near Real-Time Traffic Analytics
+Big Data Management: What to Keep from the Past to Face Future Challenges?
+HydroCloud: A Cloud-Based System for Hydrologic Data Integration and Analysis
+Representing diagrams of imperfect geographic objects
+Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-Intensive Systems
+ACaZoo: A distributed key-value store based on replicated LSM-trees
+ReSDaP: A Real-Time Data Provision System Architecture for Sensor Webs
+Identification of Neighbourhood Cities Based on Landuse Bigdata Using K-Means and K-NN Algorithm
+IBM PAIRS curated big data service for accelerated geospatial data analytics and discovery
+Spatial Data Locality in Scalable and Fault-Tolerant Distributed Spatial Computing Systems
+TrafficDB: HERE's High Performance Shared-Memory Data Store
+Maturing, Consolidation and Performance of NoSQL Databases: Comparative Study
+The Research of 3D Power Grid Based on Big Data
+History Repeats Itself: Sensible and NonsenSQL Aspects of the NoSQL Hoopla
+Covid-19 Containment: Demystifying the Research Challenges and Contributions Leveraging Digital Intelligence Technologies
+Big data analytics framework for spatial data
+Introducing Spatial Context in Comparative Pricing and Product Search
+Data Storage Management in Cloud Environments: Taxonomy, Survey, and Future Directions
+A Novel Big Data Platform for City Power Grid Status Estimation
+The Seattle Report on Database Research
+Evaluating Redundancy and Partitioning of Geospatial Data in Document-Oriented Data Warehouses
+ColumnML: Column-Store Machine Learning with on-the-Fly Data Transformation
+Engineering a High-Performance GPU B-Tree
+An extra spatial hierarchical schema in key-value store
+Document-oriented geospatial data warehouse: An experimental evaluation of SOLAP queries
+P<sup>2</sup>EST: Parallelization Philosophies for Evaluating Spatio-Temporal Queries
+High throughput BLAST algorithm using spark and cassandra
+Performance analysis of MongoDB versus PostGIS/PostGreSQL databases for line intersection and point containment spatial queries
+Urban Climate Data Sensing, Warehousing, and Analysis: A Case Study in the City of Abu Dhabi, United Arab Emirates
+Towards Linked Data Conventions for Delivery of Environmental Data Using netCDF
+Property preserving encryption in NoSQL wide column stores
+Big Data Challenges in Ocean Observation: A Survey
+Desidoo, a Big-Data Application to Join the Online and Real-World Marketplaces
+SecGDB: Graph Encryption for Exact Shortest Distance Queries with Efficient Updates
+A Neural Network Approach for Solving Traffic-Flow Forecasting Based on the Historical Voyage Datasets: A Case Study on Hai Phong Roads
+Defining temporal operators for column oriented NoSQL databases
+Analysis of Transformation Tools Applicable on NewSQL Databases
+Greenplum: A Hybrid Database for Transactional and Analytical Workloads
+GLOSSary: The GLobal Ocean 16S subunit web accessible resource
+Data Modeling and NoSQL Databases - A Systematic Mapping Review
+SODA: A framework for spatial observation data analysis
+“Big” Data Management in Cloud Computing Environment
+Design and Implementation of a Distributed Geospatial Data Storage Structure Based on Spark [基于Spark的分布式空间数据存储结构设计与实现]
+Combination of non hadoop-bigdata &amp; relational DB
+SQL to NoSQL : What to do and How
+Autonomously Improving Query Evaluations over Multidimensional Data in Distributed Hash Tables
+Practical application of order-preserving encryption in wide column stores
+Cloud Search Based Applications for Big Data - Challenges and Methodologies for Acceleration
+Grasper: A High Performance Distributed System for OLAP on Property Graphs
+Hadoop GIS: A High Performance Spatial Data Warehousing System over Mapreduce
+A GPS Trajectory Map-Matching Mechanism with DTG Big Data on the HBase System
+NoDA: Unified NoSQL Data Access Operators for Mobility Data
+An Empirical Study of Differentially-Private Analytics for High-Speed Network Data
+An Ontology-Based Information Model for Multi-Domain Semantic Modeling and Analysis of Smart City Data
+Document-Oriented Geospatial Data Warehouse: An Experimental Evaluation of SOLAP Queries
+The Comparison of Processing Efficiency of Spatial Data for PostGIS and MongoDB Databases
+An Attribute-Based Fine-Grained Access Control Mechanism for HBase
+Providing Open Environmental Data—The Scalable and Web-Friendly Way
+Performance analysis of an efficient object-based schema oriented data storage system handling health data
+3D Revision Control Framework
+Ontological Based Approach of Integrating Big Data: Issues and Prospects
+Crowdsourced Data Integrity Verification for Key-Value Stores in the Cloud
+Big spatial data processing with Apache Spark
+Web user interface based on OGC standards for sensor cloud using big data
+Big Data Approach to Analyzing Job Portals for the ICT Market
+Query Processing Optimization Using Two Types of Storage Devices
+Big Data Cluster Service Discovery: A System Application for Big Data Cluster Security Analysis
+Towards NoSQL Graph Data Warehouse for Big Social Data Analysis
+Automated Schema Design for NoSQL Databases
+CloudDBguard: Enabling sorting and searching on encrypted data in NoSQL cloud databases
+Logical schema for data warehouse on column-oriented NoSQL databases
+Semantic Sensor Web Data Exploration and Visualization for Intelligent Decision Support: Position Paper
+Implementation of a Big Data Accessing and Processing Platform for Medical Records in Cloud
+DWS: A Data Placement Approach for Smart Grid Ecosystems
+My Ever Changing Moods: Sentiment-Based Event Detection on the Cloud
+Formalizing Gremlin pattern matching traversals in an integrated graph Algebra
+Datometry Hyper-Q: Bridging the Gap Between Real-Time and Historical Analytics
+Big Data and New Data Warehousing Approaches
+Data Exchange Between JADE and Simulink Model for Multi-agent Control Using NoSQL Database Redis
+A UML Profile for the Design, Quality Assessment and Deployment of Data-intensive Applications
+Access-Aware In-memory Data Cache Middleware for Relational Databases
+Exploiting Smart City Ontology and Citizens’ Profiles for Urban Data Exploration
+A NoSQL-SQL hybrid organization and management approach for real-time geospatial data: A case study of public security video surveillance
+UrbanFlow: Large-Scale Framework to Integrate Social Media and Authoritative Landuse Maps
+Big Data and ICT Applications: A Study
+PAIRS: A scalable geo-spatial data analytics platform
+Information Systems for Processes Maintenance in Socio-communication and Resource Networks of the Smart Cities
+CockroachDB: The Resilient Geo-Distributed SQL Database
+Scalable Queries for Large Datasets Using Cloud Computing: A Case Study
+A Perspective on the Challenges and Opportunities for Privacy-Aware Big Transportation Data
+Lifetime-Based Memory Management for Distributed Data Processing Systems
+SCOPE: self-adaptive and policy-based data management middleware for federated clouds
+Evaluation of Contemporary Graph Databases
+Some Aspects of the Method for Tourist Route Creation
+SQLtoKeyNoSQL: A layer for relational to key-based NoSQL database mapping
+A basis of spatial big data analysis with map-matching system
+Big Spatial Data Management for the Internet of Things: A Survey
+20 Years of AGILE
+Implementation of Execution History in Non-Relational Databases for Feedback-Guided Job Modeling
+A Security Pattern for Key-Value NoSQL Database Authorization
+Transaction processing in consistency-aware user’s applications deployed on NoSQL databases
+Lossless compaction of model execution traces
+Improvement of Data Searching in MongoDB with the Use of Oracle Database
+SpatialHadoop: Towards Flexible and Scalable Spatial Processing Using Mapreduce
+Decorating the Cloud: Enabling Annotation Management in MapReduce
+Tool for materializing OWL ontologies in a column-oriented database
+Generic multiset programming with discrimination-based joins and symbolic Cartesian products
+MPT: Suite tools to support performance tuning in NoSQL systems
+NoSQL data management systems
+NoSQL Overview and Performance Testing of HBase Over Multiple Nodes with MySQL
+SAME4HPC: A Promising Approach in Building a Scalable and Mobile Environment for High-Performance Computing
+Two Real-World Case Studies on 3D Web Applications for Participatory Urban Planning
+An exploratory teaching program in big data analysis for undergraduate students
+Progressive Growth of ETL Tools: A Literature Review of Past to Equip Future
+Data storage optimization strategy in distributed column-oriented database by considering spatial adjacency
+Canonical Data Model for Data Warehouse
+Entity-Event Ontology Construction by Conceptualization of Mentions in Text Corpus
+Unlocking the Potential of NextGen Multi-Model Databases for Semantic Big Data Projects
+BuMP: Bulk Memory Access Prediction and Streaming
+ICSOFT 2017 - Proceedings of the 12th International Conference on Software Technologies
+PolicyCLOUD: Analytics as a Service Facilitating Efficient Data-Driven Public Policy Management
+GeoYCSB: A Benchmark Framework for the Performance and Scalability Evaluation of NoSQL Databases for Geospatial Workloads
+MDHT: A Multi-Level-Indexed DHT Algorithm to Extra-Large-Scale Data Retrieval on HDFS/Hadoop Architecture
+An efficient storage and service method for multi-source merging meteorological big data in cloud environment
+Continuous Improvement Process Model for Supporting the Construction of Internet of Things System Design Environments
+Formalizing the mapping of UML conceptual schemas to column-oriented databases
+Data-Intensive Cloud Computing: Requirements, Expectations, Challenges, and Solutions
+SQL, NewSQL, and NOSQL Databases: A Comparative Survey
+Buchbesprechungen
+MHB-Tree: A Distributed Spatial Index Method for Document Based NoSQL Database System
+Open-Source Search Engines in the Cloud
+Base64Geo: An Efficient Data Structure and Transmission Format for Large, Dense, Scalar GIS Datasets
+Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources
+Driving Big Data with Hadoop Tools and Technologies
+Data Producer Catalogs for the Web of Things: A Study on NoSQL Solutions
+ENSTDM: An ENtity-Based Spatio-Temporal Data Model and Case Study in Real Estate Management
+The Ecosystem of SpatialHadoop
+Efficient Buffer Management for Tree Indexes on Solid State Drives
+ATLAS: A Distributed File System for Spatiotemporal Data
+Citus: Distributed PostgreSQL for Data-Intensive Applications
+VegaIndexer: A Distributed composite index scheme for big spatio-temporal sensor data on cloud
+Performance analysis of schema design approaches for migration from RDBMS to NOSQL databases
+Implementierung von kryptographischen Sicherheitsverfahren für Apache Cassandra und Apache HBase
+Healthcare Data Analysis Using R and MongoDB
+Data in the 21st Century
+The Six Pillars for Building Big Data Analytics Ecosystems
+Big data storage technologies: a survey
+A Multimodal Approach for Cultural Heritage Information Retrieval
+Database System Comparison Based on Spatiotemporal Functionality
+Social Media Data Integration: From Data Lake to NoSQL Data Warehouse
+Modelling and Designing Spatial and Temporal Big Data for Analytics
+Elastic and Effective Spatio-Temporal Query Processing Scheme on Hadoop
+Temporal data management and processing with column oriented NoSQL Databases
+On Managing Geospatial Big-Data in Emergency Management: Some Perspectives
+F l u χ: a quality-driven dataflow model for data intensive computing
+A Data Management System for Big Geospatial Data Based on Phoenix [基于Phoenix的地理空间大数据管理系统]
+Automatic Transformation of Data Warehouse Schema to NoSQL Data Base: Comparative Study
+Understanding Group Event Scheduling via the OutWithFriendz Mobile Application
+SeqWare Query Engine: storing and searching sequence data in the cloud
+Synapse: A Microservices Architecture for Heterogeneous-Database Web Applications
+Managing Physical Schemas in MongoDB Stores
+Efficient Parallel Random Sampling—Vectorized, Cache-Efficient, and Online
+Assessing NoSql Approaches for Spatial Big Data Management
+Mowgli: Finding Your Way in the DBMS Jungle
+A new approach for migration of a relational database into column-oriented nosql database on hadoop
+Research on Distributed Storage and Query Optimization of Multi-Source Heterogeneous Meteorological Data
+Bounded Evaluation: Querying Big Data with Bounded Resources
+Data challenges of time domain astronomy
+A framework for monitoring multiple databases in industries using OPC UA
+Implementing multidimensional data warehouses into NoSQL
+Mining Idioms from Source Code
+The Design and Implementation of Semantic Web-Based Architecture for Augmented Reality Browser
+SIGGRAPH '16: ACM SIGGRAPH 2016 Talks
+Integration of Hazard Management Services
+A multidimensional data storage model for location based application on Hbase
+Access control technologies for Big Data management systems: literature review and future trends
+Physical data warehouse design on NoSQL databases: OLAP query processing over HBase
+Geological Data Access on a Polyglot Database Using a Service Architecture
+A Short Survey on the State of the Art in Architectures and Platforms for Large Scale Data Analysis and Knowledge Discovery from Data
+Spatial Data Wrangling with GeoSpark: A Step by Step Tutorial
+Big Data Management of Sea Surface Wind Data
+A Dynamically Scalable Cloud Data Infrastructure for Sensor Networks
+Graph DBs vs. Column-oriented stores: A pure performance comparison
+On managing geospatial big-data in emergency management: Some perspectives
+Multi-level semantic annotation and unified data integration using semantic web ontology in big data processing
+Spatial Scene Similarity Assessment on Hadoop
+The transformation of relational database to wide column store database
+Smart environmental data management system into a cattle building
+Antares: A Scalable, Real-Time, Fault Tolerant Data Store for Spatial Analysis
+Seamless Integration of NoSQL Class into the Database Curriculum
+How can we implement a multidimensional data warehouse using NoSQL?
+A Reference Architecture for Big Data Systems in the National Security Domain
+The Plan4business Approach to Transfer Open Data into Real Estate Businesses
+NotaQL is not a query language! It’s for data transformation on wide-column stores
+Big database stores a review on various big data datastores
+The Transformation of Relational Database to Wide Column Store Database
+SAP HANA Database: Data Management for Modern Business Applications
+Harnessing Remote Sensing for Civil Engineering: Then, Now, and Tomorrow
+Evaluation of Performance Metrics in GeoRediSpark Framework for GeoSpatial Query Processing
+GeoSpark: A Cluster Computing Framework for Processing Large-Scale Spatial Data
+Multimedia Data Management for Disaster Situation Awareness
+Modulo: Drive-by Sensing at City-Scale on the Cheap
+Comparative study of NoSQL databases for big data storage
+SparkGIS: Resource Aware Efficient In-Memory Spatial Query Processing
+Efficient Spatial Query Processing for Big Data
+Finding the Way to OSM Mapping Practices: Bounding Large Crisis Datasets for Qualitative Investigation
+UMLtoNoSQL: Automatic Transformation of Conceptual Schema to NoSQL Databases
+Adaptive Database’s Performance Tuning Based on Reinforcement Learning
+A Survey of Large-Scale Analytical Query Processing in MapReduce
+Using Domain-Specific Languages for Analytic Graph Databases
+A Comparison of a Graph Database and a Relational Database: A Data Provenance Perspective
+A dataspace-based framework for OLAP analyses in a high-variety multistore
+LSM-Based Storage and Indexing: An Old Idea with Timely Benefits
+A Programmatic Introduction to Neo4j
+Big Data, Simulations and HPC Convergence
+A Hadoop Extension for Analysing Spatiotemporally Referenced Events
+Distributed Stream KNN Join
+Cloud-Based NoSQL Open Database of Pulmonary Nodules for Computer-Aided Lung Cancer Diagnosis and Reproducible Research
+Using Materialized View as a Service of Scallop4SC for Smart City Application Services
+Big Data Visual Analytics: Fundamentals, Techniques, and Tools
+Big Data Semantics
+Use of Graph Databases in Tourist Navigation Application
+Versionable, Branchable, and Mergeable Application State
+From Facility to Application Sensor Data: Modular, Continuous and Holistic Monitoring with DCDB
+Study on effectiveness of using column-oriented databases in the processing of measurement characteristics of an electric vehicle
+GIS Databases and NoSQL Databases
+Data Collection and Evaluation Framework for Local Energy Systems
+Cloud services integration for farm animals’ behavior studies based on smartphones as activity sensors
+A high-concurrency web map tile service built with open-source software
+Querying Semantic Knowledge Bases with SQL-on-Hadoop
+Big data research in climate science
+Social BIMCloud: a distributed cloud-based BIM platform for object-based lifecycle information exchange
+Extracting deltas from column oriented NoSQL databases for different incremental applications and diverse data targets
+Big Data Meets Digital Cultural Heritage: Design and Implementation of SCRABS, A Smart Context-AwaRe Browsing Assistant for Cultural EnvironmentS
+Information Requirements for Big Data Projects: A Review of State-of-the-Art Approaches
+Distributed Moving Object Data Management in MobilityDB
+Automatic data modeling transformation approach of NoSQL document and column stores to RDF
+Database technologies in the world of big data
+Database system comparison based on spatiotemporal functionality
+Data Management for Social Networking
+Spatial data extension for Cassandra NoSQL database
+Should eu land use and land cover data be managed with a Nosql document store?
+Using Spark and Scala for Discovering Latent Trends in Job Markets
+Overview of Data Storing Techniques in Citizen Science Applications
+Cost-Efficient and Reliable Reporting of Highly Bursty Video Game Crash Data
+Stinuum: A Holistic Visual Analysis of Moving Objects with Open Source Software
+Efficient Encoding and Decoding Extended Geocodes for Massive Point Cloud Data
+Conceptual Modeling of the Social Environment for Information Support in Management Processes
+A survey of issues and solutions of health data management systems
+High-Performance Geospatial Analytics in HyPerSpace
+A survey of RDF data management systems
+Special issue for data intensive eScience
+Reference Representation Techniques for Large Models
+STSDB: Spatio-Temporal Sensor Database for Smart City Query Processing
+Architectural Design of Cloud Gateway in Smart Surveillance System
+Fast Scans on Key-Value Stores
+A Demonstration of Rubato DB: A Highly Scalable NewSQL Database System for OLTP and Big Data Applications
+Task Replication and Control for Highly Parallel In-Memory Stores
+Mobile Collaboration for Human and Canine Police Explosive Detection Teams
+Retrieving Large-Scale High Density Video Target Tracks from Spatial Database
+Modeling and querying data in NoSQL databases
+Enabling Standard Geospatial Capabilities in Spark for the Efficient Processing of Geospatial Big Data
+NoSQL technologies for the CMS conditions database
+Supporting Queries and Analyses of Large-Scale Social Media Data with Customizable and Scalable Indexing Techniques over NoSQL Databases
+Next-generation geospatial-Temporal information technologies for disaster management
+Big Data Platforms and Tools for Data Analytics in the Data Science Engineering Curriculum
+Parallel Stream Processing with MPI for Video Analytics and Data Visualization
+Big Data: State-of-the-art concepts, techniques, technologies, modeling approaches and research challenges
+A New Methodology for Storing Consistent Fuzzy Geospatial Data in Big Data Environment
+Runtime Performance Challenges in Big Data Systems
+7th International Conference on Emerging Databases: Technologies, Applications, and Theory, EDB 2017
+SQL or NoSQL? Contrasting Approaches to the Storage, Manipulation and Analysis of Spatio-temporal Online Social Network Data
+Estimating the Environmental Impact of Agriculture by Means of Geospatial and Big Data Analysis: The Case of Catalonia
+Sentiment Analysis in Social Media with a Semantic Web Based Approach: Application to the French Presidential Elections 2017
+A Data-Centric Computing Curriculum for a Data Science Major
+Bringing SQL databases to key-based NoSQL databases: a canonical approach
+Efficient querying of multidimensional RDF data with aggregates: Comparing NoSQL, RDF and relational data stores
+MongoDB based ship database construction and batch migration technology of its data
+SHC: Distributed Query Processing for Non-Relational Data Store
+RDBMS, NoSQL, Hadoop: A Performance-Based Empirical Analysis
+NoSQL database systems: a survey and decision guidance
+An approach to big data modeling for key-value NoSQL databases
+FoundationDB Record Layer: A Multi-Tenant Structured Datastore
+An Experimental Comparison of Complex Object Implementations for Big Data Systems
+Toward building RDB to HBase conversion rules
+Data Fusion in the Environmental Domain
+Dissertationen
+A Deep Learning Based Illegal Parking Detection Platform
+A Cloud-Enabled Regional Climate Model Evaluation System
+Big Data and Analytics
+High dimensional biological data retrieval optimization with NoSQL technology
+Understanding Concepts, Future Trends, and Case Studies of Big Data Technologies
+Haery: A Hadoop Based Query System on Accumulative and High-Dimensional Data Model for Big Data
+Concept and Framework of 3D Geo-Spatial Grid System
+Visualizing Spatial-Temporal Evaluation of News Stories
+Using Polygot Persistence with NoSQL Databases for Streaming Multimedia, Sensor, and Messaging Services in Autonomous Vehicles
+Databases and Information Systems in the AI Era: Contributions from ADBIS, TPDL and EDA 2020 Workshops and Doctoral Consortium
+Spatial Data Systems Support for the Internet of Things: Challenges and Opportunities
+Columnar NoSQL star schema benchmark
+Survey of Large-Scale Data Management Systems for Big Data Applications
+Egobile: Where Social Networks Go Mobile
+A Comprehensive Survey on Cloud Data Mining (CDM) Frameworks and Algorithms
+Fast and Efficient Cluster Based Map for Ship Tracking
+An Efficient Distributed Index for Geospatial Databases
+Surfing the Net for Software Engineering Notes
+An OAIS-based hospital information system on the cloud: Analysis of a NoSQL column-oriented approach
+Towards a Real-Time Big GeoData Geolocation System Based on Visual and Textual Features
+SQLtoKeyNoSQL: A Layer for Relational to Key-Based NoSQL Database Mapping
+WeGovNow: A Map Based Platform to Engage the Local Civic Society
+Collective Knowledge Ontology User Profiling for Twitter -- Automatic User Profiling
+Smart City System Design: A Comprehensive Study of the Application and Data Planes
+Analyzing big ocean science data with NEXUS
+Multi-Model Databases: A New Journey to Handle the Variety of Data
+Agent Based Security Model for Cloud Big Data
+A Survey of Traditional and MapReduceBased Spatial Query Processing Approaches
+ACaZoo: A Distributed Key-Value Store Based on Replicated LSM-Trees
+Cost Analysis for Big Geospatial Data Processing in Public Cloud Providers
+Comparative Performance Evaluation of Relational and NoSQL Databases for Spatial and Mobile Applications
+32nd Annual IFIP WG 11.3 Conference on Data and Applications Security and Privacy, DBSec 2018
+NoSQL databases for large volumes of data
+Building an Encrypted, Distributed, and Searchable Key-Value Store
+A Systematic Mapping Study of Cloud Large-Scale Foundation—Big Data, IoT, and Real-Time Analytics
+Geostreaming in Cloud
+Research on the Construction of Data Management System of Massive Satellite Images
+A Graph Based Analysis of User Mobility for a Smart City Project
+DataMingler: A Novel Approach to Data Virtualization
+Polyglot Persistence
+Pairs (Re)Loaded: System Design & Benchmarking For Scalable Geospatial Applications
+ElastMan: Elasticity Manager for Elastic Key-Value Stores in the Cloud
+Making Databases Work: The Pragmatic Wisdom of Michael Stonebraker
+Investigating Business Intelligence in the Era of Big Data: Concepts, Benefits and Challenges
+The Application on distributed geospatial data management based on Hadoop and the application in WebGIS
+Software service architecture to access weather data using RESTful web services
+Development of System for Real-Time Collection, Sharing, and Use of Disaster Information
+Big Data Analytics: A Review on Theoretical Contributions and Tools Used in Literature
+Using Knowledge Graphs to Search an Enterprise Data Lake
+Pragamana: Performance Comparison and Programming Alpha-Miner Algorithm in Relational Database Query Language and NoSQL Column-Oriented Using Apache Phoenix
+Deca: A Garbage Collection Optimizer for In-Memory Data Processing
+Recent Advancements in Event Processing
+Automatically Construct the Surface Visualization Model with DEM and the Geological Survey Data
+Database Support for Processing Complex Aggregate Queries over Data Streams
+A Map-Based Web Search Interface Using Point of Interest Aggregation
+Towards an agent based traffic regulation and recommendation system for the on-road air quality control
+A Heterogeneous and Interactive Big Earth Data Framework
+Data management in cloud environments: NoSQL and NewSQL data stores
+Enhancement Semantic Prediction Big Data Method for COVID-19: Onto-NoSQL
+Social Profiles - Methods of Solving Socio-Economic Problems Using Digital Technologies and Big Data
+Next-generation geospatial-temporal information technologies for disaster management
+Study of NoSQL Databases for Storing and Analyzing Traffic Data
+Evaluation of NoSQL Databases Features and Capabilities for Smart City Data Lake Management
+An IR-Based Approach towards Automated Integration of Geo-Spatial Datasets in Map-Based Software Systems
+Ubiquitous Health Profile (UHPr): a big data curation platform for supporting health data interoperability
+Architectural assessment of NoSQL and NewSQL systems
+Examining Extended and Scientific Metadata for Scalable Index Designs
+Evaluation of storage and query performance of sensor based Internet of Things data with MongoDB
+Efficient Online Sharing of Geospatial Big Data Using NoSQL XML Databases
+Federating Web-Based Applications on a Hierarchical Cloud
+Rethinking GIS towards the vision of smart cities through CityGML
+Semantically-Enabled Optimization of Digital Marketing Campaigns
+Storage Design and Implementation of Information Reconstruction System
+What database do you choose for heterogeneous security log events analysis?
+CONST: Continuous online NoSQL schema tuning
+Implementing bi-temporal properties into various NoSQL database categories
+Framework for geospatial query processing by integrating cassandra with hadoop
+Extending Battery Lifetime of Mobile Devices with Geofence Capabilities on Dynamic-Speed Urban Environments
+Performance of Graph Query Languages: Comparison of Cypher, Gremlin and Native Access in Neo4j
+DroneNet-Sim: A Learning-Based Trace Simulation Framework for Control Networking in Drone Video Analytics
+On Managing Spatial Hypermedia with Document Stores
+A Systematic Review for Smart City Data Analytics
+Cloud-Native Database Systems at Alibaba: Opportunities and Challenges
+An efficient row key encoding method with ASCII code for storing geospatial big data in HBase
+Leveraging big data analytics in healthcare enhancement: trends, challenges and opportunities
+A Hybrid Approach Combining Real-Time and Archived Data for Mobility Analysis
+High Performance Computing Education: Current Challenges and Future Directions
+Research on Oracle-Based Integrative Storage and Management of Spatial Data
+Hmfs: Efficient Support of Small Files Processing over HDFS
+Evaluation of storage and query performance of sensor based Internet of Things data with MongoDB [Sensör tabanli Nesnelerin Interneti verilerinin MongoDB ile saklanma ve sorgulanma performansinin deǧerlendirilmesi]
+ACTGAN: Automatic Configuration Tuning for Software Systems with Generative Adversarial Networks
+Map Generation from Large Scale Incomplete and Inaccurate Data Labels
+Massive Semi-structured Data Platform Based on Elasticsearch and MongoDB
+From Big Data to Big Data Mining: Challenges, Issues, and Opportunities
+SQL versus NoSQL databases for geospatial applications
+Improving the Efficiency of Subset Queries on Raster Images
+State-of-the-art geospatial information processing in NoSQL databases
+On construction of an energy monitoring service using big data technology for the smart campus
+Spatiotemporal Transformation of Social Media Geostreams: A Case Study of Twitter for Flu Risk Analysis
+Evaluating Several Design Patterns and Trends in Big Data Warehousing Systems
+Review of social media analytics process and Big Data pipeline
+Query processing over data warehouse using relational databases and NoSQL
+Enabling Devops for Containerized Data-Intensive Applications: An Exploratory Study
+HSACMA: a hierarchical scalable adaptive cloud monitoring architecture
+Providing R-tree support for MongoDB
+Analysis of Unstructured Text Data for a Person Social Profile
+Performance analysis and testing of HBase based on its architecture
+Implementation of multidimensional databases in column-oriented NoSQL systems
+Comparison of smart grid architectures for monitoring and analyzing power grid data via Modbus and REST
+EduBAI: An Educational Platform for Logic-Based Reasoning
+Development of a Knowledge System for Big Data: Case Study to Plant Phenotyping Data
+Social Media Analytics and Research Test-Bed (SMART Dashboard)
+A MapReduce Approach to <i>G</i><sub><i>i</i></sub>*(<i>d</i>) Spatial Statistic
+Incremental join view maintenance on distributed log-structured storage
+A survey on data storage and placement methodologies for Cloud-Big Data ecosystem
+Performance overview of an artificial intelligence in biomedics: a systematic approach
+Big Data Design
+Improving the Performance of Querying Multidimensional RDF Data Using Aggregates
+What's Really New with NewSQL?
+On Lowering Merge Costs of an LSM Tree
+Big Data Systems: A Software Engineering Perspective
+Storing Long-Lived Concurrent Schema and Data Versions in Relational Databases
+Implications of Data Density and Length of Collection Period for Population Estimations Using Social Media Data
+FluMapper: An Interactive CyberGIS Environment for Massive Location-Based Social Media Data Analysis
+A Unified SQL Middleware for NoSQL Databases
+An Efficient In-Memory R-Tree Construction Scheme for Spatio-Temporal Data Stream
+Efficiently Extracting Change Data from Column Oriented NoSQL Databases
+Massive Spatio-Temporal Mobility Data: An Empirical Experience on Data Management Techniques
+Extending inverse frequent itemsets mining to generate realistic datasets: complexity, accuracy and emerging applications
+Big data challenges in ocean observation: a survey
+Advanced Data Analytics and Visualisation for the Management of Human Perception of Safety and Security in Urban Spaces
+Benchmarking Database Ingestion Ability with Real-Time Big Astronomical Data
+Distributed Spatiotemporal Trajectory Query Processing in SQL
+Research on Attribute Dimension Partition Based on SVM Classifying and MapReduce
+Column Access-aware In-stream Data Cache with Stream Processing Framework
+Evaluation of NoSQL prototypes for the CMS conditions database
+Four NoSQLs in Four Fun Fortnights: Exploring NoSQLs in a Corporate IT Environment
+Efficient OR Hadoop: Why Not Both?
+An Elastic and Scalable Spatiotemporal Query Processing for Linked Sensor Data
+Review of NoSQL Data Stores: Using a reactive three-tier application for software developers to achieve a high availability application design architecture
+Integration of a Real-Time Stochastic Routing Optimization Software with an Enterprise Resource Planner
+Unstructured Data Analysis with Passphrase-Based REST API NoSQL for Big Data in Cloud
+Precomputing architecture for flexible and efficient big data analytics
+Big data analytics in healthcare: promise and potential
+Software-as-a-service (SaaS): perspectives and challenges
+An Evolutionary Algorithm for Column Family Schema Optimization in HBase
+Cost-Effective Strategies for Provisioning NoSQL Storage Services in Support for Industry 4.0
+Policy-Driven Middleware for Heterogeneous, Hybrid Cloud Platforms
+DualDB: An Efficient LSM-Based Publish/Subscribe Storage System
+Scalable Architecture, Storage and Visualization Approaches for Time Series Analysis Systems
+Spatio-temporal data model for integrating evolving nation-level datasets
+Distributed Spatial and Spatio-Temporal Join on Apache Spark
+QoS-Aware Autonomic Resource Management in Cloud Computing: A Systematic Review
+Bio-inspired computation for big data fusion, storage, processing, learning and visualization: state of the art and future directions
+Storing and Indexing IoT Context for Smart City Applications
+IoT-Big Data Software Ecosystems for Smart Cities Sensing: Challenges, Open Issues, and Emerging Solutions
+SSTDE: An Open Source Semantic Spatiotemporal Data Engine for Sensor Web
+Innovative Power Operating Center Management Exploiting Big Data Techniques
+A Corpus-Driven and Functional Analysis of the Use of NP-of Phrases in English Thesis Abstracts by Novice and More Advanced Writers
+GPU-Enabled Visual Analytics Framework for Big Transportation Datasets
+From Earthquake Detection to Traffic Surveillance – About Information and Communication Infrastructures for Smart Cities
+Enabling Massive XML-Based Biological Data Management in HBase
+A survey of large-scale analytical query processing in MapReduce
+HC-Store: putting MapReduce’s foot in two camps
+Migration from relational databases to HBase: A feasibility assessment
+NSM-Tree: Efficient Indexing on Top of NoSQL Databases
+Fine-Grained Access Control Within NoSQL Document-Oriented Datastores
+In-Database Geospatial Analytics Using Python
+Performance scaling of Cassandra on high-thread count servers industry/experience paper
+Mobile clusters of single board computers: an option for providing resources to student projects and researchers
+Self-adapting data migration in the context of schema evolution in NoSQL databases
+Feedback control loop design for workload change detection in self-tuning NoSQL wide column stores
+Can the Elephants Handle the NoSQL Onslaught?
+Disambiguating Databases
+A Cloud Computing Workflow for Managing Oceanographic Data
+CSCW '17: Proceedings of the 2017 ACM Conference on Computer Supported Cooperative Work and Social Computing
+Database Research Challenges and Opportunities of Big Graph Data
+BigGIS: How big data can shape next-generation GIS
+Digital Food Product Traceability: Using Blockchain in the International Commerce
+Inside "Big Data Management": Ogres, Onions, or Parfaits?
+SWE 2012 Workshop Report: The First International Workshop on Sensor Web Enablement
+Data science for entrepreneurship research: studying demand dynamics for entrepreneurial skills in the Netherlands
+DrugTracker: A Community-Focused Drug Abuse Monitoring and Supporting System Using Social Media and Geospatial Data (Demo Paper)
+19th East-European Conference on Advances in Databases and Information Systems, ADBIS 2015 held with Workshops BigDap, DCSA, GID, MEBIS, OAIS, SW4CH, WISARD, 2015
+GraphLMI: A data driven system for exploring labor market information through graph databases
+Open Data: Opportunities and Challenges
+Pairs (Re)Loaded: System Design Benchmarking for Scalable Geospatial Applications
+Integration of Large-Scale Data Processing Systems and Traditional Parallel Database Technology
+Cloud-Based RDF Data Management
+Building OLAP cubes from columnar NoSQL data warehouses
+The big data system, components, tools, and technologies: a survey
+Sinew: A SQL System for Multi-Structured Data
+S2RDF: RDF Querying with SPARQL on Spark
+Big Data Analytics for Large-Scale Wireless Networks: Challenges and Opportunities
+SIRS Digues 2.0: A Cooperative Software for Levees Management
+Managing Data and Processes in Cloud-Enabled Large-Scale Sensor Networks: State-of-the-Art and Future Research Directions
+A multi-granularity knowledge association model of geological text based on hypernetwork
+A Big Geo Data Query Framework to Correlate Open Data with Social Network Geotagged Posts
+A Big Data Framework for Cloud Monitoring
+RDF Data Storage and Query Processing Schemes: A Survey
+A Comprehensive Survey and Open Challenges of Mining Bigdata
+Entity resolution in NoSQL data warehouse
+The Design of a Collaborative Social Network for Watershed Science
+Research on the Innovation of Trajectory Big Data in Social Governance
+Big Data management in smart grid: concepts, requirements and implementation
+Mortadelo: A model-driven framework for NoSQL database design
+Visualizing 3D Models in Aid of Public Consultation
+Maintaining NoSQL Database Quality during Conceptual Model Evolution
+Federating web-based applications on a hierarchical cloud
+Integrating an openEHR-based personalized virtual model for the ageing population within HBase
+Big Data Analytics Framework for Spatial Data
+GraphDBLP: a system for analysing networks of computer scientists through graph databases
+A Scalable Distributed Spatial Index for the Internet-of-Things
+Big data and rule-based recommendation system in Internet of Things
+On the Application and Performance of MongoDB for Climate Satellite Data
+Integration of Relational and NoSQL Databases
+Use of NoSQL technology for analysis of unstructured spatial data
+Amazon Redshift and the Case for Simpler Data Warehouses
+Organizing and Storing Method for Large-Scale Unstructured Data Set with Complex Content
+Scalable SQL and NoSQL Data Stores
+On the application and performance of MongoDB for climate satellite data
+Multiple nested schema of HBase for migration from SQL
+Comparison of Various NoSQL Databases for Unstructured Industrial Data
+Data Warehousing in Big Data: From Multidimensional to Tabular Data Models
+Techniques and guidelines for effective migration from RDBMS to NoSQL
+A visual big data system for the prediction of weather-related variables: Jordan-Spain case study
+Evaluation of Data Management Systems for Geospatial Big Data
+Geo-spatial Big Data Storage Based on NoSQL Database
+Analysis of the Activity of Territorial Communities Using Information Technology of Big Data Based on the Entity-Characteristic Mode
+Geospatial data storage based on HBase and MapReduce
+On the Use of Social Trajectory-Based Clustering Methods for Public Transport Optimization
+GeoWave: Utilizing Distributed Key-Value Stores for Multidimensional Data
+From Metadata Catalogs to Distributed Data Processing for Smart City Platforms and Services: A Study on the Interplay of CKAN and Hadoop
+Smart City: Recent Advances and Research Issues
+State of the Art in MapReduce: Issues and Approaches
+An evolutionary algorithm for column family schema optimization in HBase
+GeoSensor: Semantifying Change and Event Detection over Big Data
+The Vertica Analytic Database: C-Store 7 Years Later
+Data integrity verification in column-oriented NoSQL databases
+Big Data System Development: An Embedded Case Study with a Global Outsourcing Firm
+Access Control in the Era of Big Data: State of the Art and Research Directions
+Blockchain Technology for Cloud Storage: A Systematic Literature Review
+A Big Data Architecture for Automotive Applications: PSA Group Deployment Experience
+Towards Massive Spatial Data Validation with SpatialHadoop
+Design and implementation of geospatial information database in Mobile Internet
+Towards Big Linked Data: A Large-Scale, Distributed Semantic Data Storage
+Security Mechanisms in NoSQL DBMS’s: A Technical Review
+Lightweight Indexing of Observational Data in Log-Structured Storage
+A Benchmark to Evaluate Mobile Video Upload to Cloud Infrastructures
+Generating Executable Mappings from RDF Data Cube Data Structure Definitions
+Toward automatic generation of column-oriented NoSQL databases in Big Data context
+Developing Multiple Nested Schema to Reduce Data Redundancy in CONoSQLDB Schema
+I/O Characteristics of MongoDB and Trim-Based Optimization in Flash SSDs

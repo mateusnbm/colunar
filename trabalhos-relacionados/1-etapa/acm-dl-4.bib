@@ -1,0 +1,1820 @@
+@inproceedings{10.1145/2837060.2837062,
+author = {Cho, Wonhee and Choi, Eunmi},
+title = {A GPS Trajectory Map-Matching Mechanism with DTG Big Data on the HBase System},
+year = {2015},
+isbn = {9781450338462},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2837060.2837062},
+doi = {10.1145/2837060.2837062},
+abstract = {Since smartphones equipped with GPS have been produced, the need to conduct an analysis
+by matching the mass of GPS trajectory data on a digital map has increased. However,
+the study of the existing map-matching algorithm technique is mainly for navigation.
+In order to analyze large amounts of GPS trajectories on a server, issues of the speed
+and performance of the system exist. The purpose of this study is to utilize a map-matching
+system using HBase, which is a distributed NoSQL DB in a Hadoop ecosystem. We defined
+the table specification of HBase for mounting the digital map and proposed and implemented
+the method for analysis with a map-matching algorithm. In this paper, we present the
+map-matching methodology using the NoSQL DB of Hadoop ecosystem for analyzing GPS
+trajectory.},
+booktitle = {Proceedings of the 2015 International Conference on Big Data Applications and Services},
+pages = {22–29},
+numpages = {8},
+keywords = {Hadoop, spatial analysis, Big data, map matching, HBase},
+location = {Jeju Island, Republic of Korea},
+series = {BigDAS '15}
+}
+
+@inproceedings{10.1145/2835596.2835614,
+author = {Liu, Kuien and Yao, Yandong and Guo, Danhuai},
+title = {On Managing Geospatial Big-Data in Emergency Management: Some Perspectives},
+year = {2015},
+isbn = {9781450339704},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2835596.2835614},
+doi = {10.1145/2835596.2835614},
+abstract = {With the rapid growth of mobile devices and applications, geo-tagged data is becoming
+increasingly important in emergency management and has become a major workload for
+big data storage systems. Traditional methods that storing geospatial data in centralized
+databases suffer from inevitable limitations such like scaling out with the growing
+size of geospatial data. In order to achieve scalability, a number of solutions on
+big geospatial data management are proposed in recent years. We can simply classify
+them into two kinds: extending on distributed databases, or migrating to big-data
+storage systems. For previous, they mostly adopt the massive parallel processing (MPP)
+based architecture, in which data are stored and retrieved in a set of independent
+nodes. Each node can be treated as a traditional databases instance with geospatial
+extension. For the latter, existing solutions tend to build an additional index layer
+above general-purpose distributed data stores, e.g., HBASE, CASSANDRA, MangoDB, etc.,
+to support geospatial data while integrating the big-data lineage. However, there
+are no absolutely perfect data management systems on the earth. Some approaches are
+desired for execution efficiency while some others are better on fulfilling the programming
+level need for big data scenarios.In this paper, we analysis the requirements and
+challenges on geospatial big data storage in emergency management, succeed with discussion
+with individual perspective from practical cases. The purpose of this paper is not
+only focused on how to program a geospatial data storage platform but also on how
+to approve the rationality of geospatial big data system that we plan to build.},
+booktitle = {Proceedings of the 1st ACM SIGSPATIAL International Workshop on the Use of GIS in Emergency Management},
+articleno = {5},
+numpages = {4},
+keywords = {geospatial, perspectives, big data, emergency management},
+location = {Bellevue, Washington},
+series = {EM-GIS '15}
+}
+
+@inproceedings{10.5555/3049877.3049893,
+author = {Serrano, Diego and Stroulia, Eleni},
+title = {From Relations to Multi-Dimensional Maps: A SQL-to-HBase Transformation Methodology},
+year = {2016},
+publisher = {IBM Corp.},
+address = {USA},
+abstract = {In this paper, we describe a methodology for migrating applications relying on relational
+databases to HBase backends. Our methodology includes (a) a SQL-to-HBASE data-schema
+migration step, and (b) a transformation of the application SQL queries to equivalent
+sequences of HBase API calls. Our data-schema migration method relies on a set of
+HBase-organization guidelines to drive a four-step data-schema transformation process.
+Some of these guidelines are query-agnostic: we defined them based on related literature
+regarding the desired properties of the HBase organization. Other guidelines are query-aware:
+we formulated them to incorporate data-access paths, extracted from query logs, in
+order to improve the quality of the transformation and the eventual access efficiency
+of the HBase repository. Our transformation method maintains a mapping between source
+and target schema that is used to create sequences of HBase API calls, equivalent
+to SQL queries in the relational database. We illustrate and validate our method with
+a case study and a comprehensive performance evaluation.},
+booktitle = {Proceedings of the 26th Annual International Conference on Computer Science and Software Engineering},
+pages = {156–165},
+numpages = {10},
+keywords = {program translation, HBase, NoSQL, distributed databases, database design and modeling, data translation},
+location = {Toronto, Ontario, Canada},
+series = {CASCON '16}
+}
+
+@inproceedings{10.1145/2442810.2442827,
+author = {Bae, Wan D. and Narayanappa, Sada and Alkobaisi, Shayma and Bae, Kye Y.},
+title = {MobiS: A Distributed Paradigm of Mobile Sensor Data Analytics for Evaluating Environmental Exposures},
+year = {2012},
+isbn = {9781450316996},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2442810.2442827},
+doi = {10.1145/2442810.2442827},
+abstract = {Continued advances and cost reduction in personal mobile devices such as smart phones
+made them widely used in daily-life practices. Mobile devices can be integrated with
+a growing set of cheap powerful embedded sensors that enable the emergence of mobile
+sensing applications, including healthcare, environmental monitoring and transportation.
+As the size of the sensor data continuously grows, managing the data becomes increasingly
+difficult using traditional database systems. This paper proposes a new framework
+for large-scale continuously changing mobile sensor data analysis. We discuss the
+emerging environmental sensing paradigms and opportunities to apply HBase and MapReduce
+for managing multiple sensor data in the environmental exposome domain. Moreover,
+we provide an architectural framework and present a concrete use case with a set of
+data models, spatio-temporal queries, and MapReduce functions.},
+booktitle = {Proceedings of the First ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems},
+pages = {93–96},
+numpages = {4},
+keywords = {Hadoop, environmental exposome, HBase, mobile sensor data, MapReduce, health monitoring},
+location = {Redondo Beach, California},
+series = {MobiGIS '12}
+}
+
+@inproceedings{10.1145/2447481.2447486,
+author = {Zhong, Yunqin and Zhu, Xiaomin and Fang, Jinyun},
+title = {Elastic and Effective Spatio-Temporal Query Processing Scheme on Hadoop},
+year = {2012},
+isbn = {9781450316927},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2447481.2447486},
+doi = {10.1145/2447481.2447486},
+abstract = {Geospatial applications have become prevalent in both scientific research and industry.
+Spatio-Temporal query processing is a fundamental issue for driving geospatial applications.
+However, the state-of-the-art spatio-temporal query processing methods are facing
+significant challenges as the data expand and concurrent users increase. In this paper
+we present a novel spatio-temporal querying scheme to provide efficient query processing
+over big geospatial data. The scheme improves query efficiency from three facets.
+Firstly, taking geographic proximity and storage locality into consideration, we propose
+a geospatial data organization approach to achieve high aggregate I/O throughput,
+and design a distributed indexing framework for efficient pruning of the search space.
+Furthermore, we design an indexing plus MapReduce query processing architecture to
+improve data retrieval efficiency and query computation efficiency. In addition, we
+design distributed caching model to accelerate the access response of hotspot spatial
+objects. We evaluate the effectiveness of our scheme with comprehensive experiments
+using real datasets and application scenarios.},
+booktitle = {Proceedings of the 1st ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data},
+pages = {33–42},
+numpages = {10},
+keywords = {cloud, spatio-temporal query, Hadoop, geographic information system, spatial database},
+location = {Redondo Beach, California},
+series = {BigSpatial '12}
+}
+
+@inproceedings{10.1145/3282834.3282837,
+author = {Werner, Martin},
+title = {Spatial Data Locality in Scalable and Fault-Tolerant Distributed Spatial Computing Systems},
+year = {2018},
+isbn = {9781450360418},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3282834.3282837},
+doi = {10.1145/3282834.3282837},
+abstract = {In the last decade, spatial datasets started to grow from small collections of high
+quality geospatial information into huge collections of data covering the whole planet
+with varying formats and qualities. Large-scale spatial datasets are about to create
+significant value in varying application fields including navigation, autonomous driving,
+urban geography, agriculture, and climate research. Therefore, large datasets are
+actively acquired. In addition, social networks such as Facebook, Twitter, and Flickr
+provide text, video, and images with associated geospatial information from the crowd.
+These sources are highly interesting as they provide near-realtime insights into aspects
+of human behavior and dynamics. Finally, global and long-running satellite missions
+such as Landsat, Sentinel, World-View, or TerraSAR add large amounts of geospatial
+information. It is a matter of fact that these data collections are putting challenges
+to the computational infrastructure used for spatial computing. Not only do we need
+a lot of computation, we also need to think about how to organize and design distributed
+systems that can help tackle the volume, velocity, and variety of current and future
+geospatial datasets. Modern big data systems employ data replication for two main
+reasons: first, for increased fault tolerance, and, second, for higher flexibility
+in scheduling tasks across a large cluster of machines. This paper proposes and compares
+novel data replication schemata for scalable spatial computing and analyzes the impact
+on the communication complexity of global spatial joins of a large collection of tweets
+collected from the Twitter API and building polygons extracted from OpenStreetMap.},
+booktitle = {Proceedings of the 7th ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data},
+pages = {47–56},
+numpages = {10},
+keywords = {Spatial Big Data, Data Replication and Distribution; Spatial Join},
+location = {Seattle, WA, USA},
+series = {BigSpatial 2018}
+}
+
+@inproceedings{10.1145/3331076.3331101,
+author = {Makris, Antonios and Tserpes, Konstantinos and Anagnostopoulos, Dimosthenis and Nikolaidou, Mara and de Macedo, Jose Ant\^{o}nio Fernandes},
+title = {Database System Comparison Based on Spatiotemporal Functionality},
+year = {2019},
+isbn = {9781450362498},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3331076.3331101},
+doi = {10.1145/3331076.3331101},
+abstract = {The amount of sources and sheer volumes of spatiotemporal data have met an unprecedented
+growth during the last decade. As a consequence, a rapidly increasing number of applications
+are seeking to generate value by crunching those data. The development of a system
+that will tap into the potential value of the spatiotemporal big data analysis for
+a multitude of applications remains one of the biggest challenges in computer engineering.
+This paper delves into the key-characteristics of the most prominent suchlike systems.
+In particular, it provides a thorough analysis of NoSQL datastores as well as a traditional
+relational database system in terms of their geospatial querying capabilities.},
+booktitle = {Proceedings of the 23rd International Database Applications &amp; Engineering Symposium},
+articleno = {21},
+numpages = {7},
+keywords = {data stores, geospatial functionality, spatio-temporal characteristics, spatio-temporal databases},
+location = {Athens, Greece},
+series = {IDEAS '19}
+}
+
+@inproceedings{10.1145/3356394.3365589,
+author = {Yu, Jia and Sarwat, Mohamed},
+title = {Spatial Data Wrangling with GeoSpark: A Step by Step Tutorial},
+year = {2019},
+isbn = {9781450369534},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3356394.3365589},
+doi = {10.1145/3356394.3365589},
+abstract = {This tutorial is expected to deliver a comprehensive study and hands-on tutorial of
+how GeoSpark incorporates Spark to uphold massive-scale spatial data. We also want
+this tutorial to serve as an introductory course that teaches the audience the basic
+building blocks in a scalable spatial data management system and the important design
+concerns based on our previous experience. We begin our tutorial with a background
+introduction of the characteristics of spatial data and the history of distributed
+data management systems. A follow-up section presents common approaches used by the
+practitioners to extend Spark and introduces the vital components in a generic spatial
+data management system. The third section gives a hands-on live demonstration to illustrate
+the basic steps of performing geospatial data analytics using GeoSpark.},
+booktitle = {Proceedings of the 1st ACM SIGSPATIAL International Workshop on Geospatial Data Access and Processing APIs},
+articleno = {3},
+numpages = {2},
+keywords = {Cluster computing, Spatial data, Large-scale data},
+location = {Chicago, IL, USA},
+series = {SpatialAPI'19}
+}
+
+@inproceedings{10.1145/2064959.2064962,
+author = {Kazemitabar, Seyed Jalal and Banaei-Kashani, Farnoush and McLeod, Dennis},
+title = {Geostreaming in Cloud},
+year = {2011},
+isbn = {9781450310369},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2064959.2064962},
+doi = {10.1145/2064959.2064962},
+abstract = {In recent years, geospatial databases have been commercialized and widely exposed
+to mass users. Current exponential growth in data generation and querying rates for
+these data highlights the importance of efficient techniques for streaming. Traditional
+database technology, which operates on persistent and less dynamic data objects does
+not meet the requirements for efficient geospatial data streaming. Geostreaming, the
+intersection of data stream processing and geospatial querying, is an ongoing research
+focus in this area. In this paper, we describe why cloud is the most appropriate infrastructure
+in which to support geospatial stream data processing. First, we argue that cloud
+best fits the requirements of a large-scale geostreaming application. Second, we propose
+ElaStream, a general cloud-based streaming infrastructure that enables huge parallelism
+by means of the divide, conquer, and combine paradigm. Third, we examine key related
+work in the data streaming and (geo)spatial database fields, and describe the challenges
+ahead to build scalable cloud-based geostreaming applications.},
+booktitle = {Proceedings of the 2nd ACM SIGSPATIAL International Workshop on GeoStreaming},
+pages = {3–9},
+numpages = {7},
+keywords = {cloud computing, spatial databases, data stream processing, geostreaming},
+location = {Chicago, Illinois},
+series = {IWGS '11}
+}
+
+@inproceedings{10.1145/3006386.3006392,
+author = {Migliorini, Sara and Belussi, Alberto and Negri, Mauro and Pelagatti, Giuseppe},
+title = {Towards Massive Spatial Data Validation with SpatialHadoop},
+year = {2016},
+isbn = {9781450345811},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3006386.3006392},
+doi = {10.1145/3006386.3006392},
+abstract = {Spatial data usually encapsulate semantic characterization of features which carry
+out important meaning and relations among objects, such as the containment between
+the extension of a region and of its constituent parts. The GeoUML methodology allows
+one to bring the gap between the definition of spatial integrity constraints at conceptual
+level and the realization of validation procedures. In particular, it automatically
+generates SQL validation queries starting from a conceptual specification and using
+predefined SQL templates. These queries can be used to check data contained into spatial
+relational databases, such as PostGIS.However, the quality requirements and the amount
+of available data are considerably growing making unfeasible the execution of these
+validation procedures. The use of the map-reduce paradigm can be effectively applied
+in such context since the same test can be performed in parallel on different data
+chunks and then partial results can be combined together to obtain the final set of
+violating objects. Pigeon is a data-flow language defined on top of Spatial Hadoop
+which provides spatial data types and functions. The aim of this paper is to explore
+the possibility to extend the GeoUML methodology by automatically producing Pigeon
+validation procedures starting from a set of predefined Pigeon macros. These scripts
+can be used in a map-reduce environment in order to make feasible the validation of
+large datasets.},
+booktitle = {Proceedings of the 5th ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data},
+pages = {18–27},
+numpages = {10},
+keywords = {spatial validation, big data, spatial constraints, map-reduce},
+location = {Burlingame, California},
+series = {BigSpatial '16}
+}
+
+@inproceedings{10.1109/CCGrid.2014.57,
+author = {Gao, Xiaoming and Qiu, Judy},
+title = {Supporting Queries and Analyses of Large-Scale Social Media Data with Customizable and Scalable Indexing Techniques over NoSQL Databases},
+year = {2014},
+isbn = {9781479927838},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/CCGrid.2014.57},
+doi = {10.1109/CCGrid.2014.57},
+abstract = {Social media data analysis demonstrates two special characteristics in Big Data processing.
+First, most analyses focus on data subsets related to specific social events or activities
+instead of the whole dataset. Second, analysis workflows consist of multiple stages,
+and algorithms applied in each stage may use different computation and communication
+patterns depending on processing frameworks. This paper presents our efforts in supporting
+the data storage and processing requirements for such characteristics. To achieve
+efficient queries about target data subsets, we propose a general customizable and
+scalable indexing framework that can be built over distributed NoSQL databases. This
+framework allows users to define suitable customized index structures for their query
+patterns against social media data, and supports scalable indexing of both historical
+and streaming data. We implement this framework on HBase, and name it IndexedHBase.
+Starting from IndexedHBase, we build a distributed analysis stack based on YARN to
+support analysis algorithms using different processing frameworks, such as Hadoop
+MapReduce, Harp, and Giraph. This analysis stack is used to host the Truthy social
+media data observatory, and we have applied the customized index structures in supporting
+both query evaluation and sophisticated analysis algorithms. Performance tests show
+that our solutions outperform implementations using both direct raw data scans and
+current indexing mechanisms in existing NoSQL databases.},
+booktitle = {Proceedings of the 14th IEEE/ACM International Symposium on Cluster, Cloud, and Grid Computing},
+pages = {587–590},
+numpages = {4},
+keywords = {customizable and scalable indexing, NoSQL databases, social media data analysis, YARN},
+location = {Chicago, Illinois},
+series = {CCGRID '14}
+}
+
+@article{10.1145/3325135,
+author = {Whitman, Randall T. and Marsh, Bryan G. and Park, Michael B. and Hoel, Erik G.},
+title = {Distributed Spatial and Spatio-Temporal Join on Apache Spark},
+year = {2019},
+issue_date = {June 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {5},
+number = {1},
+issn = {2374-0353},
+url = {https://doi.org/10.1145/3325135},
+doi = {10.1145/3325135},
+abstract = {Effective processing of extremely large volumes of spatial data has led to many organizations
+employing distributed processing frameworks. Apache Spark is one such open source
+framework that is enjoying widespread adoption. Within this data space, it is important
+to note that most of the observational data (i.e., data collected by sensors, either
+moving or stationary) has a temporal component or timestamp. To perform advanced analytics
+and gain insights, the temporal component becomes equally important as the spatial
+and attribute components. In this article, we detail several variants of a spatial
+join operation that addresses both spatial, temporal, and attribute-based joins. Our
+spatial join technique differs from other approaches in that it combines spatial,
+temporal, and attribute predicates in the join operator. In addition, our spatio-temporal
+join algorithm and implementation differs from others in that it runs in commercial
+off-the-shelf (COTS) application. The users of this functionality are assumed to be
+GIS analysts with little if any knowledge of the implementation details of spatio-temporal
+joins or distributed processing. They are comfortable using simple tools that do not
+provide the ability to tweak the configuration of the algorithm or processing environment.
+The spatio-temporal join algorithm behind the tool must always succeed, regardless
+of input data parameters (e.g., it can be highly irregularly distributed, contain
+large numbers of coincident points, it can be extremely large, etc.). These factors
+combine to place additional requirements on the algorithm that are uncommonly found
+in the traditional research environment. Our spatio-temporal join algorithm was shipped
+as part of the GeoAnalytics Server [12], part of the ArcGIS Enterprise platform from
+version 10.5 onward.},
+journal = {ACM Trans. Spatial Algorithms Syst.},
+month = jun,
+articleno = {6},
+numpages = {28},
+keywords = {Spatial join, HDFS, Hadoop, Spark, distributed processing, geospatial and spatiotemporal databases, spatio-temporal join}
+}
+
+@inproceedings{10.1145/3183713.3190662,
+author = {Begoli, Edmon and Camacho-Rodr\'{\i}guez, Jes\'{u}s and Hyde, Julian and Mior, Michael J. and Lemire, Daniel},
+title = {Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources},
+year = {2018},
+isbn = {9781450347037},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3183713.3190662},
+doi = {10.1145/3183713.3190662},
+abstract = {Apache Calcite is a foundational software framework that provides query processing,
+optimization, and query language support to many popular open-source data processing
+systems such as Apache Hive, Apache Storm, Apache Flink, Druid, and MapD. The goal
+of this paper is to formally introduce Calcite to the broader research community,
+brie y present its history, and describe its architecture, features, functionality,
+and patterns for adoption. Calcite's architecture consists of a modular and extensible
+query optimizer with hundreds of built-in optimization rules, a query processor capable
+of processing a variety of query languages, an adapter architecture designed for extensibility,
+and support for heterogeneous data models and stores (relational, semi-structured,
+streaming, and geospatial). This exible, embeddable, and extensible architecture is
+what makes Calcite an attractive choice for adoption in big-data frameworks. It is
+an active project that continues to introduce support for the new types of data sources,
+query languages, and approaches to query processing and optimization.},
+booktitle = {Proceedings of the 2018 International Conference on Management of Data},
+pages = {221–230},
+numpages = {10},
+keywords = {modular query optimization, apache calcite, data management, storage adapters, relational semantics, query algebra},
+location = {Houston, TX, USA},
+series = {SIGMOD '18}
+}
+
+@inproceedings{10.1145/2494621.2494638,
+author = {Malensek, Matthew and Pallickara, Sangmi and Pallickara, Shrideep},
+title = {Autonomously Improving Query Evaluations over Multidimensional Data in Distributed Hash Tables},
+year = {2013},
+isbn = {9781450321723},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2494621.2494638},
+doi = {10.1145/2494621.2494638},
+abstract = {The proliferation of observational devices and sensors with networking capabilities
+has led to growth in both the rates and sources of data that ultimately contribute
+to extreme-scale data volumes. Datasets generated in such settings are often multidimensional,
+with each dimension accounting for a feature of interest. We posit that efficient
+evaluation of queries over such datasets must account for both the distribution of
+data values and the patterns in the queries themselves. Configuring query evaluation
+by hand is infeasible given the data volumes, dimensionality, and the rates at which
+new data and queries arrive. In this paper, we describe our algorithm to autonomously
+improve query evaluations over voluminous, distributed datasets. Our approach autonomously
+tunes for the most dominant query patterns and distribution of values across a dimension.
+We evaluate our algorithm in the context of our system, Galileo, which is a hierarchical
+distributed hash table used for managing geospatial, time-series data. Our system
+strikes a balance between memory utilization, fast evaluations, and search space reductions.
+Empirical evaluations reported here are performed on a dataset that is multidimensional
+and comprises a billion files. The schemes described in this work are broadly applicable
+to any system that leverages distributed hash tables as a storage mechanism.},
+booktitle = {Proceedings of the 2013 ACM Cloud and Autonomic Computing Conference},
+articleno = {15},
+numpages = {10},
+keywords = {autonomous query tuning, distributed hash tables, multidimensional data},
+location = {Miami, Florida, USA},
+series = {CAC '13}
+}
+
+@inproceedings{10.1145/2534921.2534929,
+author = {Sun, Xiling and Yaagoub, Anan and Trajcevski, Goce and Scheuermann, Peter and Chen, Hao and Kachhwaha, Abhinav},
+title = {P<sup>2</sup>EST: Parallelization Philosophies for Evaluating Spatio-Temporal Queries},
+year = {2013},
+isbn = {9781450325349},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2534921.2534929},
+doi = {10.1145/2534921.2534929},
+abstract = {This work considers the impact of different contexts when attempting to exploit parallelization
+approaches for processing continuous spatio-temporal queries. More specifically, we
+are interested in various trade-off aspects that may arise due to differences of the
+computing environments like, for example, multicore vs. cloud. Algorithmic solutions
+for parallel processing of spatio-temporal queries cater to splitting the load among
+units - be it based on the data or the query (or both) - relying to a bigger or lesser
+degree on a certain set of features of a given environment. We postulate that incorporating
+the service-features should be coupled with the algorithms/heuristics for processing
+particular queries, in addition to the volume of the data. We present the current
+version of the implementation of our P2EST system and analyze the execution of different
+heuristics for parallel processing of spatio-temporal range queries.},
+booktitle = {Proceedings of the 2nd ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data},
+pages = {47–54},
+numpages = {8},
+keywords = {spatio-temporal queries, multi-core, cloud},
+location = {Orlando, Florida},
+series = {BigSpatial '13}
+}
+
+@inproceedings{10.1145/1869692.1869695,
+author = {Liu, Yan and Wu, Kaichao and Wang, Shaowen and Zhao, Yanli and Huang, Qian},
+title = {A MapReduce Approach to <i>G</i><sub><i>i</i></sub>*(<i>d</i>) Spatial Statistic},
+year = {2010},
+isbn = {9781450304320},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1869692.1869695},
+doi = {10.1145/1869692.1869695},
+abstract = {Managing and analyzing massive spatial datasets as supported by GIS and spatial analysis
+is becoming crucial to geospatial problem-solving and decision-making. MapReduce provides
+a data-centric computational model through which highly scalable spatial analysis
+computation can be achieved. However, it is challenging to leverage multi-dimensional
+spatial characteristics on the horizontally-partitioned and transparently managed
+MapReduce data system for improving the computational performance of spatial analysis.
+This paper tackles this challenge through the development of MapReduce-based computation
+of Gi*(d) -- a spatial statistic for detecting local clustering. Without exploiting
+spatial characteristics, Gi*(d) computation for a particular location requires pair-wise
+distance calculation for all points of a given dataset. A spatial locality-based storage
+and indexing strategy is developed to associate spatial locality with storage locality
+on MapReduce platform. Based on a spatial indexing method, unnecessary map tasks can
+be eliminated for a MapReduce job, thus significantly improving the overall computation
+performance. To leverage underlying parallelism on storage nodes, an application-level
+load balancing mechanism is developed to produce even loads among map tasks based
+on adaptive spatial domain decomposition. Experiments show the effectiveness of the
+developed storage and indexing strategy with different distance parameter settings.
+Significant reduction on execution time for all-point computation is observed through
+the use of the application-level load balancing mechanism.},
+booktitle = {Proceedings of the ACM SIGSPATIAL International Workshop on High Performance and Distributed Geographic Information Systems},
+pages = {11–18},
+numpages = {8},
+keywords = {data-centric computing, cloud computing, spatial statistics},
+location = {San Jose, California},
+series = {HPDGIS '10}
+}
+
+@inproceedings{10.1145/3127479.3132254,
+author = {Iyer, Anand Padmanabha and Stoica, Ion},
+title = {A Scalable Distributed Spatial Index for the Internet-of-Things},
+year = {2017},
+isbn = {9781450350280},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3127479.3132254},
+doi = {10.1145/3127479.3132254},
+abstract = {The increasing interest in the Internet-of-Things (IoT) suggests that a new source
+of big data is imminent---the machines and sensors in the IoT ecosystem. The fundamental
+characteristic of the data produced by these sources is that they are inherently geospatial
+in nature. In addition, they exhibit unprecedented and unpredictable skews. Thus,
+big data systems designed for IoT applications must be able to efficiently ingest,
+index and query spatial data having heavy and unpredictable skews. Spatial indexing
+is well explored area of research in literature, but little attention has been given
+to the topic of efficient distributed spatial indexing.In this paper, we propose Sift,
+a distributed spatial index and its implementation. Unlike systems that depend on
+load balancing mechanisms that kick-in post ingestion, Sift tries to distribute the
+incoming data along the distributed structure at indexing time and thus incurs minimal
+rebalancing overhead. Sift depends only on an underlying key-value store, hence is
+implementable in many existing big data stores. Our evaluations of Sift on a popular
+open source data store show promising results---Sift achieves up to 8\texttimes{} reduction in
+indexing overhead while simultaneously reducing the query latency and index size by
+over 2\texttimes{} and 3\texttimes{} respectively, in a distributed environment compared to the state-of-the-art.},
+booktitle = {Proceedings of the 2017 Symposium on Cloud Computing},
+pages = {548–560},
+numpages = {13},
+keywords = {big data, distributed data store, spatial indexing},
+location = {Santa Clara, California},
+series = {SoCC '17}
+}
+
+@inproceedings{10.1145/3340964.3340981,
+author = {Koutroumanis, Nikolaos and Nikitopoulos, Panagiotis and Vlachou, Akrivi and Doulkeridis, Christos},
+title = {NoDA: Unified NoSQL Data Access Operators for Mobility Data},
+year = {2019},
+isbn = {9781450362801},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3340964.3340981},
+doi = {10.1145/3340964.3340981},
+abstract = {In this paper, we propose NoDA, an abstraction layer consisting of spatio-temporal
+data access operators, which is used to access NoSQL storage engines in a unified
+way. NoDA alleviates the burden from big data developers of learning the query language
+of each NoSQL store, and offers a unified view of the underlying NoSQL store. Our
+approach is inspired by the equivalent paradigm of drivers (such as JDBC) in the relational
+database world, where the application code is indifferent to the exact underlying
+database engine. Still, the challenges in the NoSQL world are manifold, because of
+the lack of standardization in data access. We focus on the specific case of mobility
+data, and show how spatial and spatio-temporal operators, such as range queries and
+k-nearest neighbor, are supported in a unified way. Moreover, we present challenges
+and solutions for supporting spatial and spatio-temporal data in NoSQL stores.},
+booktitle = {Proceedings of the 16th International Symposium on Spatial and Temporal Databases},
+pages = {174–177},
+numpages = {4},
+keywords = {NoSQL, spatio-temporal data, data access operators},
+location = {Vienna, Austria},
+series = {SSTD '19}
+}
+
+@inproceedings{10.1145/2814864.2814869,
+author = {Quoc, Hoan Nguyen Mau and Le Phuoc, Danh},
+title = {An Elastic and Scalable Spatiotemporal Query Processing for Linked Sensor Data},
+year = {2015},
+isbn = {9781450334624},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2814864.2814869},
+doi = {10.1145/2814864.2814869},
+abstract = {Recently, many approaches have been proposed to manage sensor data using Semantic
+Web technologies for effective heterogeneous data integration. However, our research
+survey revealed that these solutions primarily focused on semantic relationships and
+still paid less attention to its temporal-spatial correlation. Most semantic approaches
+do not have spatiotemporal support. Some of them have served limitations on providing
+full spatiotemporal support but have poor performance for complex spatiotemporal aggregate
+queries. In addition, while the volume of sensor data is rapidly growing, a challenge
+of querying and managing the massive volumes of data generated by sensing devices
+still remains unsolved. In this paper, we propose a spatiotemporal query engine for
+sensor data based on Linked Data model. The ultimate goal of our approach is to provide
+an elastic and scalable system which allows fast searching and analysis on the relationships
+of space, time and semantic in sensor data. We also introduce a set of new query operators
+in order to support spatiotemporal computing in linked sensor data context.},
+booktitle = {Proceedings of the 11th International Conference on Semantic Systems},
+pages = {17–24},
+numpages = {8},
+keywords = {real-time search engine, linked stream data, internet of things, graph of things},
+location = {Vienna, Austria},
+series = {SEMANTICS '15}
+}
+
+@inproceedings{10.1145/3147234.3151010,
+author = {Gong, Yikai and Rimba, Paul and Sinnott, Richard},
+title = {A Big Data Architecture for Near Real-Time Traffic Analytics},
+year = {2017},
+isbn = {9781450351959},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3147234.3151010},
+doi = {10.1145/3147234.3151010},
+abstract = {Big data is a popular research topic that has brought about a range of new IT challenges
+and opportunities. The transport domain is one area that has much to benefit from
+big data platforms. It requires capabilities for processing voluminous amounts of
+heterogeneous data that is often created in near real time and at high velocity from
+a multitude of distributed sensors. It can also require the application of performance-oriented
+spatial data processing of such data. In this paper, we present a platform (SMASH)
+that tackles many of the specific challenges raised by the transport domain. We present
+a range of case studies applying SMASH to transport and other data used to understand
+traffic phenomenon across the State of Victoria, Australia. The novelty of this work
+is that this Cloud-based platform is not designed for a specific type of data or for
+a specific form of data processing. Rather it supports a range of data flavours with
+a range of data processing possibilities. In particular we show how the platform can
+be used for analyzing social media data used for traffic jam identification through
+spatial and temporal clustering tweets on the road network and compare the results
+with official real-time traffic data based on the Sydney Coordinated Adaptive Traffic
+System (SCATS - www.scats.com.au) that has been rolled out across Victoria.},
+booktitle = {Companion Proceedings of The10th International Conference on Utility and Cloud Computing},
+pages = {157–162},
+numpages = {6},
+keywords = {big data, traffic analysis, cloud},
+location = {Austin, Texas, USA},
+series = {UCC '17 Companion}
+}
+
+@inproceedings{10.1145/3344341.3368802,
+author = {Rammer, Daniel and Lee Pallickara, Sangmi and Pallickara, Shrideep},
+title = {ATLAS: A Distributed File System for Spatiotemporal Data},
+year = {2019},
+isbn = {9781450368940},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3344341.3368802},
+doi = {10.1145/3344341.3368802},
+abstract = {A majority of the data generated in several domains is geotagged. These data also
+have a chronological component associated with them. Pervasive data generation and
+collection efforts have led to an increase in data volumes. These data hold the potential
+to unlock valuable insights. To facilitate such knowledge extraction in a timely manner,
+the underlying file system must satisfy several objectives. In this study, we present
+Atlas, a distributed file system designed specifically for spatiotemporal data. Atlas
+includes several capabilities that are suited for performing large-scale analyses:
+aligning dispersion with data access patterns, load balancing storage, and facilitating
+interoperation with analytical engines such as Hadoop and Spark. Our empirical benchmarks
+profile several aspects of Atlas, and demonstrate the suitability of our methodology.},
+booktitle = {Proceedings of the 12th IEEE/ACM International Conference on Utility and Cloud Computing},
+pages = {11–20},
+numpages = {10},
+keywords = {spatiotemporal data, hdfs, file systems, analytics},
+location = {Auckland, New Zealand},
+series = {UCC'19}
+}
+
+@inproceedings{10.1145/3265007.3265015,
+author = {Zhang, Bin and Zhu, Guobin and Yu, Riji and Wei, Shaoyan and Peng, Ling and Fei, Dingzhou and Yu, Xuesong and Pan, Peiwen},
+title = {Research on the Innovation of Trajectory Big Data in Social Governance},
+year = {2018},
+isbn = {9781450365741},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3265007.3265015},
+doi = {10.1145/3265007.3265015},
+abstract = {With the development of modern society. The unprecedented prosperity of science &amp;
+technology and finance. Objects formed a huge amount of track data in its movement.
+The large amount of track data contains rich spatio-temporal characteristics information,
+it exposes the privacy information such as the behavior characteristics, interests
+and social habits of mobile objects. Through trajectory data processing technology.
+It can excavate information such as human activity pattern and behavior characteristic,
+urban vehicle movement characteristic, atmospheric environment change law and so on.
+The large amount of track data also reveals the privacy information, such as the behavior
+characteristics, interests and social habits of mobile objects, which is rich in spatio-temporal
+characteristics information. This paper begins with the significance of the study
+of trajectory big data. Introducing track big data acquisition mode and social application
+in various fields, In the specific application With the development of modern society.
+The unprecedented prosperity of science &amp; technology and finance. Objects formed a
+huge amount of track data in its movement. The large amount of track data contains
+rich spatio-temporal characteristics information, it exposes the privacy information
+such as the behavior characteristics, interests and social habits of mobile objects.
+Through trajectory data processing technology. It can excavate information such as
+human activity pattern and behavior characteristic, urban vehicle movement characteristic,
+atmospheric environment change law and so on. The large amount of track data also
+reveals the privacy information, such as the behavior characteristics, interests and
+social habits of mobile objects, which is rich in spatio-temporal characteristics
+information. This paper begins with the significance of the study of trajectory big
+data. Introducing track big data acquisition mode and social application in various
+fields, In the specific application, we pay more attention to the object's trajectory
+privacy protection. Applying the big data of trajectory to social governance; In addition,
+the application of big data in social governance is summarized and the future work
+prospect is discussed. We pay more attention to the object's trajectory privacy protection.
+Applying the big data of trajectory to social governance; In addition, the application
+of big data in social governance is summarized and the future work prospect is discussed.},
+booktitle = {Proceedings of the 6th ACM/ACIS International Conference on Applied Computing and Information Technology},
+pages = {38–42},
+numpages = {5},
+keywords = {Social Computing, Trajectory Big Data, Social Governance, Privacy Protection},
+location = {Kunming, China},
+series = {ACIT 2018}
+}
+
+@article{10.14778/3137765.3137828,
+author = {Eldawy, Ahmed and Mokbel, Mohamed F.},
+title = {The Era of Big Spatial Data},
+year = {2017},
+issue_date = {August 2017},
+publisher = {VLDB Endowment},
+volume = {10},
+number = {12},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3137765.3137828},
+doi = {10.14778/3137765.3137828},
+abstract = {In this tutorial, we present the recent work in the database community for handling
+Big Spatial Data. This topic became very hot due to the recent explosion in the amount
+of spatial data generated by smart phones, satellites and medical devices, among others.
+This tutorial goes beyond the use of existing systems as-is (e.g., Hadoop, Spark or
+Impala), and digs deep into the core components of big systems (e.g., indexing and
+query processing) to describe how they are designed to handle big spatial data. During
+this 90-minute tutorial, we review the state-of-the-art work in the area of Big Spatial
+Data while classifying the existing research efforts according to the implementation
+approach, underlying architecture, and system components. In addition, we provide
+case studies of full-fledged systems and applications that handle Big Spatial Data
+which allows the audience to better comprehend the whole tutorial.},
+journal = {Proc. VLDB Endow.},
+month = aug,
+pages = {1992–1995},
+numpages = {4}
+}
+
+@article{10.1145/2108144.2108163,
+author = {Doernhoefer, Mark},
+title = {Surfing the Net for Software Engineering Notes},
+year = {2012},
+issue_date = {March 2012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {37},
+number = {2},
+issn = {0163-5948},
+url = {https://doi.org/10.1145/2108144.2108163},
+doi = {10.1145/2108144.2108163},
+journal = {SIGSOFT Softw. Eng. Notes},
+month = apr,
+pages = {11–20},
+numpages = {10}
+}
+
+@inproceedings{10.1145/2820783.2820860,
+author = {Yu, Jia and Wu, Jinxuan and Sarwat, Mohamed},
+title = {GeoSpark: A Cluster Computing Framework for Processing Large-Scale Spatial Data},
+year = {2015},
+isbn = {9781450339674},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2820783.2820860},
+doi = {10.1145/2820783.2820860},
+abstract = {This paper introduces GeoSpark an in-memory cluster computing framework for processing
+large-scale spatial data. GeoSpark consists of three layers: Apache Spark Layer, Spatial
+RDD Layer and Spatial Query Processing Layer. Apache Spark Layer provides basic Spark
+functionalities that include loading / storing data to disk as well as regular RDD
+operations. Spatial RDD Layer consists of three novel Spatial Resilient Distributed
+Datasets (SRDDs) which extend regular Apache Spark RDDs to support geometrical and
+spatial objects. GeoSpark provides a geometrical operations library that accesses
+Spatial RDDs to perform basic geometrical operations (e.g., Overlap, Intersect). System
+users can leverage the newly defined SRDDs to effectively develop spatial data processing
+programs in Spark. The Spatial Query Processing Layer efficiently executes spatial
+query processing algorithms (e.g., Spatial Range, Join, KNN query) on SRDDs. GeoSpark
+also allows users to create a spatial index (e.g., R-tree, Quad-tree) that boosts
+spatial data processing performance in each SRDD partition. Preliminary experiments
+show that GeoSpark achieves better run time performance than its Hadoop-based counterparts
+(e.g., SpatialHadoop).},
+booktitle = {Proceedings of the 23rd SIGSPATIAL International Conference on Advances in Geographic Information Systems},
+articleno = {70},
+numpages = {4},
+keywords = {large-scale data, spatial data, cluster computing},
+location = {Seattle, Washington},
+series = {SIGSPATIAL '15}
+}
+
+@inproceedings{10.1145/3077584.3077587,
+author = {Li, Chengming and Wu, Zheng and Yin, Jie},
+title = {Research on Oracle-Based Integrative Storage and Management of Spatial Data},
+year = {2017},
+isbn = {9781450348331},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3077584.3077587},
+doi = {10.1145/3077584.3077587},
+abstract = {An Oracle-based object-oriented vector-raster-integrated spatial database management
+system was proposed in this paper based upon the combination of mature relational
+spatial database storage and spatial data engine technologies in order to solve the
+problem of low transferability and efficiency that exists in the storage and management
+of multi-source heterogeneous spatial data. By rearranging the data transfer flow,
+establishing an integrated vector and raster data model, and optimizing the spatial
+data retrieval mechanism, this system enabled united storage and efficient management
+of spatial data. A comparison with ArcSDE, a piece of international leading similar
+software, revealed this technology's higher data transfer performance and better query
+and retrieval efficiency},
+booktitle = {Proceedings of the 2017 International Conference on Information System and Data Mining},
+pages = {16–22},
+numpages = {7},
+keywords = {vector and raster integration management, data transfer, retrieval optimization, Spatial data},
+location = {Charleston, SC, USA},
+series = {ICISDM '17}
+}
+
+@inproceedings{10.1145/2070770.2070776,
+author = {Malik, Tanu and Best, Neil and Elliott, Joshua and Madduri, Ravi and Foster, Ian},
+title = {Improving the Efficiency of Subset Queries on Raster Images},
+year = {2011},
+isbn = {9781450310406},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2070770.2070776},
+doi = {10.1145/2070770.2070776},
+abstract = {We propose a parallel method to accelerate the performance of subset queries on raster
+images. The method, based on map-reduce paradigm, includes two principles from database
+management systems to improve the performance of subset queries. First, we employ
+column-oriented storage format for storing locationand weather variables. Second,
+we improve data locality by storing multidimensional attributes such as space and
+time in a Hilbert order instead of a serial, row-wise order. We implement the principles
+in a map-reduce environment, maintaining compatibility with the replication and scheduling
+constraints. We show through experiments that the techniques improve data locality
+and increase performance of subset queries, respectively, by 5x and 2x.},
+booktitle = {Proceedings of the ACM SIGSPATIAL Second International Workshop on High Performance and Distributed Geographic Information Systems},
+pages = {34–37},
+numpages = {4},
+location = {Chicago, Illinois},
+series = {HPDGIS '11}
+}
+
+@inproceedings{10.1145/1869692.1869700,
+author = {Guo, Danhuai and Wu, Kaichao and Li, Jianhui and Wang, Yuwei},
+title = {Spatial Scene Similarity Assessment on Hadoop},
+year = {2010},
+isbn = {9781450304320},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1869692.1869700},
+doi = {10.1145/1869692.1869700},
+abstract = {Spatial Scene Similarity Assessment (SSSA) is an essential problem in spatial analysis,
+spatial query, and map generalization, etc. In SSSA, spatial scene similarity needs
+to be compared between query spatial scene and each candidate spatial scene. The computational
+complexity of spatial scene comparison often cannot be resolved by sequential computing
+model. In this paper, we analyze the computational complexity of SSSA and develop
+a parallel processing method and associated algorithms for SSSA based on Hadoop. The
+COOT (Cell Object Overlay Times) is proposed as a data locality strategy. The experiment
+results demonstrate that MapReduce on Hadoop significantly improve SSSA in computing
+performance and data processing capability.},
+booktitle = {Proceedings of the ACM SIGSPATIAL International Workshop on High Performance and Distributed Geographic Information Systems},
+pages = {39–42},
+numpages = {4},
+keywords = {spatial relation, Hadoop, MapReduce, spatial scene similarity assessment, spatial scene},
+location = {San Jose, California},
+series = {HPDGIS '10}
+}
+
+@inproceedings{10.1145/2361999.2362039,
+author = {Begoli, Edmon},
+title = {A Short Survey on the State of the Art in Architectures and Platforms for Large Scale Data Analysis and Knowledge Discovery from Data},
+year = {2012},
+isbn = {9781450315685},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2361999.2362039},
+doi = {10.1145/2361999.2362039},
+abstract = {Intended as a survey for practicing architects and researchers seeking an overview
+of the state-of-the-art architectures for data analysis, this paper provides an overview
+of the emerging data management and analytic platforms including parallel databases,
+Hadoop-based systems, High Performance Computing (HPC) platforms and platforms popularly
+referred to as NoSQL platforms. Platforms are presented based on their relevance,
+analysis they support and the data organization model they support.},
+booktitle = {Proceedings of the WICSA/ECSA 2012 Companion Volume},
+pages = {177–183},
+numpages = {7},
+keywords = {large scale data analysis, software architecture, massively parallel processing, NoSQL, big data, knowledge discovery from data},
+location = {Helsinki, Finland},
+series = {WICSA/ECSA '12}
+}
+
+@inproceedings{10.1145/3314545.3314566,
+author = {Mbah, Raymond Blanch K. and Rege, Manjeet and Misra, Bhabani},
+title = {Using Spark and Scala for Discovering Latent Trends in Job Markets},
+year = {2019},
+isbn = {9781450366342},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3314545.3314566},
+doi = {10.1145/3314545.3314566},
+abstract = {Job markets are experiencing an exponential growth in data alongside the recent explosion
+of big data in various domains including health, security and finance. Staying current
+with job market trends entails collecting, processing and analyzing huge amounts of
+data. A typical challenge with analyzing job listings is that they vary drastically
+with regards to verbiage, for instance a given job title or skill can be referred
+to using different words or industry jargons. As a result, it becomes incumbent to
+go beyond words present in job listings and carry out analysis aimed at discovering
+latent structures and trends in job listings. In this paper, we present a systematic
+approach of uncovering latent trends in job markets using big data technologies (Apache
+Spark and Scala) and distributed semantic techniques such as latent semantic analysis
+(LSA). We show how LSA can uncover patterns/relationships/trends that will otherwise
+remain hidden if using traditional text mining techniques that rely only on word frequencies
+in documents.},
+booktitle = {Proceedings of the 2019 3rd International Conference on Compute and Data Analysis},
+pages = {55–62},
+numpages = {8},
+keywords = {Singular Value Decomposition (SVD), Scala, Big Data, Spark, Natural Language Processing(NLP), Latent Semantic Analysis(LSA)},
+location = {Kahului, HI, USA},
+series = {ICCDA 2019}
+}
+
+@inproceedings{10.1145/2896825.2896834,
+author = {Klein, John and Buglak, Ross and Blockow, David and Wuttke, Troy and Cooper, Brenton},
+title = {A Reference Architecture for Big Data Systems in the National Security Domain},
+year = {2016},
+isbn = {9781450341523},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2896825.2896834},
+doi = {10.1145/2896825.2896834},
+abstract = {Acquirers, system builders, and other stakeholders of big data systems need to define
+requirements, develop and evaluate solutions, and integrate systems together. A reference
+architecture enables these software engineering activities by standardizing nomenclature,
+defining key solution elements and their relationships, collecting relevant solution
+patterns, and classifying existing technologies. Within the national security domain,
+existing reference architectures for big data systems have not been useful because
+they are too general or are not vendor-neutral. We present a reference architecture
+for big data systems that is focused on addressing typical national defence requirements
+and that is vendor-neutral, and we demonstrate how to use this reference architecture
+to define solutions in one mission area.},
+booktitle = {Proceedings of the 2nd International Workshop on BIG Data Software Engineering},
+pages = {51–57},
+numpages = {7},
+keywords = {big data, reference architecture},
+location = {Austin, Texas},
+series = {BIGDSE '16}
+}
+
+@inproceedings{10.1145/2896825.2896831,
+author = {Scavuzzo, Marco and Tamburri, Damian A. and Di Nitto, Elisabetta},
+title = {Providing Big Data Applications with Fault-Tolerant Data Migration across Heterogeneous NoSQL Databases},
+year = {2016},
+isbn = {9781450341523},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2896825.2896831},
+doi = {10.1145/2896825.2896831},
+abstract = {The recent growing interest on highly-available data-intensive applications sparked
+the need for flexible and portable storage technologies, e.g., NoSQL databases. Unfortunately,
+the lack of standard interfaces and architectures for NoSQLs makes it difficult and
+expensive to create portable applications, which results in vendor lock-in. Building
+on previous work, we aim at providing guaranteed fault-tolerant techniques and supporting
+architectures to port or migrate data to and across heterogeneous NoSQL technology.
+To prove the effectiveness of our approach we evaluate it on an industrial case-study.
+We conclude that our method and supporting architecture offer an efficient and fault-tolerant
+mechanism for NoSQL portability and interoperation.},
+booktitle = {Proceedings of the 2nd International Workshop on BIG Data Software Engineering},
+pages = {26–32},
+numpages = {7},
+location = {Austin, Texas},
+series = {BIGDSE '16}
+}
+
+@inproceedings{10.1145/2513228.2513320,
+author = {Shim, Jaeseok and Lim, Yujin and Park, Jaesung},
+title = {Architectural Design of Cloud Gateway in Smart Surveillance System},
+year = {2013},
+isbn = {9781450323482},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2513228.2513320},
+doi = {10.1145/2513228.2513320},
+abstract = {Wireless Sensor Network (WSN) applications have been used in monitoring and controlling
+areas. However, due to the limitation of resources, efficient management of the large
+volume of WSNs data is an important issue to deal with. In recent years, Sensor Cloud
+(SC) infrastructure is introduced as an integration of cloud computing into WSNs to
+innovate a number of other new services. SC infrastructure is becoming popular that
+can provide an open, flexible, and reconfigurable platform for several monitoring
+and controlling applications. In this paper, we design and implement a smart surveillance
+system on top of sensor cloud infrastructure. For the real time alerts of the system,
+we define the architecture of a cloud gateway and propose a semantic filtering mechanism
+to extract the meaningful data from sensor data in WSNs. Through implementation of
+the smart surveillance system, we show the functionality and feasibility of our system.},
+booktitle = {Proceedings of the 2013 Research in Adaptive and Convergent Systems},
+pages = {261–266},
+numpages = {6},
+keywords = {semantic filter, smart surveillance system, cloud computing},
+location = {Montreal, Quebec, Canada},
+series = {RACS '13}
+}
+
+@inproceedings{10.1145/3134472.3134516,
+author = {Nguyen, Quang Vinh and Engelke, Ulrich},
+title = {Big Data Visual Analytics: Fundamentals, Techniques, and Tools},
+year = {2017},
+isbn = {9781450354035},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3134472.3134516},
+doi = {10.1145/3134472.3134516},
+booktitle = {SIGGRAPH Asia 2017 Courses},
+articleno = {2},
+numpages = {203},
+location = {Bangkok, Thailand},
+series = {SA '17}
+}
+
+@article{10.1145/2766196.2766198,
+author = {Eldawy, Ahmed and Mokbel, Mohamed F.},
+title = {The Ecosystem of SpatialHadoop},
+year = {2015},
+issue_date = {November 2014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {6},
+number = {3},
+url = {https://doi.org/10.1145/2766196.2766198},
+doi = {10.1145/2766196.2766198},
+abstract = {There is a recent outbreak in the amounts of spatial data generated by different sources,
+e.g., smart phones, space telescopes, and medical devices, which urged researchers
+to exploit the existing distributed systems to process such amounts of spatial data.
+However, as these systems are not designed for spatial data, they cannot fully utilize
+its spatial properties to achieve high performance. In this paper, we describe SpatialHadoop,
+a full-fledged MapReduce framework which extends Hadoop to support spatial data efficiently.
+SpatialHadoop consists of four main layers, namely, language, indexing, query processing,
+and visualization. The language layer provides a high level language with standard
+spatial data types and operations to make the system accessible to non-technical users.
+The indexing layer supports standard spatial indexes, such as grid, R-tree and R+-tree,
+inside Hadoop file system in order to speed up spatial operations. The query processing
+layer encapsulates the spatial operations supported by SpatialHadoop such as range
+query, k nearest neighbor, spatial join and computational geometry operations. Finally,
+the visualization layer allows users to produce images that describe very large datasets
+to make it easier to explore and understand big spatial data. SpatialHadoop is already
+used as a main component in several real systems such as MNTG, TAREEG, TAGHREED, and
+SHAHED.},
+journal = {SIGSPATIAL Special},
+month = apr,
+pages = {3–10},
+numpages = {8}
+}
+
+@inbook{10.1145/3394486.3403301,
+author = {Zhang, Rui and Albrecht, Conrad and Zhang, Wei and Cui, Xiaodong and Finkler, Ulrich and Kung, David and Lu, Siyuan},
+title = {Map Generation from Large Scale Incomplete and Inaccurate Data Labels},
+year = {2020},
+isbn = {9781450379984},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3394486.3403301},
+abstract = {Accurately and globally mapping human infrastructure is an important and challenging
+task with applications in routing, regulation compliance monitoring, and natural disaster
+response management etc.. In this paper we present progress in developing an algorithmic
+pipeline and distributed compute system that automates the process of map creation
+using high resolution aerial images. Unlike previous studies, most of which use datasets
+that are available only in a few cities across the world, we utilizes publicly available
+imagery and map data, both of which cover the contiguous United States (CONUS). We
+approach the technical challenge of inaccurate and incomplete training data adopting
+state-of-the-art convolutional neural network architectures such as the U-Net and
+the CycleGAN to incrementally generate maps with increasingly more accurate and more
+complete labels of man-made infrastructure such as roads and houses. Since scaling
+the mapping task to CONUS calls for parallelization, we then adopted an asynchronous
+distributed stochastic parallel gradient descent training scheme to distribute the
+computational workload onto a cluster of GPUs with nearly linear speed-up.},
+booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining},
+pages = {2514–2522},
+numpages = {9}
+}
+
+@inproceedings{10.1145/2786006.2786007,
+author = {Alsubaiee, Sattam and Carey, Michael J. and Li, Chen},
+title = {LSM-Based Storage and Indexing: An Old Idea with Timely Benefits},
+year = {2015},
+isbn = {9781450336680},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2786006.2786007},
+doi = {10.1145/2786006.2786007},
+abstract = {With the social-media data explosion, near real-time queries, particularly those of
+a spatio-temporal nature, can be challenging. In this paper, we show how to efficiently
+answer queries that target recent data within very large data sets. We describe a
+solution that exploits a natural partitioning property that LSM-based indexes have
+for components, allowing us to filter out many components when answering queries.
+Our solution is generalizable to any LSM-based index structure, and can be applied
+not just on temporal fields (e.g., based on recency), but on any "time-correlated
+fields" such as Universally Unique Identifiers (UUIDs), user-provided integer ids,
+etc. We have implemented and experimentally evaluated the solution in the context
+of the AsterixDB system.},
+booktitle = {Second International ACM Workshop on Managing and Mining Enriched Geo-Spatial Data},
+pages = {1–6},
+numpages = {6},
+location = {Melbourne, VIC, Australia},
+series = {GeoRich'15}
+}
+
+@inproceedings{10.1145/2247596.2247598,
+author = {Borkar, Vinayak and Carey, Michael J. and Li, Chen},
+title = {Inside "Big Data Management": Ogres, Onions, or Parfaits?},
+year = {2012},
+isbn = {9781450307901},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2247596.2247598},
+doi = {10.1145/2247596.2247598},
+abstract = {In this paper we review the history of systems for managing "Big Data" as well as
+today's activities and architectures from the (perhaps biased) perspective of three
+"database guys" who have been watching this space for a number of years and are currently
+working together on "Big Data" problems. Our focus is on architectural issues, and
+particularly on the components and layers that have been developed recently (in open
+source and elsewhere) and on how they are being used (or abused) to tackle challenges
+posed by today's notion of "Big Data". Also covered is the approach we are taking
+in the ASTERIX project at UC Irvine, where we are developing our own set of answers
+to the questions of the "right" components and the "right" set of layers for taming
+the "Big Data" beast. We close by sharing our opinions on what some of the important
+open questions are in this area as well as our thoughts on how the dataintensive computing
+community might best seek out answers.},
+booktitle = {Proceedings of the 15th International Conference on Extending Database Technology},
+pages = {3–14},
+numpages = {12},
+location = {Berlin, Germany},
+series = {EDBT '12}
+}
+
+@inproceedings{10.1145/2602622.2602625,
+author = {Eldawy, Ahmed},
+title = {SpatialHadoop: Towards Flexible and Scalable Spatial Processing Using Mapreduce},
+year = {2014},
+isbn = {9781450329248},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2602622.2602625},
+doi = {10.1145/2602622.2602625},
+abstract = {Recently, MapReduce frameworks, e.g., Hadoop, have been used extensively in different
+applications that include tera-byte sorting, machine learning, and graph processing.
+With the huge volumes of spatial data coming from different sources, there is an increasing
+demand to exploit the efficiency of Hadoop, coupled with the flexibility of the MapReduce
+framework, in spatial data processing. However, Hadoop falls short in supporting spatial
+data efficiently as the core is unaware of spatial data properties. This paper describes
+SpatialHadoop; a full-edged MapReduce framework with native support for spatial data.
+SpatialHadoop is a comprehensive extension to Hadoop that injects spatial data awareness
+in each Hadoop layer, namely, the language, storage, MapReduce, and operations layers.
+In the language layer, SpatialHadoop adds a simple and ex- pressive high level language
+for spatial data types and operations. In the storage layer, SpatialHadoop adapts
+traditional spatial index structures, Grid, R-tree and R+-tree, to form a two-level
+spatial index. SpatialHadoop enriches the MapReduce layer by two new components, SpatialFileSplitter
+and SpatialRecordReader, for efficient and scalable spatial data processing. In the
+operations layer, SpatialHadoop is already equipped with a dozen of operations, including
+range query, kNN, and spatial join. The flexibility and open source nature of SpatialHadoop
+allows more spatial operations to be implemented efficiently using MapReduce. Extensive
+experiments on a real system prototype and real datasets show that SpatialHadoop achieves
+orders of magnitude better performance than Hadoop for spatial data processing.},
+booktitle = {Proceedings of the 2014 SIGMOD PhD Symposium},
+pages = {46–50},
+numpages = {5},
+keywords = {indexing, spatial, hadoop, mapreduce},
+location = {Snowbird, Utah, USA},
+series = {SIGMOD'14 PhD Symposium}
+}
+
+@inproceedings{10.1145/3105831.3105841,
+author = {Costa, Carlos and Santos, Maribel Yasmina},
+title = {The SusCity Big Data Warehousing Approach for Smart Cities},
+year = {2017},
+isbn = {9781450352208},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3105831.3105841},
+doi = {10.1145/3105831.3105841},
+abstract = {Nowadays, the concept of Smart City provides a rich analytical context, highlighting
+the need to store and process vast amounts of heterogeneous data flowing at different
+velocities. This data is defined as Big Data, which imposes significant difficulties
+in traditional data techniques and technologies. Data Warehouses (DWs) have long been
+recognized as a fundamental enterprise asset, providing fact-based decision support
+for several organizations. The concept of DW is evolving. Traditionally, Relational
+Database Management Systems (RDBMSs) are used to store historical data, providing
+different analytical perspectives regarding several business processes. With the current
+advancements in Big Data techniques and technologies, the concept of Big Data Warehouse
+(BDW) emerges to surpass several limitations of traditional DWs. This paper presents
+a novel approach for designing and implementing BDWs, which has been supporting the
+SusCity data visualization platform. The BDW is a crucial component of the SusCity
+research project in the context of Smart Cities, supporting analytical tasks based
+on data collected in the city of Lisbon.},
+booktitle = {Proceedings of the 21st International Database Engineering &amp; Applications Symposium},
+pages = {264–273},
+numpages = {10},
+keywords = {Smart Cities, Data Warehouse, Big Data, Hadoop, Big Data Warehousing, NoSQL},
+location = {Bristol, United Kingdom},
+series = {IDEAS 2017}
+}
+
+@article{10.1145/3137586.3137590,
+author = {Singh, Hari and Bawa, Seema},
+title = {A Survey of Traditional and MapReduceBased Spatial Query Processing Approaches},
+year = {2017},
+issue_date = {June 2017},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {46},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/3137586.3137590},
+doi = {10.1145/3137586.3137590},
+abstract = {Various indexing methods of spatial data have come out after rigorous efforts put
+by many researchers for fast processing of spatial queries. Parallelizing spatial
+index building and query processing have become very popular for improving efficiency.
+The MapReduce framework provides a modern way of parallel processing. A MapReduce-based
+works for spatial queries consider the existing traditional spatial indexing for building
+spatial indexes in parallel. The majority of the spatial indexes implemented in MapReduce
+use R-Tree and its variants. Therefore, R-Tree and its variantbased traditional spatial
+indexes are thoroughly surveyed in the paper. The objective is to search for still
+less explored spatial indexing approaches, having the potential for parallelism in
+MapReduce. The review work also provides a detailed survey of MapReduce-based spatial
+query processing approaches - hierarchical indexed and packed key-value storage based
+spatial dataset. Both approaches use different data partitioning strategies for distributing
+data among cluster nodes and managing the partitioned dataset through different indexing.
+Finally, a number of parameters are selected for comparison and analysis of all the
+existing approaches in the literature.},
+journal = {SIGMOD Rec.},
+month = sep,
+pages = {18–29},
+numpages = {12},
+keywords = {MapReduce, Index, R-Tree, Spatial}
+}
+
+@inproceedings{10.1145/2063348.2063364,
+author = {Wang, Daniel L. and Monkewitz, Serge M. and Lim, Kian-Tat and Becla, Jacek},
+title = {Qserv: A Distributed Shared-Nothing Database for the LSST Catalog},
+year = {2011},
+isbn = {9781450311397},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2063348.2063364},
+doi = {10.1145/2063348.2063364},
+abstract = {The LSST project will provide public access to a database catalog that, in its final
+year, is estimated to include 26 billion stars and galaxies in dozens of trillion
+detections in multiple petabytes. Because we are not aware of an existing open-source
+database implementation that has been demonstrated to efficiently satisfy astronomers'
+spatial self-joining and cross-matching queries at this scale, we have implemented
+Qserv, a distributed shared-nothing SQL database query system. To speed development,
+Qserv relies on two successful open-source software packages: the MySQL RDBMS and
+the Xrootd distributed file system. We describe Qserv's design, architecture, and
+ability to scale to LSST's data requirements. We illustrate its potential with test
+results on a 150-node cluster using 55 billion rows and 30 terabytes of simulated
+data. These results demonstrate the soundness of Qserv's approach and the scale it
+achieves on today's hardware.},
+booktitle = {State of the Practice Reports},
+articleno = {12},
+numpages = {11},
+keywords = {database, file system, MPP, distributed, shared-nothing, parallel},
+location = {Seattle, Washington},
+series = {SC '11}
+}
+
+@inproceedings{10.1145/2485732.2485754,
+author = {Parker-Wood, Aleatha and Long, Darrell D. E. and Madden, Brian A. and Adams, Ian F. and McThrow, Michael and Wildani, Avani},
+title = {Examining Extended and Scientific Metadata for Scalable Index Designs},
+year = {2013},
+isbn = {9781450321167},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2485732.2485754},
+doi = {10.1145/2485732.2485754},
+abstract = {While file system metadata is well characterized by a variety of workload studies,
+scientific metadata is much less well understood. We characterize scientific metadata,
+in order to better understand the implications for index design. Based on our findings,
+existing solutions for either file system or scientific search will not suffice for
+indexing a large scientific file system. We describe the problems with existing solutions,
+and suggest column stores as an alternative approach.},
+booktitle = {Proceedings of the 6th International Systems and Storage Conference},
+articleno = {4},
+numpages = {6},
+keywords = {scientific data, metadata, search, index design, file systems},
+location = {Haifa, Israel},
+series = {SYSTOR '13}
+}
+
+@inproceedings{10.1145/3410566.3410568,
+author = {Afyouni, Imad and Khan, Aamir S. and Aghbari, Zaher Al},
+title = {Spatio-Temporal Event Discovery in the Big Social Data Era},
+year = {2020},
+isbn = {9781450375030},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3410566.3410568},
+doi = {10.1145/3410566.3410568},
+abstract = {Social networks have been transforming the way people express opinions, post and react
+to events, and share ideas. Over the last decade, several studies on event detection
+from social media have been proposed, with the aim of extracting specific types of
+events, such as, social gatherings, natural disasters, and emergency situations, among
+others. However, these works do not consider the continuous processing of events over
+the social data streams, and therefore, cannot determine the spatial and temporal
+evolution of such events. This paper introduces a big data platform for event discovery,
+while tracking their evolution over space and time. We propose a scalable and efficient
+architecture that can manage and mine a huge data flow of unstructured streams, in
+order to detect geo-social events. The extracted clusters of events are indexed by
+a spatio-temporal index structure. We conduct experiments over twitter datasets to
+measure the effectiveness and efficiency of our system with respect to the existing
+major event detection techniques. An initial demonstration of our platform highlights
+its major advantage for detecting and tracking events spatially and temporally, thus
+allowing for great opportunities from application perspectives.},
+booktitle = {Proceedings of the 24th Symposium on International Database Engineering &amp; Applications},
+articleno = {7},
+numpages = {6},
+keywords = {spatio-temporal scope, event detection, social big data, data stream management},
+location = {Seoul, Republic of Korea},
+series = {IDEAS '20}
+}
+
+@article{10.1145/3323214,
+author = {Lu, Jiaheng and Holubov\'{a}, Irena},
+title = {Multi-Model Databases: A New Journey to Handle the Variety of Data},
+year = {2019},
+issue_date = {July 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {52},
+number = {3},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3323214},
+doi = {10.1145/3323214},
+abstract = {The variety of data is one of the most challenging issues for the research and practice
+in data management systems. The data are naturally organized in different formats
+and models, including structured data, semi-structured data, and unstructured data.
+In this survey, we introduce the area of multi-model DBMSs that build a single database
+platform to manage multi-model data. Even though multi-model databases are a newly
+emerging area, in recent years, we have witnessed many database systems to embrace
+this category. We provide a general classification and multi-dimensional comparisons
+for the most popular multi-model databases. This comprehensive introduction on existing
+approaches and open problems, from the technique and application perspective, make
+this survey useful for motivating new multi-model database approaches, as well as
+serving as a technical reference for developing multi-model database applications.},
+journal = {ACM Comput. Surv.},
+month = jun,
+articleno = {55},
+numpages = {38},
+keywords = {NoSQL database management systems, multi-model databases, Big data management}
+}
+
+@inproceedings{10.1145/2487766.2487769,
+author = {Scheidgen, Markus},
+title = {Reference Representation Techniques for Large Models},
+year = {2013},
+isbn = {9781450321655},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2487766.2487769},
+doi = {10.1145/2487766.2487769},
+abstract = {If models consist of more and more objects, time and space required to process these
+models becomes an issue. To solve this we can employ different existing frameworks
+that use different model representations (e.g. trees in XMI or relational data with
+CDO). Based on the observation that these frameworks reach different performance measures
+for different operations and different model characteristics, we rise the question
+if and how different model representations can be combined to mitigate performance
+issues of individual representations.In this paper, we analyze different techniques
+to represent references, which are one important aspect to process large models efficiently.
+We present the persistence framework EMF-Fragments, which combines the representation
+of references as source-object contained sets of target-objects (e.g. in XMI) within
+the representation as relations similar to those in relational databases (e.g. with
+CDO). We also present a performance evaluation for both representations and discuss
+the use of both representations in three applications: models for source-code repositories,
+scientific data, and geo-spatial data.},
+booktitle = {Proceedings of the Workshop on Scalability in Model Driven Engineering},
+articleno = {5},
+numpages = {9},
+keywords = {meta-modeling, big data, mining software repositories, model persistence, EMF},
+location = {Budapest, Hungary},
+series = {BigMDE '13}
+}
+
+@inproceedings{10.1145/3129757.3129758,
+author = {Timonin, Alexey Y. and Bozhday, Alexander S. and Bershadsky, Alexander M.},
+title = {Analysis of Unstructured Text Data for a Person Social Profile},
+year = {2017},
+isbn = {9781450354127},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3129757.3129758},
+doi = {10.1145/3129757.3129758},
+abstract = {The greatest scientific interest for analysts are Internet open social data, because
+it has a direct link with all kinds of human activity. However, these data are not
+suitable for the application in its original form. Information should be presented
+in a structured, convenient, human-readable form which is called a social profile.
+The social profile building is carried out through the analysis of the filtered Internet
+open source data. Analysis of personal profile data is achieved through the use of
+mathematical set theory, Big Data software, NoSQL data stores and analytic tools for
+social media. This article discusses methods of unstructured textual data analysis
+in relation to a social profile. Special attention is given to the search of implicit
+dependences in texts using visual analysis and natural language processing means.
+Phase of the textual data analysis is the most important in terms of results and complicated
+to implement. There is the possibility to partially automate the process of information
+analyzing through the use of visual analysis, natural language processing (NLP), neural
+networks and specialized algorithms. Resulted data provide a detailed in-depth review
+of the social profile entities and relations. It can be used in further deeper social
+researches.},
+booktitle = {Proceedings of the Internationsl Conference on Electronic Governance and Open Society: Challenges in Eurasia},
+pages = {1–5},
+numpages = {5},
+keywords = {natural language processing, social media, data mining, public data sources, visual analysis, data analysis, personal social profile, text analysis, big data, unstructured data},
+location = {St. Petersburg, Russia},
+series = {eGose '17}
+}
+
+@article{10.1145/3150226,
+author = {Pouyanfar, Samira and Yang, Yimin and Chen, Shu-Ching and Shyu, Mei-Ling and Iyengar, S. S.},
+title = {Multimedia Big Data Analytics: A Survey},
+year = {2018},
+issue_date = {April 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {1},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3150226},
+doi = {10.1145/3150226},
+abstract = {With the proliferation of online services and mobile technologies, the world has stepped
+into a multimedia big data era. A vast amount of research work has been done in the
+multimedia area, targeting different aspects of big data analytics, such as the capture,
+storage, indexing, mining, and retrieval of multimedia big data. However, very few
+research work provides a complete survey of the whole pine-line of the multimedia
+big data analytics, including the management and analysis of the large amount of data,
+the challenges and opportunities, and the promising research directions. To serve
+this purpose, we present this survey, which conducts a comprehensive overview of the
+state-of-the-art research work on multimedia big data analytics. It also aims to bridge
+the gap between multimedia challenges and big data solutions by providing the current
+big data frameworks, their applications in multimedia analyses, the strengths and
+limitations of the existing methods, and the potential future directions in multimedia
+big data analytics. To the best of our knowledge, this is the first survey that targets
+the most recent multimedia management techniques for very large-scale data and also
+provides the research studies and technologies advancing the multimedia analyses in
+this big data era.},
+journal = {ACM Comput. Surv.},
+month = jan,
+articleno = {10},
+numpages = {34},
+keywords = {mobile multimedia, 5V challenges, indexing, retrieval, multimedia analysis, multimedia databases, machine learning, Big data analytics, survey, data mining}
+}
+
+@inproceedings{10.1145/3460866.3461772,
+author = {C\'{e}rin, Christophe and Andres, Fr\'{e}d\'{e}ric and Geldwerth-Feniger, Danielle},
+title = {Towards an Emulation Tool Based on Ontologies and Data Life Cycles for Studying Smart Buildings},
+year = {2021},
+isbn = {9781450384650},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3460866.3461772},
+doi = {10.1145/3460866.3461772},
+abstract = {In this paper, we share our vision to study a complex Information Technology (IT)
+system handling a massive amount of data in the context of 'smart buildings.' One
+technique for analyzing complex IT systems relies on emulation, where the final software
+system is fully deployed on real architectures, and is evaluated in considering "small"
+instances of situations the system is supposed to solve. We propose a software architecture
+for studying the ecosystem of 'smart buildings'. This software architecture is built:
+1) on top of ontologies for the description of smart buildings; 2) on a special tool
+for mastering the life cycle of data produced by sensors and actuators inside the
+buildings.We assume that it is equally important to model both the building's components
+and the flow of data produced inside the building. We use existing software components
+for both goals and to make real our concerns. According to a translational methodology,
+we also discuss use cases for illustrating the potential of our approach and the particular
+challenges associated with making the two main components of our emulation tool inter-operate.Therefore,
+our main contribution is to propose a comprehensive, ambitious and realistic research
+plan to guide communities. The paper illustrates how computer scientists and smart
+buildings domain scientists may communicate to address and solve specific research
+problems related to Big Data in emergent distributed environments. We are also guessing
+that experimental results that can demonstrate the practicality of the proposed combination
+of tools could be devised in the future, based on our broad vision. The paper is,
+first and foremost, a visionary paper.},
+booktitle = {Proceedings of the International Workshop on Big Data in Emergent Distributed Environments},
+articleno = {8},
+numpages = {15},
+keywords = {emulation principles, ontology, smart buildings, systems and methods, big data tools, data life cycle},
+location = {Virtual Event, China},
+series = {BiDEDE '21}
+}
+
+@article{10.1145/3349265,
+author = {Barua, Hrishav Bakul and Mondal, Kartick Chandra},
+title = {A Comprehensive Survey on Cloud Data Mining (CDM) Frameworks and Algorithms},
+year = {2019},
+issue_date = {October 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {52},
+number = {5},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3349265},
+doi = {10.1145/3349265},
+abstract = {Data mining is used for finding meaningful information out of a vast expanse of data.
+With the advent of Big Data concept, data mining has come to much more prominence.
+Discovering knowledge out of a gigantic volume of data efficiently is a major concern
+as the resources are limited. Cloud computing plays a major role in such a situation.
+Cloud data mining fuses the applicability of classical data mining with the promises
+of cloud computing. This allows it to perform knowledge discovery out of huge volumes
+of data with efficiency. This article presents the existing frameworks, services,
+platforms, and algorithms for cloud data mining. The frameworks and platforms are
+compared among each other based on similarity, data mining task support, parallelism,
+distribution, streaming data processing support, fault tolerance, security, memory
+types, storage systems, and others. Similarly, the algorithms are grouped on the basis
+of parallelism type, scalability, streaming data mining support, and types of data
+managed. We have also provided taxonomies on the basis of data mining techniques such
+as clustering, classification, and association rule mining. We also have attempted
+to discuss and identify the major applications of cloud data mining. The various taxonomies
+for cloud data mining frameworks, platforms, and algorithms have been identified.
+This article aims at gaining better insight into the present research realm and directing
+the future research toward efficient cloud data mining in future cloud systems.},
+journal = {ACM Comput. Surv.},
+month = sep,
+articleno = {104},
+numpages = {62},
+keywords = {distributed computing, machine learning, taxonomy, volume, cloud data mining (CDM), Review, data science, graph mining, framework, survey, velocity, classification and association rule mining, data mining, cloud computing, parallelism, variety, big data analytics, clustering, big data}
+}
+
+@inproceedings{10.1145/1985500.1985508,
+author = {Hart, Andrew F. and Goodale, Cameron E. and Mattmann, Chris A. and Zimdars, Paul and Crichton, Dan and Lean, Peter and Kim, Jinwon and Waliser, Duane},
+title = {A Cloud-Enabled Regional Climate Model Evaluation System},
+year = {2011},
+isbn = {9781450305822},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1985500.1985508},
+doi = {10.1145/1985500.1985508},
+abstract = {The climate research community is increasingly interested in utilizing direct, observational
+measurements to validate model output in an effort to tune those models to better
+approximate our planet's dynamic climate. The current emphasis on performing these
+comparisons at regional, as opposed to global, scales presents challenges both scientific
+and technical, since regional ecosystems are highly heterogeneous and the available
+data is not readily consumed on a regional basis. If provided with a common approach
+for efficiently accessing and utilizing the existing observational datasets, climate
+researchers have the potential to effect lasting societal, economic and political
+benefits. A key challenge, however, is that model-to-observational comparison requires
+massive quantities of data and significant computational capabilities. Further complicating
+matters is the fact that, currently, observational data and model outputs exist in
+a variety of data formats, utilize varying degrees of specificity and resolution,
+and reside in disparate, highly heterogeneous data systems. In this paper we present
+a software architectural approach that leverages the advantages of cloud computing
+and modern open-source software technologies to address the regional climate modeling
+problem. Our system, dubbed RCMES, is highly scalable and elastic, allows for both
+local and distributed management of the satellite observations and generated model
+outputs, and delivers this information to climate researchers in a way that is easily
+integrated into existing climate simulations and statistical tools.},
+booktitle = {Proceedings of the 2nd International Workshop on Software Engineering for Cloud Computing},
+pages = {43–49},
+numpages = {7},
+keywords = {rcmes, oodt, jifresse, cas, regional, model},
+location = {Waikiki, Honolulu, HI, USA},
+series = {SECLOUD '11}
+}
+
+@inproceedings{10.1145/2737909.2737912,
+author = {Fox, Geoffrey C. and Jha, Shantenu and Qiu, Judy and Luckow, Andre},
+title = {Towards an Understanding of Facets and Exemplars of Big Data Applications},
+year = {2014},
+isbn = {9781450330312},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2737909.2737912},
+doi = {10.1145/2737909.2737912},
+abstract = {We study many Big Data applications from a variety of research and commercial areas
+and suggest a set of characteristic features and possible kernel benchmarks that stress
+those features for data analytics. We draw conclusions for the hardware and software
+architectures that are suggested by this analysis.},
+booktitle = {Proceedings of the 20 Years of Beowulf Workshop on Honor of Thomas Sterling's 65th Birthday},
+pages = {7–16},
+numpages = {10},
+location = {Annapolis, MD, USA},
+series = {Beowulf '14}
+}
+
+@inbook{10.1145/3448016.3457269,
+author = {Shahvarani, Amirhesam and Jacobsen, Hans-Arno},
+title = {Distributed Stream KNN Join},
+year = {2021},
+isbn = {9781450383431},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3448016.3457269},
+abstract = {kNN join over data streams is an important operation for location-aware systems, which
+correlates events from different sources based on their occurrence locations. Combining
+the complexity of kNN join and the dynamicity of data streams, kNN join in streaming
+environments is a computationally intensive operator, and its performance can be greatly
+improved by utilizing the computational capabilities of modern non-uniform memory
+access (NUMA) computing platforms. However, the conventional approaches to kNN join
+for prestored datasets do not work efficiently with the kind of highly dynamic data
+found in streaming environments.Therefore, in this paper, we introduce an adaptive
+scalable stream kNN join, named ADS-kNN, to address the challenges of performing the
+kNN join operation on highly dynamic data. We propose a multistage kNN execution plan
+that enables high-performance kNN queries in distributed settings by overlapping the
+computation and communication stages. Moreover, we propose an adaptive data partitioning
+scheme that dynamically adjusts the load among the operators according to the changes
+in the input values. Combining these two techniques, ADS-kNN provides a scalable and
+adaptive kNN join operator for data streams. Our experiments using a 56-core system
+show that ADS-kNN achieves a maximum throughput that is 21 times higher than that
+of a single-threaded approach.},
+booktitle = {Proceedings of the 2021 International Conference on Management of Data},
+pages = {1597–1609},
+numpages = {13}
+}
+
+@inproceedings{10.1145/2902251.2902306,
+author = {Cohen, Sara},
+title = {Data Management for Social Networking},
+year = {2016},
+isbn = {9781450341912},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2902251.2902306},
+doi = {10.1145/2902251.2902306},
+abstract = {Social networks are fascinating and valuable datasets, which can be leveraged to better
+understand society, and to make inter-personal choices. This tutorial explores the
+fundamental issues that arise when storing and querying social data. The discussion
+is divided into three main parts. First, we consider some of the key computational
+problems that arise over the social graph structure, such as node centrality, link
+prediction, community detection and information diffusion. Second, we consider algorithmic
+challenges that leverage both the textual content and the graph structure of a social
+network, e.g., social search and querying, and team formation. Finally, we consider
+critical aspects of implementing a social network database management system, and
+discuss existing systems. In this tutorial, we also point out gaps between the state-of-the-art
+and desired features of a data management system for social networking, and discuss
+open research challenges.},
+booktitle = {Proceedings of the 35th ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems},
+pages = {165–177},
+numpages = {13},
+keywords = {data management, social networks},
+location = {San Francisco, California, USA},
+series = {PODS '16}
+}
+
+@article{10.1145/3239566,
+author = {Moustaka, Vaia and Vakali, Athena and Anthopoulos, Leonidas G.},
+title = {A Systematic Review for Smart City Data Analytics},
+year = {2018},
+issue_date = {January 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {5},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3239566},
+doi = {10.1145/3239566},
+abstract = {Smart cities (SCs) are becoming highly sophisticated ecosystems at which innovative
+solutions and smart services are being deployed. These ecosystems consider SCs as
+data production and sharing engines, setting new challenges for building effective
+SC architectures and novel services. The aim of this article is to “connect the pieces”
+among Data Science and SC domains, with a systematic literature review which identifies
+the core topics, services, and methods applied in SC data monitoring. The survey focuses
+on data harvesting and data mining processes over repeated SC data cycles. A survey
+protocol is followed to reach both quantitative and semantically important entities.
+The review results generate useful taxonomies for data scientists in the SC context,
+which offers clear guidelines for corresponding future works. In particular, a taxonomy
+is proposed for each of the main SC data entities, namely, the “D Taxonomy” for the
+data production, the “M Taxonomy” for data analytics methods, and the “S Taxonomy”
+for smart services. Each of these taxonomies clearly places entities in a classification
+which is beneficial for multiple stakeholders and for multiple domains in urban smartness
+targeting. Such indicative scenarios are outlined and conclusions are quite promising
+for systemizing.},
+journal = {ACM Comput. Surv.},
+month = dec,
+articleno = {103},
+numpages = {41},
+keywords = {Internet of Things, crowd-sourcing, crowd-sensing, data harvesting, systematic review, open data, taxonomy, Data mining, smart dimensions, smart cities, smart services}
+}
+
+@inproceedings{10.1145/3427228.3427260,
+author = {Ferrari, Dario and Carminati, Michele and Polino, Mario and Zanero, Stefano},
+title = {NoSQL Breakdown: A Large-Scale Analysis of Misconfigured NoSQL Services},
+year = {2020},
+isbn = {9781450388580},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3427228.3427260},
+doi = {10.1145/3427228.3427260},
+abstract = {In the last years, NoSQL databases have grown in popularity due to their easy-to-deploy,
+reliable, and scalable storage mechanism. While most NoSQL services offer access control
+mechanisms, their default configurations grant access without any form of authentication,
+resulting in misconfigurations that may expose data to the Internet, as demonstrated
+by the recent high-profile data leaks. In this paper, we investigate the usage of
+the most popular NoSQL databases, focusing on automatically analyzing and discovering
+misconfigurations that may lead to security and privacy issues. We developed a tool
+that automatically scans large IP subnets to detect the exposed services and performs
+security analyses without storing nor exposing sensitive data. We analyzed 67,725,641
+IP addresses between October 2019 and March 2020, spread across several Cloud Service
+Providers (CSPs), and found 12,276 misconfigured databases. The risks associated with
+exposed services range from data leaking, which may pose a significant menace to users’
+privacy, to data tampering of resources stored in the vulnerable databases, which
+may pose a relevant threat to a web service reputation. Regarding the last point,
+we found 742 potentially vulnerable websites linked to misconfigured instances with
+the write permission enabled to anonymous users. },
+booktitle = {Annual Computer Security Applications Conference},
+pages = {567–581},
+numpages = {15},
+keywords = {database and storage security, misconfiguration, vulnerabilities., NoSQL services},
+location = {Austin, USA},
+series = {ACSAC '20}
+}
+
+@proceedings{10.1145/2723372,
+title = {SIGMOD '15: Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data},
+year = {2015},
+isbn = {9781450327589},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+abstract = {Welcome to SIGMOD 2015 -- officially, the 2015 ACM SIGMOD International Conference
+on the Management of Data! This year's conference is being held in the beautiful cultural
+capital of Australia, Melbourne. During the Gold Rush period of the 19th Century,
+Melbourne was the richest city in the world, and as a result it is filled with many
+unique neighborhoods and distinctive buildings. In addition to wonderful neighborhoods
+to explore, the city has great museums and other cultural attractions, as well as
+a fine multi-cultural atmosphere. For those who would like to explore the outdoors,
+popular highlights are the Phillip Island Nature Park (90 minutes away), which features
+wild penguins who return in a parade each day at sunset, and the Great Ocean Road,
+one of the world's most scenic coastal drives, including the famous towering 12 Apostles.SIGMOD
+2015's exciting technical program reflects not only traditional topics, but the database
+community's role in broader data science and data analytics. The keynote from Laura
+Haas, "The Power Behind the Throne: Information Integration in the Age of Data-Driven
+Discovery" highlights the role of database and data integration techniques in the
+growing field of data science. Jignesh Patel's talk, "From Data to Insights @ Bare
+Metal Speed," explains how hardware and software need to be co-evolved to support
+the needs of scalable data analytics. Jennifer Widom, winner of the 2015 ACM-W Athena
+Lecturer Award for fundamental contributions to computer science, will give her award
+talk, "Three Favorite Results," on Tuesday. Christopher R\'{e} will lead a panel on "Machine
+Learning and Databases: The Sound of Things to Come or a Cacophony of Hype?," with
+participants Divyakant Agrawal, Magdalena Balazinska, Michael Cafarella, Michael Jordan,
+Tim Kraska, and Raghu Ramakrishnan. Of course, there are also 106 research paper presentations,
+4 tutorials, 30 demonstrations, and 18 industrial papers. Papers will be presented
+both as talks during the research sessions, and as part of plenary Poster Sessions.SIGMOD
+2015 is preceded by the PhD Workshop, as well as workshops on leading-edge topics
+like data analytics (DanaC), databases and the Web (WebDB), exploratory search (ExploreDB),
+managing and mining spatial data (GeoRich), and graph data (GRADES); the New Researcher
+Symposium will take place on Wednesday. The banquet will be held in a Melbourne landmark,
+the Town Hall.As in recent years, we had two submission deadlines for SIGMOD this
+year, one in August and one in November. The review process was journal-style, with
+multiple rounds of reviews coordinated by the Group Leaders. We accepted 34 of 137
+papers from the first deadline and 72 of 278 from the second deadline. The total acceptance
+rate was about 25.5%, and we believe that the revision processhas improved the quality
+of the technical program.},
+location = {Melbourne, Victoria, Australia}
+}
+
+@article{10.1145/3204947,
+author = {Siow, Eugene and Tiropanis, Thanassis and Hall, Wendy},
+title = {Analytics for the Internet of Things: A Survey},
+year = {2018},
+issue_date = {September 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {4},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3204947},
+doi = {10.1145/3204947},
+abstract = {The Internet of Things (IoT) envisions a world-wide, interconnected network of smart
+physical entities. These physical entities generate a large amount of data in operation,
+and as the IoT gains momentum in terms of deployment, the combined scale of those
+data seems destined to continue to grow. Increasingly, applications for the IoT involve
+analytics. Data analytics is the process of deriving knowledge from data, generating
+value like actionable insights from them. This article reviews work in the IoT and
+big data analytics from the perspective of their utility in creating efficient, effective,
+and innovative applications and services for a wide spectrum of domains. We review
+the broad vision for the IoT as it is shaped in various communities, examine the application
+of data analytics across IoT domains, provide a categorisation of analytic approaches,
+and propose a layered taxonomy from IoT data to analytics. This taxonomy provides
+us with insights on the appropriateness of analytical techniques, which in turn shapes
+a survey of enabling technology and infrastructure for IoT analytics. Finally, we
+look at some tradeoffs for analytics in the IoT that can shape future research.},
+journal = {ACM Comput. Surv.},
+month = jul,
+articleno = {74},
+numpages = {36},
+keywords = {big data, cyber-physical networks, Internet of things, data analytics}
+}
+
+@proceedings{10.1145/3134472,
+title = {SA '17: SIGGRAPH Asia 2017 Courses},
+year = {2017},
+isbn = {9781450354035},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+abstract = {The SIGGRAPH Asia Courses program will feature a variety of instructional sessions
+catered to the different levels of expertise of our attendees. Sessions from introductory
+to advanced topics in computer graphics and interactive techniques will be conducted
+by speakers from renowned organizations and academic research institutions from over
+the world.The program has been the premier source for practitioners, developers, researchers,
+artists, and students who want to learn about the state-of-the-art technologies in
+computer graphics and their related topics. Join them in Bangkok this November to
+further broaden and deepen your technical knowledge.},
+location = {Bangkok, Thailand}
+}
+
+@book{10.1145/3226595,
+editor = {Brodie, Michael L.},
+title = {Making Databases Work: The Pragmatic Wisdom of Michael Stonebraker},
+year = {2018},
+isbn = {9781947487192},
+publisher = {Association for Computing Machinery and Morgan &amp; Claypool},
+volume = {22},
+abstract = {At the ACM Awards banquet in June 2017, during the 50th anniversary celebration of
+the A.M. Turing Award, ACM announced the launch of the ACM A.M. Turing Book Series,
+a sub-series of ACM Books, to celebrate the winners of the A.M. Turing Award, computing's
+highest honor, the "Nobel Prize" for computing. This series aims to highlight the
+accomplishments of awardees, explaining their major contributions of lasting importance
+in computing."Making Databases Work: The Pragmatic Wisdom of Michael Stonebraker,"
+the first book in the series, celebrates Mike's contributions and impact. What accomplishments
+warranted computing's highest honor? How did Stonebraker do it? Who is Mike Stonebraker---researcher,
+professor, CTO, lecturer, innovative product developer, serial entrepreneur, and decades-long
+leader, and research evangelist for the database community. This book describes Mike's
+many contributions and evaluates them in light of the Turing Award.The book describes,
+in 36 chapters, the unique nature, significance, and impact of Mike's achievements
+in advancing modern database systems over more than 40 years. The stories involve
+technical concepts, projects, people, prototype systems, failures, lucky accidents,
+crazy risks, startups, products, venture capital, and lots of applications that drove
+Mike Stonebraker's achievements and career. Even if you have no interest in databases
+at all, you'll gain insights into the birth and evolution of Turing Award-worthy achievements
+from the perspectives of 39 remarkable computer scientists and professionals.Today,
+data is considered the world's most valuable resource ("The Economist," May 6, 2017),
+whether it is in the tens of millions of databases used to manage the world's businesses
+and governments, in the billions of databases in our smartphones and watches, or residing
+elsewhere, as yet unmanaged, awaiting the elusive next generation of database systems.
+Every one of the millions or billions of databases includes features that are celebrated
+by the 2014 A.M. Turing Award and are described in this book.}
+}
+

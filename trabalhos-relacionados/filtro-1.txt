@@ -1,0 +1,676 @@
+
+
+#####################################################################################
+##################################################################### Termos de busca
+#####################################################################################
+
+    1. nosql
+    2. column-oriented
+    3. wide-column
+    4. geoespatial
+    5. hbase
+
+
+#####################################################################################
+################################################################# ACM Digital Library
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: "column-oriented"] [ 123 resultados ]
+
+        1.
+
+            Pragamana: Performance Comparison and Programming Alpha-miner Algorithm in Relational Database Query Language and NoSQL Column-Oriented Using Apache Phoenix
+            https://dl.acm.org/doi/10.1145/2790798.2790819
+
+        2.
+
+            RDBMS, NoSQL, Hadoop: A Performance-Based Empirical Analysis
+            https://dl.acm.org/doi/10.1145/2944165.2944174
+
+        3.
+
+            Automated schema design for NoSQL databases
+            https://dl.acm.org/doi/10.1145/2602622.2602624
+
+        4.
+
+            Data Modeling and NoSQL Databases - A Systematic Mapping Review
+            https://dl.acm.org/doi/10.1145/3457608
+
+        5.
+
+            Data modeling for analytical queries on document-oriented DBMS
+            https://dl.acm.org/doi/10.1145/3167132.3167191
+
+        6.
+
+            A GPS Trajectory Map-Matching Mechanism with DTG Big Data on the HBase System
+            https://dl.acm.org/doi/10.1145/2837060.2837062
+
+        7.
+
+            Improving the performance of querying multidimensional RDF data using aggregates
+            https://dl.acm.org/doi/10.1145/3297280.3297506
+
+        8.
+
+            Storage Design and Implementation of Information Reconstruction System
+            https://dl.acm.org/doi/10.1145/3372454.3372455
+
+        9.
+
+            Data Warehousing in Big Data: From Multidimensional to Tabular Data Models
+            https://dl.acm.org/doi/10.1145/2948992.2949024
+
+        10.
+
+            Big data and analytics
+            https://dl.acm.org/doi/10.5555/2555523.2555559
+
+        11.
+
+            The Six Pillars for Building Big Data Analytics Ecosystems
+            https://dl.acm.org/doi/10.1145/2963143
+
+        12.
+
+            A call to arms: revisiting database design
+            https://dl.acm.org/doi/10.1145/2070736.2070750
+
+        13.
+
+            State of the art in MapReduce: issues and approaches
+            https://dl.acm.org/doi/10.1145/3090354.3090397
+            
+        14.
+
+            Geostreaming in cloud
+            https://dl.acm.org/doi/10.1145/2064959.2064962
+
+        15.
+
+            Introducing spatial context in comparative pricing and product search
+            https://dl.acm.org/doi/10.1145/2536146.2536158
+
+        16.
+
+            A survey of large-scale analytical query processing in MapReduce
+            https://dl.acm.org/doi/10.1007/s00778-013-0319-9
+
+        17.
+
+            SparkGIS: Resource Aware Efficient In-Memory Spatial Query Processing
+            https://dl.acm.org/doi/10.1145/3139958.3140019
+
+        18.
+
+            An experimental comparison of complex object implementations for big data systems
+            https://dl.acm.org/doi/10.1145/3127479.3129248
+
+    Busca: [All: nosql] AND [All: "wide-column"] [ 41 resultados ]
+
+        19. 
+
+            A Survey on NoSQL Stores
+            https://dl.acm.org/doi/10.1145/3158661
+
+        20.
+
+            A Framework to Convert NoSQL to Relational Model
+            https://dl.acm.org/doi/10.1145/3265007.3265011
+
+        21.
+
+            Cross-system NoSQL data transformations with NotaQL
+            https://dl.acm.org/doi/10.1145/2926534.2926535
+
+        22.
+
+            Scalable SQL and NoSQL data stores
+            https://dl.acm.org/doi/10.1145/1978915.1978919
+
+        23.
+
+            NoDA: Unified NoSQL Data Access Operators for Mobility Data
+            https://dl.acm.org/doi/10.1145/3340964.3340981
+
+        24.
+
+            Big Data Design
+            https://dl.acm.org/doi/10.1145/2811222.2811235
+
+        25.
+
+            Overview of the method for choosing the most suitable database system according to certain criteria
+            https://dl.acm.org/doi/10.1145/3410352.3410788
+
+        26.
+
+            Optimization Techniques in Data Management: A Survey
+            https://dl.acm.org/doi/10.1145/3456172.3456214
+
+        27.
+
+            Efficient spatial query processing for big data
+            https://dl.acm.org/doi/10.1145/2666310.2666481
+
+    Busca: [All: nosql] AND [All: geospatial] [ 106 resultados ]
+
+        28.
+
+            On managing geospatial big-data in emergency management: some perspectives
+            https://dl.acm.org/doi/10.1145/2835596.2835614
+
+        29.
+
+            Towards GeoSpatial semantic data management: strengths, weaknesses, and challenges ahead
+            https://dl.acm.org/doi/10.1145/2666310.2666410
+
+        30.
+
+            Supporting queries and analyses of large-scale social media data with customizable and scalable indexing techniques over NoSQL databases
+            https://dl.acm.org/doi/10.1109/CCGrid.2014.57
+
+        31.
+
+            Database system comparison based on spatiotemporal functionality
+            https://dl.acm.org/doi/10.1145/3331076.3331101
+
+        32.
+
+            From relations to multi-dimensional maps: a SQL-to-HBase transformation methodology
+            https://dl.acm.org/doi/10.5555/3049877.3049893
+
+        33.
+
+            Retrieving large-scale high density video target tracks from spatial database
+            https://dl.acm.org/doi/10.1145/2345316.2345339
+
+        34.
+
+            Elastic and effective spatio-temporal query processing scheme on Hadoop
+            https://dl.acm.org/doi/10.1145/2447481.2447486
+
+        35.
+
+            An IR-based approach towards automated integration of geo-spatial datasets in map-based software systems
+            https://dl.acm.org/doi/10.1145/3338906.3340454
+
+        36.
+
+            Hadoop GIS: a high performance spatial data warehousing system over mapreduce
+            https://dl.acm.org/doi/10.14778/2536222.2536227
+
+    Busca: [All: hbase] AND [All: geospatial] [ 60 resultados ]
+
+        37.
+
+            MobiS: a distributed paradigm of mobile sensor data analytics for evaluating environmental exposures
+            https://dl.acm.org/doi/10.1145/2442810.2442827
+
+        38.
+
+            A Survey of Traditional and MapReduceBased Spatial Query Processing Approaches
+            https://dl.acm.org/doi/10.1145/3137586.3137590
+
+#####################################################################################
+####################################################################### Springer Link
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: "column-oriented"] [ 93 resultados ]
+
+        39.
+
+            Data storage optimization strategy in distributed column-oriented database by considering spatial adjacency
+            https://link.springer.com/article/10.1007/s10586-017-1081-3
+
+        40.
+
+            Bringing SQL databases to key-based NoSQL databases: a canonical approach
+            https://link.springer.com/article/10.1007/s00607-019-00736-1
+
+        41.
+
+            Schema design advisor model for RDBMS to NoSQL database migration
+            https://link.springer.com/article/10.1007/s41870-020-00515-8
+
+        42.
+
+            Techniques and guidelines for effective migration from RDBMS to NoSQL
+            https://link.springer.com/article/10.1007/s11227-018-2361-2
+
+        43.
+
+            Big data storage technologies: a survey
+            https://link.springer.com/article/10.1631/FITEE.1500441
+
+        44.
+
+            The big data system, components, tools, and technologies: a survey
+            https://link.springer.com/article/10.1007/s10115-018-1248-0
+
+        45.
+
+            SODA: A framework for spatial observation data analysis
+            https://link.springer.com/article/10.1007/s10619-014-7165-7
+
+        46.
+
+            HBase storage schemas for massive spatial vector data
+            https://link.springer.com/article/10.1007/s10586-017-1253-1
+
+        47.
+
+            Toward building RDB to HBase conversion rules
+            https://link.springer.com/article/10.1186/s40537-017-0071-x
+
+        48.
+
+            Efficient storage of heterogeneous geospatial data in spatial databases
+            https://link.springer.com/article/10.1186/s40537-019-0262-8
+
+        49.
+
+            Precomputing architecture for flexible and efficient big data analytics
+            https://link.springer.com/article/10.1007/s40595-018-0109-9
+
+        50.
+
+            Evaluating partitioning and bucketing strategies for Hive-based Big Data Warehousing systems
+            https://link.springer.com/article/10.1186/s40537-019-0196-1
+
+        51.
+
+            A survey of large-scale analytical query processing in MapReduce
+            https://link.springer.com/article/10.1007/s00778-013-0319-9
+
+        52.
+
+            HGeoHashBase: an optimized storage model of spatial objects for location-based services
+            https://link.springer.com/article/10.1007/s11704-018-7030-3
+
+        53.
+
+            An extra spatial hierarchical schema in key-value store
+            https://link.springer.com/article/10.1007/s10586-018-2270-4
+
+        54.
+
+            Performance analysis of an efficient object-based schema oriented data storage system handling health data
+            https://link.springer.com/article/10.1007/s11334-019-00354-2
+
+    Busca: [All: nosql] AND [All: "wide-column"] [ 27 resultados ]
+
+        55.
+
+            Benchmarking large-scale data management for Internet of Things
+            https://link.springer.com/article/10.1007/s11227-019-02984-6
+
+        56.
+
+            Self-adapting data migration in the context of schema evolution in NoSQL databases
+            https://link.springer.com/article/10.1007/s10619-021-07334-1
+
+        57.
+
+            Spatial data extension for Cassandra NoSQL database
+            https://link.springer.com/article/10.1186/s40537-016-0045-4            
+
+    Busca: [All: nosql] AND [All: "geoespatial"] [ 119 resultados ]
+
+        58.
+
+            Performance analysis of MongoDB versus PostGIS/PostGreSQL databases for line intersection and point containment spatial queries
+            https://link.springer.com/article/10.1007/s41324-016-0059-1
+
+        59.
+
+            MongoDB Vs PostgreSQL: A comparative study on performance aspects
+            https://link.springer.com/article/10.1007/s10707-020-00407-w
+
+        60.
+
+            A comparative experimental study of distributed storage engines for big spatial data processing using GeoSpark
+            https://link.springer.com/article/10.1007/s11227-021-03946-7
+
+        61.
+
+            Parallel and scalable processing of spatio-temporal RDF queries using Spark
+            https://link.springer.com/article/10.1007/s10707-019-00371-0
+
+        62.
+
+            Evaluating Redundancy and Partitioning of Geospatial Data in Document-Oriented Data Warehouses
+            https://link.springer.com/chapter/10.1007/978-3-030-27520-4_16
+
+        63.
+
+            Performance Analysis on Voluntary Geographic Information Systems with Document-Based NoSQL Database
+            https://link.springer.com/chapter/10.1007/978-3-319-58965-7_13
+
+        64.
+
+            Assessing NoSql Approaches for Spatial Big Data Management
+            https://link.springer.com/chapter/10.1007/978-3-030-33103-0_6
+
+        65.
+
+            Comparative Performance Evaluation of Relational and NoSQL Databases for Spatial and Mobile Applications
+            https://link.springer.com/chapter/10.1007/978-3-319-22849-5_14
+
+        66.
+
+            Integration of Relational and NoSQL Databases
+            https://link.springer.com/chapter/10.1007/978-3-319-75420-8_4
+
+        67.
+
+            Study of NoSQL Databases for Storing and Analyzing Traffic Data
+            https://link.springer.com/chapter/10.1007/978-981-13-1217-5_56
+
+        68.
+
+            Enabling Standard Geospatial Capabilities in Spark for the Efficient Processing of Geospatial Big Data
+            https://link.springer.com/chapter/10.1007/978-3-030-29948-4_7
+
+        69.
+
+            The Comparison of Processing Efficiency of Spatial Data for PostGIS and MongoDB Databases
+            https://link.springer.com/chapter/10.1007/978-3-030-19093-4_22
+
+        70.
+
+            Big Data Analytics Framework for Spatial Data
+            https://link.springer.com/chapter/10.1007/978-3-030-04780-1_17
+
+        71.
+
+            Evaluating Several Design Patterns and Trends in Big Data Warehousing Systems
+            https://link.springer.com/chapter/10.1007/978-3-319-91563-0_28
+
+        72.
+
+            Storing and Querying Semi-structured Spatio-Temporal Data in HBase
+            https://link.springer.com/chapter/10.1007/978-3-319-47121-1_26
+
+    Busca: [All: hbase] AND [All: "geoespatial"] [ 52 resultados ]
+
+        73.
+
+            NoSQL Overview and Performance Testing of HBase Over Multiple Nodes with MySQL
+            https://link.springer.com/chapter/10.1007/978-981-13-1498-8_24
+
+        74.
+
+            GeoWave: Utilizing Distributed Key-Value Stores for Multidimensional Data
+            https://link.springer.com/chapter/10.1007/978-3-319-64367-0_6
+
+        75.
+
+            SQL or NoSQL? Contrasting Approaches to the Storage, Manipulation and Analysis of Spatio-temporal Online Social Network Data
+            https://link.springer.com/chapter/10.1007/978-3-319-09144-0_16
+
+#####################################################################################
+######################################################################### IEEE Xplore
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: column-oriented] [ 28 resultados ]
+
+        76.
+
+            Developing Multiple Nested Schema to Reduce Data Redundancy in CONoSQLDB Schema
+            https://ieeexplore.ieee.org/document/8686736
+
+        77.
+
+            Columnar NoSQL CUBE: Agregation operator for columnar NoSQL data warehouse
+            https://ieeexplore.ieee.org/document/6974527
+
+        78.
+
+            UMLtoNoSQL: Automatic Transformation of Conceptual Schema to NoSQL Databases
+            https://ieeexplore.ieee.org/document/8308297
+
+        79.
+
+            Modeling and querying data in NoSQL databases
+            https://ieeexplore.ieee.org/document/6691765
+
+        80.
+
+            Query processing over data warehouse using relational databases and NoSQL
+            https://ieeexplore.ieee.org/document/6427228
+
+        81.
+
+            An Evolutionary Algorithm for Column Family Schema Optimization in HBase
+            https://ieeexplore.ieee.org/document/7184913
+
+        82.
+
+            Multiple Nested Schema of HBase for Migration from SQL
+            https://ieeexplore.ieee.org/document/7024606
+
+    Busca: [All: nosql] AND [All: wide-column] [ 5 resultados ]
+
+        83.
+
+            The Transformation of Relational Database to Wide Column Store Database
+            https://ieeexplore.ieee.org/document/9394106
+
+    Busca: [All: nosql] AND [All: geoespatial] [ 27 resultados ]
+
+        84.
+
+            GeoYCSB: A Benchmark Framework for the Performance and Scalability Evaluation of NoSQL Databases for Geospatial Workloads
+            https://ieeexplore.ieee.org/document/9005570
+
+        85.
+
+            SQL versus NoSQL databases for geospatial applications
+            https://ieeexplore.ieee.org/document/8258324
+
+        86.
+
+            Document-Oriented Geospatial Data Warehouse: An Experimental Evaluation of SOLAP Queries
+            https://ieeexplore.ieee.org/document/8808080
+
+        87.
+
+            HGrid: A Data Model for Large Geospatial Data Sets in HBase
+            https://ieeexplore.ieee.org/document/6740243
+
+    Busca: [All: hbase] AND [All: geoespatial] [ 0 resultados ]
+
+        88.
+
+            Geospatial data storage based on HBase and MapReduce
+            https://ieeexplore.ieee.org/document/8047040
+
+        89.
+
+            Pairs (Re)Loaded: System Design & Benchmarking For Scalable Geospatial Applications
+            https://ieeexplore.ieee.org/document/9165675
+
+        90.
+
+            Big spatial data processing with Apache Spark
+            https://ieeexplore.ieee.org/document/8047039
+
+#####################################################################################
+############################################################################## SCOPUS
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: column-oriented] [ 85 resultados ]
+
+        91.
+
+            Efficient querying of multidimensional RDF data with aggregates: Comparing NoSQL, RDF and relational data stores
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85086517564&origin=resultslist&sort=plf-f&src=s&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=4&citeCnt=1&searchTerm=
+
+        92.
+
+            Performance analysis of schema design approaches for migration from RDBMS to NOSQL databases
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85078264134&origin=resultslist&sort=plf-f&src=s&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=9&citeCnt=0&searchTerm=
+
+        93.
+
+            Big Data warehouse: Building columnar NoSQL OLAP cubes
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85074516420&origin=resultslist&sort=plf-f&src=s&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=11&citeCnt=1&searchTerm=
+        
+        94.
+
+            Toward automatic generation of column-oriented NoSQL databases in Big Data context
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85067292099&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=22&citeCnt=3&searchTerm=
+        
+        95.
+
+            A new approach for migration of a relational database into column-oriented nosql database on hadoop
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85055729362&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=25&citeCnt=2&searchTerm=
+        
+        96.
+
+            Automatic data modeling transformation approach of NoSQL document and column stores to RDF
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85052077535&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=26&citeCnt=1&searchTerm=
+        
+        97.
+
+            Formalizing the mapping of UML conceptual schemas to column-oriented databases
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85050720715&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=28&citeCnt=3&searchTerm=
+
+        98.
+
+            Relational Databases Versus HBase: An Experimental Evaluation
+            https://www.astesj.com/publications/ASTESJ_040249.pdf
+
+        99.
+
+            From document warehouse to column-oriented NoSQL document warehouse
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85029302678&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=44&citeCnt=1&searchTerm=
+
+        100.
+
+            Logical schema for data warehouse on column-oriented NoSQL databases
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85028449580&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=45&citeCnt=11&searchTerm=
+
+        101.
+
+            Big data and knowledge management: How to implement conceptual models in NoSQL systems'
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-85007021159&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=50&citeCnt=7&searchTerm=
+
+        102.
+
+            Building OLAP cubes from columnar NoSQL data warehouses
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-84988640565&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=53&citeCnt=12&searchTerm=
+
+        103.
+
+            Physical data warehouse design on NoSQL databases: OLAP query processing over HBase
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-84979516742&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=55&citeCnt=14&searchTerm=
+
+        104.
+
+            Implementing multidimensional data warehouses into NoSQL
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-84939516628&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=70&citeCnt=27&searchTerm=
+
+        105.
+
+            Columnar NoSQL CUBE: Agregation operator for columnar NoSQL data warehouse
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-84938150970&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=74&citeCnt=14&searchTerm=
+
+        106.
+
+            Columnar NoSQL star schema benchmark
+            https://www.scopus.com/record/display.uri?eid=2-s2.0-84921490025&origin=resultslist&sort=plf-f&src=s&nlo=&nlr=&nls=&sid=9ce51750cac649839e8ae29ee391c609&sot=b&sdt=b&sl=57&s=%28TITLE-ABS-KEY%28nosql%29+AND+TITLE-ABS-KEY%28column-oriented%29%29&relpos=76&citeCnt=17&searchTerm=
+
+    Busca: [All: nosql] AND [All: wide-column] [ 20 resultados ]
+
+    Busca: [All: nosql] AND [All: geospatial] [ 50 resultados ]
+
+    Busca: [All: hbase] AND [All: geospatial] [ 17 resultados ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################
+################################################################# ACM Digital Library
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: "column-oriented"] [ 123 resultados ]
+
+    Busca: [All: nosql] AND [All: "wide-column"] [ 41 resultados ]
+
+    Busca: [All: nosql] AND [All: geospatial] [ 106 resultados ]
+
+    Busca: [All: hbase] AND [All: geospatial] [ 60 resultados ]
+
+    total = 330
+
+#####################################################################################
+####################################################################### Springer Link
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: "column-oriented"] [ 93 resultados ]
+
+    Busca: [All: nosql] AND [All: "wide-column"] [ 27 resultados ]
+
+    Busca: [All: nosql] AND [All: "geoespatial"] [ 119 resultados ]
+
+    Busca: [All: hbase] AND [All: "geoespatial"] [ 52 resultados ]
+
+    total = 291
+
+#####################################################################################
+######################################################################### IEEE Xplore
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: column-oriented] [ 28 resultados ]
+
+    Busca: [All: nosql] AND [All: wide-column] [ 5 resultados ]
+
+    Busca: [All: nosql] AND [All: geoespatial] [ 27 resultados ]
+
+    Busca: [All: hbase] AND [All: geoespatial] [ 14 resultados ]
+
+    total = 74
+
+#####################################################################################
+############################################################################## SCOPUS
+#####################################################################################
+
+    Busca: [All: nosql] AND [All: column-oriented] [ 85 resultados ]
+
+    Busca: [All: nosql] AND [All: wide-column] [ 20 resultados ]
+
+    Busca: [All: nosql] AND [All: geospatial] [ 50 resultados ]
+
+    Busca: [All: hbase] AND [All: geospatial] [ 17 resultados ]
+
+    total = 172
+
+
+    TOTAL COMBINADO DAS BASES = 867
+
+
+
+            
+
+
+
+
+
+
+
+

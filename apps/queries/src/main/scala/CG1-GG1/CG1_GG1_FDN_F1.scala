@@ -36,10 +36,23 @@ object CG1_GG1_FDN_F1 {
                     |
                     |"id":                              {"cf":"rowkey", "col":"key", "type":"string"},
                     |
+                    |"line_order_order_number_pk":      {"cf":"a", "col":"aa", "type":"int"},
+                    |"line_order_line_number_pk":       {"cf":"a", "col":"ab", "type":"int"},
                     |"line_order_customer_fk":          {"cf":"a", "col":"ac", "type":"int"},
                     |"line_order_part_fk":              {"cf":"a", "col":"ad", "type":"int"},
+                    |"line_order_supplier_fk":          {"cf":"a", "col":"ae", "type":"int"},
+                    |"line_order_order_date_fk":        {"cf":"a", "col":"af", "type":"int"},
+                    |"line_order_order_priority":       {"cf":"a", "col":"ag", "type":"string"},
+                    |"line_order_shipping_priority":    {"cf":"a", "col":"ah", "type":"string"},
                     |"line_order_quantity":             {"cf":"a", "col":"ai", "type":"int"},
+                    |"line_order_extended_price":       {"cf":"a", "col":"aj", "type":"int"},
                     |"line_order_order_total_price":    {"cf":"a", "col":"ak", "type":"int"},
+                    |"line_order_discount":             {"cf":"a", "col":"al", "type":"int"},
+                    |"line_order_revenue":              {"cf":"a", "col":"am", "type":"int"},
+                    |"line_order_supply_cost":          {"cf":"a", "col":"an", "type":"int"},
+                    |"line_order_tax":                  {"cf":"a", "col":"ao", "type":"int"},
+                    |"line_order_commit_date_fk":       {"cf":"a", "col":"ap", "type":"int"},
+                    |"line_order_shipping_mode":        {"cf":"a", "col":"aq", "type":"string"}
                     |
                 |}
             |}""".stripMargin

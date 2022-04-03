@@ -476,7 +476,7 @@ object CG2_GG1_FDH_F1 {
             | WHERE
             |
             |   ST_Contains(i.nation_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   i.id = c.customer_nation_fk AND
+            |   i.id = b.customer_nation_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY
@@ -513,7 +513,7 @@ object CG2_GG1_FDH_F1 {
             | WHERE
             |
             |   ST_Contains(h.city_geom, ST_GeomFromText('POINT(-87.42 41.24)')) AND
-            |   h.id = c.customer_city_fk AND
+            |   h.id = b.customer_city_fk AND
             |   b.id = a.date_date_cust_supp_part
             |
             | GROUP BY

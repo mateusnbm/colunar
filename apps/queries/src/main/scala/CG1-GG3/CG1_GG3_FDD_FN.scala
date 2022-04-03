@@ -538,7 +538,7 @@ object CG1_GG3_FDD_FN {
             |
             | WHERE
             |
-            |   ST_Distance(c.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18
+            |   ST_Distance(a.customer_addr_geom, ST_GeomFromText('POINT(-87.42 41.24)')) <= 0.18
             |
             | GROUP BY
             |
